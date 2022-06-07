@@ -25,5 +25,5 @@ export const NavigationButtonsContainer = styled(Container)({
 });
 
 export const NavigationActionsContainer = styled(Container)({
-  gap: '5px',
+  gap: '1vw',
 });
