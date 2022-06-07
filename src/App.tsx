@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //React Router
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 function App(): ReactElement {
   return (
