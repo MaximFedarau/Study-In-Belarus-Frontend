@@ -20,4 +20,5 @@ export const DrawerButton = styled(DefaultButton)({
   lineHeight: '23px',
   textAlign: 'center',
   padding: '0 24px',
+  fontFamily: 'Cera Pro Bold',
 });

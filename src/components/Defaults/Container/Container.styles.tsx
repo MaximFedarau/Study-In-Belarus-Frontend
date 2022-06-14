@@ -27,3 +27,28 @@ export const NavigationButtonsContainer = styled(Container)({
 export const NavigationActionsContainer = styled(Container)({
   gap: '1vw',
 });
+
+export const NavigationDrawerLoginContainer = styled(Container)({
+  marginTop: '59px',
+  justifyContent: 'space-between',
+  alignItems: 'unset',
+});
+
+export const NavigationDrawerItemsListContainer = styled(Container)({
+  flexDirection: 'column',
+  gap: '23px',
+  marginTop: '42px',
+  marginLeft: '25px',
+  marginRight: '26px',
+  alignItems: 'unset',
+});
+
+export const NavigationDrawerLinksContainer = styled(Container)(
+  ({ isSelected }: { isSelected?: boolean }) => ({
+    alignItems: 'unset',
+    flexDirection: 'column',
+    gap: '14px',
+    marginTop: '7px',
+    display: isSelected ? 'flex' : 'none',
+  }),
+);
