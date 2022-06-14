@@ -1,1 +1,10 @@
 export const NAVIGATION_ICON_BUTTON_SIZES = { width: 35, height: 35 };
+
+export const NAVIGATION_DRAWER_ITEMS = [
+  'Why Belarus',
+  'EDUCATION IN BELARUS',
+  'HOW TO ENTER THE UNIVERSITY?',
+  'LIFE IN BELARUS',
+  'NEWS',
+  'EVENT CALENDAR',
+];
