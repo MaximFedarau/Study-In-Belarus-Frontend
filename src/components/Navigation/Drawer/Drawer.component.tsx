@@ -33,7 +33,7 @@ export default function Drawer({
       PaperProps={NavigationPaperStyle}
       anchor={anchor}
       open={open}
-      onClose={onCloseHandler}
+      variant="persistent"
     >
       <NavigationDrawerLoginContainer>
         <DrawerButton>login for Universities</DrawerButton>

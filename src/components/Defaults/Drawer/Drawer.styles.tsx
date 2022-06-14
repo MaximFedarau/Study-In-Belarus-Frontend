@@ -1,7 +1,7 @@
 //Types
 import React from 'react';
 
-//Interfce for Paper Styles
+//Interface for Paper Styles
 interface PaperStylesInterface {
   style: React.CSSProperties;
 }

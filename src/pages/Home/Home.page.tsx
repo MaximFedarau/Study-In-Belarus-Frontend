@@ -2,5 +2,5 @@
 import { ReactElement } from 'react';
 
 export default function Home(): ReactElement {
-  return <div>Home</div>;
+  return <div style={{ minHeight: '100vh' }}>Home</div>;
 }

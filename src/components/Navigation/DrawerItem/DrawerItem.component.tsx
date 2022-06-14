@@ -36,7 +36,7 @@ export default function DrawerItem({
       </DrawerMainText>
       <NavigationDrawerLinksContainer isSelected={additionalInfoVisibility}>
         {NAVIGATION_DRAWER_ITEMS[children].map((item) => (
-          <Link to={item.link}>
+          <Link to={item.link} key={item.name}>
             <DrawerText>{item.name}</DrawerText>
           </Link>
         ))}
