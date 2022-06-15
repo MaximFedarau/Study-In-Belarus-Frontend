@@ -2,7 +2,8 @@
 import { ReactElement } from 'react';
 
 //Components
-import NavigationBar from 'components/Navigation/NavigationBar/NavigationBar.component';
+import NavigationBar from '../Navigation/NavigationBar/NavigationBar.component';
+import Footer from '../Footer/MainComponent/Footer.component';
 
 //React Router
 import { Outlet } from 'react-router-dom';
@@ -12,6 +13,7 @@ export default function MainLayout(): ReactElement {
     <>
       <NavigationBar />
       <Outlet />
+      <Footer />
     </>
   );
 }
