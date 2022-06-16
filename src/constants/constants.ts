@@ -34,6 +34,15 @@ export const BUTTON_SIZE_STYLING = {
   },
 };
 
+//Constants
+import WHITE_WAVE from '../assets/images/wave.svg';
+import BLUE_WAVE from '../assets/images/blue_wave.svg';
+
+export const URLS = {
+  HOME: '/',
+  ADVANTAGES: '/advantages',
+};
+
 export const NAVIGATION_ICON_BUTTON_SIZES = { width: 35, height: 35 };
 
 export const NAVIGATION_ACTIONS_ICONS = [
@@ -46,7 +55,7 @@ export const NAVIGATION_DRAWER_ITEMS: NavigatonDrawerItemsInterface = {
   'Why Belarus': [
     {
       name: 'Advantages of Studying in Belarus',
-      link: '/advantages',
+      link: URLS.ADVANTAGES,
     },
     {
       name: 'Development of Higher Education in the Republic of Belarus',
@@ -66,4 +75,10 @@ export const NAVIGATION_DRAWER_ITEMS: NavigatonDrawerItemsInterface = {
   'LIFE IN BELARUS': [],
   NEWS: [],
   'EVENT CALENDAR': [],
+};
+
+//Footer Background color depending on Path
+export const FOOTER_BACKGROUND_BY_PATH = {
+  [URLS.HOME]: WHITE_WAVE,
+  [URLS.ADVANTAGES]: BLUE_WAVE,
 };
