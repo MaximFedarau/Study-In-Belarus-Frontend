@@ -9,10 +9,13 @@ import {
 
 //Components
 import {
+  FooterMainContainer,
+  FooterWaveContainer,
   FooterContaner,
   FooterContentContainer,
   FooterContactsContainer,
   FooterContactsItemsContainer,
+  FooterPhoneNumbersContainer,
   FooterNetworksContactsContainer,
   FooterTextContainer,
 } from '../../Defaults/Container/Container.styles';
@@ -21,8 +24,9 @@ import {
   FooterContactText,
 } from '../../Defaults/Text/Text.styles';
 
+import { Box } from '@mui/material';
+
 //Icons
-import { ReactComponent as WaveSVG } from '../../../assets/images/blue_wave.svg';
 import { ReactComponent as LogoSVG } from '../../../assets/images/logo.svg';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import EmailIcon from '@mui/icons-material/Email';
@@ -40,37 +44,45 @@ export default function Footer(): ReactElement {
   };
 
   return (
-    <FooterContaner image={FOOTER_BACKGROUND_BY_PATH[location.pathname]}>
-      <FooterContentContainer>
-        <LogoSVG />
-        <FooterTextContainer>
-          {Object.keys(NAVIGATION_DRAWER_ITEMS).map((category) => (
-            <FooterLinkText>{category}</FooterLinkText>
-          ))}
-        </FooterTextContainer>
-        <FooterContactsContainer>
-          <FooterContactText>
-            Studyinby.com - official website on higher education in the Republic
-            of Belarus for foreign citizens
-          </FooterContactText>
-          <FooterContactsItemsContainer>
-            <LocalPhoneIcon />
-            <div style={{ display: 'flex', flexDirection: 'column' }}>
-              <FooterContactText>+375-17-306-52-59</FooterContactText>
-              <FooterContactText>+375-17-306-52-71</FooterContactText>
-              <FooterContactText>+375-29-691-38-08</FooterContactText>
-            </div>
-          </FooterContactsItemsContainer>
-          <FooterContactsItemsContainer>
-            <EmailIcon />
-            <FooterContactText>edu@intcenter.by</FooterContactText>
-          </FooterContactsItemsContainer>
-          <FooterNetworksContactsContainer>
-            <InstagramIcon {...iconOptions} />
-            <TwitterIcon {...iconOptions} />
-          </FooterNetworksContactsContainer>
-        </FooterContactsContainer>
-      </FooterContentContainer>
-    </FooterContaner>
+    <FooterMainContainer>
+      <FooterWaveContainer>
+        <img
+          src={FOOTER_BACKGROUND_BY_PATH[location.pathname].image}
+          style={{ width: '100vw', height: '100%' }}
+        />
+      </FooterWaveContainer>
+      <FooterContaner {...FOOTER_BACKGROUND_BY_PATH[location.pathname]}>
+        <FooterContentContainer>
+          <LogoSVG />
+          <FooterTextContainer>
+            {Object.keys(NAVIGATION_DRAWER_ITEMS).map((category) => (
+              <FooterLinkText>{category}</FooterLinkText>
+            ))}
+          </FooterTextContainer>
+          <FooterContactsContainer>
+            <FooterContactText>
+              Studyinby.com - official website on higher education in the
+              Republic of Belarus for foreign citizens
+            </FooterContactText>
+            <FooterContactsItemsContainer>
+              <LocalPhoneIcon />
+              <FooterPhoneNumbersContainer>
+                <FooterContactText>+375-17-306-52-59</FooterContactText>
+                <FooterContactText>+375-17-306-52-71</FooterContactText>
+                <FooterContactText>+375-29-691-38-08</FooterContactText>
+              </FooterPhoneNumbersContainer>
+            </FooterContactsItemsContainer>
+            <FooterContactsItemsContainer>
+              <EmailIcon />
+              <FooterContactText>edu@intcenter.by</FooterContactText>
+            </FooterContactsItemsContainer>
+            <FooterNetworksContactsContainer>
+              <InstagramIcon {...iconOptions} />
+              <TwitterIcon {...iconOptions} />
+            </FooterNetworksContactsContainer>
+          </FooterContactsContainer>
+        </FooterContentContainer>
+      </FooterContaner>
+    </FooterMainContainer>
   );
 }

@@ -37,6 +37,7 @@ export const BUTTON_SIZE_STYLING = {
 //Constants
 import WHITE_WAVE from '../assets/images/wave.svg';
 import BLUE_WAVE from '../assets/images/blue_wave.svg';
+import { TRUE_BLUE } from './colors';
 
 export const URLS = {
   HOME: '/',
@@ -79,6 +80,12 @@ export const NAVIGATION_DRAWER_ITEMS: NavigatonDrawerItemsInterface = {
 
 //Footer Background color depending on Path
 export const FOOTER_BACKGROUND_BY_PATH = {
-  [URLS.HOME]: WHITE_WAVE,
-  [URLS.ADVANTAGES]: BLUE_WAVE,
+  [URLS.HOME]: {
+    image: WHITE_WAVE,
+    mobileBackground: 'white',
+  },
+  [URLS.ADVANTAGES]: {
+    image: BLUE_WAVE,
+    mobileBackground: TRUE_BLUE,
+  },
 };

@@ -1,9 +1,6 @@
 //MUI
 import { styled, Box } from '@mui/material';
 
-//Constants
-import { TRUE_BLUE } from '../../../constants/colors';
-
 export const Container = styled(Box)(
   ({ width, height }: { width?: string; height?: string }) => ({
     display: 'flex',
@@ -54,17 +51,43 @@ export const NavigationDrawerLinksContainer = styled(Container)(
   }),
 );
 
+export const FooterMainContainer = styled(Container)({
+  flexDirection: 'column',
+  alignItems: 'unset',
+});
+
+export const FooterWaveContainer = styled(Container)({
+  display: 'none',
+  '@media screen and (max-width: 1180px)': {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
+    justifyContent: 'end',
+  },
+});
+
 export const FooterContaner = styled(Container)(
-  ({ image }: { image?: string }) => ({
+  ({
+    image,
+    mobileBackground,
+  }: {
+    image?: string;
+    mobileBackground?: string;
+  }) => ({
     backgroundImage: `url(${image})`,
     width: '100vw',
-    height: '100vh',
+    height: '588px',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'bottom',
     backgroundSize: 'contain',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'flex-end',
+    '@media screen and (max-width: 1180px)': {
+      background: mobileBackground,
+      height: '100%',
+      justifyContent: 'center',
+    },
   }),
 );
 
@@ -77,8 +100,10 @@ export const FooterContentContainer = styled(Container)({
   marginBottom: '5%',
   '@media screen and (max-width: 1180px)': {
     alignItems: 'center',
-    alignSelf: 'center',
     gap: '40px',
+    // backgroundColor: TRUE_BLUE,
+    width: '100%',
+    marginBottom: 0,
   },
 });
 
@@ -109,6 +134,11 @@ export const FooterContactsItemsContainer = styled(Container)({
   flexDirection: 'row',
   alignItems: 'center',
   gap: '16px',
+});
+
+export const FooterPhoneNumbersContainer = styled(Container)({
+  flexDirection: 'column',
+  alignItems: 'unset',
 });
 
 export const FooterNetworksContactsContainer = styled(Container)({
