@@ -89,3 +89,8 @@ export const FOOTER_BACKGROUND_BY_PATH = {
     mobileBackground: TRUE_BLUE,
   },
 };
+
+//Footer Network Icons
+export const FOOTER_NETWORK_ICON_OPTIONS = {
+  style: { width: '53px', height: '53px', cursor: 'pointer' },
+};

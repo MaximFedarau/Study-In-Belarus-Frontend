@@ -66,7 +66,7 @@ export const FooterWaveContainer = styled(Container)({
   },
 });
 
-export const FooterContaner = styled(Container)(
+export const FooterContainer = styled(Container)(
   ({
     image,
     mobileBackground,
@@ -101,7 +101,6 @@ export const FooterContentContainer = styled(Container)({
   '@media screen and (max-width: 1180px)': {
     alignItems: 'center',
     gap: '40px',
-    // backgroundColor: TRUE_BLUE,
     width: '100%',
     marginBottom: 0,
   },
