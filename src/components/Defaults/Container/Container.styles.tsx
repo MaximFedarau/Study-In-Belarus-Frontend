@@ -94,7 +94,7 @@ export const FooterContainer = styled(Container)(
 export const FooterContentContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
-  alignSelf: 'end',
+  alignSelf: 'flex-end',
   gap: '57px',
   alignItems: 'unset',
   marginBottom: '5%',
