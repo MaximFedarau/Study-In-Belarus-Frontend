@@ -37,10 +37,8 @@ export const NavigationDrawerLoginContainer = styled(Container)({
 export const NavigationDrawerItemsListContainer = styled(Container)({
   flexDirection: 'column',
   gap: '23px',
-  marginTop: '42px',
-  marginLeft: '25px',
-  marginRight: '26px',
   alignItems: 'unset',
+  margin: '42px 26px 0 25px',
 });
 
 export const NavigationDrawerLinksContainer = styled(Container)(

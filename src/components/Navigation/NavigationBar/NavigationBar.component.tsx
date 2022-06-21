@@ -5,11 +5,11 @@ import { ReactElement } from 'react';
 import {
   NavigationContainer,
   NavigationContentContainer,
-} from '../../Defaults/Container/Container.styles';
-import ButtonsContainer from '../ButtonsContainer/ButtonsContainer.component';
+} from 'components/Defaults/Container/Container.styles';
+import ButtonsContainer from 'components/Navigation/ButtonsContainer/ButtonsContainer.component';
 
 //Icons
-import { ReactComponent as LogoSvg } from '../../../assets/images/logo.svg';
+import { ReactComponent as LogoSvg } from 'assets/images/logo.svg';
 
 //React Router
 import { Link } from 'react-router-dom';

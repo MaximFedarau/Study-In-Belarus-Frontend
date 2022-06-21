@@ -9,7 +9,7 @@ export const DefaultText = styled(Typography)({
   fontSize: '14px',
 });
 
-export const DrawerMainText = styled(DefaultText)(
+export const SectionText = styled(DefaultText)(
   ({ isSelected }: { isSelected?: boolean }) => ({
     fontFamily: 'Cera Pro Bold',
     fontSize: '18px',
@@ -20,7 +20,7 @@ export const DrawerMainText = styled(DefaultText)(
   }),
 );
 
-export const DrawerText = styled(DefaultText)({
+export const SubsectionText = styled(DefaultText)({
   userSelect: 'none',
   fontFamily: 'Cera Pro Light',
   fontSize: '18px',

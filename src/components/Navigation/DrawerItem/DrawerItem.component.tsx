@@ -2,11 +2,14 @@
 import React, { ReactElement } from 'react';
 
 //Constants
-import { NAVIGATION_DRAWER_ITEMS } from '../../../constants/constants';
+import { NAVIGATION_DRAWER_ITEMS } from 'constants/constants';
 
 //Components
-import { DrawerMainText, DrawerText } from '../../Defaults/Text/Text.styles';
-import { NavigationDrawerLinksContainer } from '../../Defaults/Container/Container.styles';
+import {
+  SectionText,
+  SubsectionText,
+} from 'components/Defaults/Text/Text.styles';
+import { NavigationDrawerLinksContainer } from 'components/Defaults/Container/Container.styles';
 
 //React Router
 import { Link } from 'react-router-dom';
@@ -28,16 +31,16 @@ export default function DrawerItem({
 
   return (
     <div>
-      <DrawerMainText
+      <SectionText
         isSelected={additionalInfoVisibility}
         onClick={onMainTextClickHandler}
       >
         {children}
-      </DrawerMainText>
+      </SectionText>
       <NavigationDrawerLinksContainer isSelected={additionalInfoVisibility}>
         {NAVIGATION_DRAWER_ITEMS[children].map((item) => (
           <Link to={item.link} key={item.name}>
-            <DrawerText>{item.name}</DrawerText>
+            <SubsectionText>{item.name}</SubsectionText>
           </Link>
         ))}
       </NavigationDrawerLinksContainer>

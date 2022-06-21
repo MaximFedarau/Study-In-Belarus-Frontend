@@ -2,16 +2,16 @@
 import React, { ReactElement } from 'react';
 
 //Constants
-import { NAVIGATION_ICON_BUTTON_SIZES } from '../../../constants/constants';
+import { NAVIGATION_ICON_BUTTON_SIZES } from 'constants/constants';
 
 //Components
-import { NavigationButtonsContainer } from '../../Defaults/Container/Container.styles';
-import IconButton from '../../Defaults/IconButton/IconButton.component';
-import Drawer from '../Drawer/Drawer.component';
+import { NavigationButtonsContainer } from 'components/Defaults/Container/Container.styles';
+import IconButton from 'components/Defaults/IconButton/IconButton.component';
+import Drawer from 'components/Navigation/Drawer/Drawer.component';
 
 //Icons
-import { ReactComponent as DrawerButtonSvg } from '../../../assets/images/drawer_button.svg';
-import ActionsContainer from '../ActionsContainer/ActionsContainer.component';
+import { ReactComponent as DrawerButtonSvg } from 'assets/images/drawer_button.svg';
+import ActionsContainer from 'components/Navigation/ActionsContainer/ActionsContainer.component';
 
 export default function ButtonsContainer(): ReactElement {
   const [drawerState, setDrawerState] = React.useState<boolean>(false);

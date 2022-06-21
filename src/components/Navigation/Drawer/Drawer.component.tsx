@@ -2,19 +2,19 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { NavigationPaperStyle } from '../../Defaults/Drawer/Drawer.styles';
+import { NavigationPaperStyle } from 'components/Defaults/Drawer/Drawer.styles';
 
 //Components
-import { NavigationDrawerLoginContainer } from '../../Defaults/Container/Container.styles';
-import { DrawerButton } from '../../Defaults/Button/Button.styles';
-import IconButton from '../../Defaults/IconButton/IconButton.component';
+import { NavigationDrawerLoginContainer } from 'components/Defaults/Container/Container.styles';
+import { DrawerButton } from 'components/Defaults/Button/Button.styles';
+import IconButton from 'components/Defaults/IconButton/IconButton.component';
 
 //MUI Components
 import { Drawer as MUIDrawer } from '@mui/material';
 
 //Icons
-import CloseIcon from '../../../assets/images/close.svg';
-import DrawerItemsList from '../DrawerItemsList/DrawerItemsList.component';
+import CloseIcon from 'assets/images/close.svg';
+import DrawerItemsList from 'components/Navigation/DrawerItemsList/DrawerItemsList.component';
 
 //Interface for Props
 interface DrawerProps {

@@ -2,11 +2,11 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { NAVIGATION_DRAWER_ITEMS } from '../../../constants/constants';
+import { NAVIGATION_DRAWER_ITEMS } from 'constants/constants';
 
 //Components
-import { NavigationDrawerItemsListContainer } from '../../Defaults/Container/Container.styles';
-import DrawerItem from '../DrawerItem/DrawerItem.component';
+import { NavigationDrawerItemsListContainer } from 'components/Defaults/Container/Container.styles';
+import DrawerItem from 'components/Navigation/DrawerItem/DrawerItem.component';
 
 export default function DrawerItemsList(): ReactElement {
   return (
