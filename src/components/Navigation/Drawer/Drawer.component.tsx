@@ -34,6 +34,7 @@ export default function Drawer({
       anchor={anchor}
       open={open}
       variant="persistent"
+      transitionDuration={750}
     >
       <NavigationDrawerLoginContainer>
         <DrawerButton>login for Universities</DrawerButton>
