@@ -3,11 +3,12 @@ import { ReactElement } from 'react';
 
 //Constants
 import { NavigationPaperStyle } from 'components/Defaults/Drawer/Drawer.styles';
+import { BUTTON_VARIANT, BUTTON_SIZE } from 'constants/enum';
 
 //Components
 import { NavigationDrawerLoginContainer } from 'components/Defaults/Container/Container.styles';
-import { DrawerButton } from 'components/Defaults/Button/Button.styles';
 import IconButton from 'components/Defaults/IconButton/IconButton.component';
+import Button from 'components/Defaults/Button/Button.component';
 
 //MUI Components
 import { Drawer as MUIDrawer } from '@mui/material';
@@ -37,7 +38,12 @@ export default function Drawer({
       transitionDuration={750}
     >
       <NavigationDrawerLoginContainer>
-        <DrawerButton>login for Universities</DrawerButton>
+        <Button
+          shellVariant={BUTTON_VARIANT.OUTLINED}
+          shellSize={BUTTON_SIZE.LARGE}
+        >
+          login for Universities
+        </Button>
         <IconButton width={48} height={48} onClickHandler={onCloseHandler}>
           <img src={CloseIcon} />
         </IconButton>

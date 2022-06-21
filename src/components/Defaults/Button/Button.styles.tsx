@@ -2,23 +2,23 @@
 import { styled, Button } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE } from '../../../constants/colors';
+import {
+  BUTTON_VARIANT_STYLING,
+  BUTTON_SIZE_STYLING,
+} from 'constants/constants';
+import { BUTTON_SIZE, BUTTON_VARIANT } from 'constants/enum';
 
-export const DefaultButton = styled(Button)({
-  display: 'flex',
-  backgroundColor: 'white',
-  color: 'black',
-});
-
-export const DrawerButton = styled(DefaultButton)({
-  textTransform: 'uppercase',
-  border: `1px solid ${TRUE_BLUE}`,
-  borderRadius: '30px',
-  color: TRUE_BLUE,
-  fontWeight: 700,
-  fontSize: '15px',
-  lineHeight: '23px',
-  textAlign: 'center',
-  padding: '0 24px',
-  fontFamily: 'Cera Pro Bold',
-});
+export const ButtonShell = styled(Button)(
+  ({
+    shellSize: size = BUTTON_SIZE.MEDIUM,
+    shellVariant: variant = BUTTON_VARIANT.OUTLINED,
+  }: {
+    shellSize?: BUTTON_SIZE;
+    shellVariant?: BUTTON_VARIANT;
+  }) => ({
+    ...BUTTON_VARIANT_STYLING[variant],
+    ...BUTTON_SIZE_STYLING[size],
+    borderRadius: '30px',
+    textAlign: 'center',
+  }),
+);
