@@ -4,10 +4,14 @@ import { styled, Typography } from '@mui/material';
 //Constants
 import { TRUE_BLUE } from '../../../constants/colors';
 
+// * Default
+
 export const DefaultText = styled(Typography)({
   color: 'black',
   fontSize: '14px',
 });
+
+// * Navigation
 
 export const SectionText = styled(DefaultText)(
   ({ isSelected }: { isSelected?: boolean }) => ({
@@ -28,6 +32,8 @@ export const SubsectionText = styled(DefaultText)({
   maxWidth: '266px',
 });
 
+// * Footer
+
 export const BottomLink = styled(DefaultText)({
   userSelect: 'none',
   fontFamily: 'Cera Pro Bold',
@@ -46,4 +52,27 @@ export const ContactsText = styled(DefaultText)({
   '@media screen and (max-width: 1180px)': {
     textAlign: 'center',
   },
+});
+
+// * 404
+export const NotFoundHeader = styled(DefaultText)({
+  color: '#0000a3',
+  fontFamily: 'Windows Regular',
+  fontSize: 18,
+  fontWeight: 'bold',
+});
+
+export const NotFoundText = styled(DefaultText)({
+  color: 'white',
+  fontFamily: 'Windows Regular',
+  fontWeight: 'bold',
+  fontSize: 20,
+});
+
+export const NotFoundFooter = styled(DefaultText)({
+  color: 'white',
+  fontFamily: 'Windows Regular',
+  fontWeight: 'bold',
+  fontSize: 20,
+  textAlign: 'center',
 });

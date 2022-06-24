@@ -1,6 +1,11 @@
 //MUI
 import { styled, Box } from '@mui/material';
 
+//Constants
+import { WINDOWS_BLUE, WINDOWS_GRAY } from 'constants/colors';
+
+// * Default
+
 export const Container = styled(Box)(
   ({ width, height }: { width?: string; height?: string }) => ({
     display: 'flex',
@@ -10,6 +15,8 @@ export const Container = styled(Box)(
     alignItems: 'center',
   }),
 );
+
+// * Navigation
 
 export const NavigationContainer = styled(Container)({
   justifyContent: 'center',
@@ -50,6 +57,8 @@ export const NavigationDrawerLinksContainer = styled(Container)(
     display: isSelected ? 'flex' : 'none',
   }),
 );
+
+// * Footer
 
 export const FooterMainContainer = styled(Container)({
   flexDirection: 'column',
@@ -145,4 +154,34 @@ export const FooterNetworksContactsContainer = styled(Container)({
   flexDirection: 'row',
   alignItems: 'center',
   gap: '48px',
+});
+
+// * 404
+
+export const NotFoundContainer = styled(Container)({
+  width: '100vw',
+  height: '100vh',
+  background: WINDOWS_BLUE,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
+export const NotFoundContentContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '16px',
+  marginBottom: '64px',
+});
+
+export const NotFoundHeaderContainer = styled(Container)({
+  background: WINDOWS_GRAY,
+  padding: '1px 12px 1px 12px',
+});
+
+export const NotFoundInfoContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '23px',
 });
