@@ -22,6 +22,11 @@ code {
   src: url("./assets/fonts/CeraPro-Bold.ttf");
 }
 
+@font-face {
+  font-family: 'Windows Regular';
+  src: url('./assets/fonts/Windows-Regular.ttf');
+}
+
 a {
   text-decoration: none;
   
