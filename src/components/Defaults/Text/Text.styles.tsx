@@ -2,7 +2,7 @@
 import { styled, Typography } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE } from '../../../constants/colors';
+import { TRUE_BLUE, SUVA_GREY } from '../../../constants/colors';
 
 // * Default
 
@@ -75,4 +75,32 @@ export const NotFoundFooter = styled(DefaultText)({
   fontWeight: 'bold',
   fontSize: 20,
   textAlign: 'center',
+});
+
+// * Advantages
+export const ArticlePathText = styled(DefaultText)({
+  color: SUVA_GREY,
+  fontSize: '18px',
+  fontFamily: 'Roboto Regular',
+  fontWeight: 500,
+});
+
+export const ArticleHeaderText = styled(DefaultText)({
+  fontFamily: 'Roboto Regular',
+  fontWeight: 700,
+  fontSize: '36px',
+  textTransform: 'capitalize',
+});
+
+export const SubarticleText = styled(DefaultText)({
+  fontFamily: 'Roboto Regular',
+  fontWeight: 400,
+  fontSize: '20px',
+  color: TRUE_BLUE,
+});
+
+export const ArticleText = styled(DefaultText)({
+  fontFamily: 'Roboto Regular',
+  fontWeight: 400,
+  fontSize: '18px',
 });

@@ -1,5 +1,5 @@
 //MUI
-import { styled, Box } from '@mui/material';
+import { styled, Box, AppBar } from '@mui/material';
 
 //Constants
 import { WINDOWS_BLUE, WINDOWS_GRAY } from 'constants/colors';
@@ -16,10 +16,21 @@ export const Container = styled(Box)(
   }),
 );
 
+// * Outlet Container
+export const OutletContainer = styled(Box)({
+  marginTop: '72px',
+  display: 'block',
+});
+
 // * Navigation
 
-export const NavigationContainer = styled(Container)({
+export const NavigationContainer = styled(AppBar)({
   justifyContent: 'center',
+  display: 'flex',
+  background: 'white',
+  width: '100%',
+  height: '72px',
+  boxShadow: 'none',
 });
 
 export const NavigationContentContainer = styled(Container)({
@@ -184,5 +195,31 @@ export const NotFoundInfoContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
   gap: '23px',
+  alignItems: 'unset',
+});
+
+// * Advantages Page
+
+export const AdvantagesContainer = styled(Container)({
+  minHeight: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '74px',
+  alignItems: 'unset',
+});
+
+export const AdvantagesContentContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '38px',
+  alignItems: 'unset',
+  padding: '0 0 0 5%',
+});
+
+export const SubarticleContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '17px',
+  width: '70%',
   alignItems: 'unset',
 });
