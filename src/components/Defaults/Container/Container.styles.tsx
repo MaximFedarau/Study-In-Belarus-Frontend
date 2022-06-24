@@ -2,7 +2,7 @@
 import { styled, Box, AppBar } from '@mui/material';
 
 //Constants
-import { WINDOWS_BLUE, WINDOWS_GRAY } from 'constants/colors';
+import { WINDOWS_BLUE, WINDOWS_GRAY, TRUE_BLUE } from 'constants/colors';
 
 // * Default
 
@@ -18,8 +18,8 @@ export const Container = styled(Box)(
 
 // * Outlet Container
 export const OutletContainer = styled(Box)({
+  display: 'flex',
   marginTop: '72px',
-  display: 'block',
 });
 
 // * Navigation
@@ -205,7 +205,10 @@ export const AdvantagesContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
   gap: '74px',
-  alignItems: 'unset',
+  '@media screen and (max-width: 800px)': {
+    marginBottom: '48px',
+    gap: '48px',
+  },
 });
 
 export const AdvantagesContentContainer = styled(Container)({
@@ -213,7 +216,32 @@ export const AdvantagesContentContainer = styled(Container)({
   flexDirection: 'column',
   gap: '38px',
   alignItems: 'unset',
-  padding: '0 0 0 5%',
+  padding: '0 3% 0 5%',
+  '@media screen and (max-width: 800px)': {
+    padding: '0 5% 0 5%',
+  },
+});
+
+export const ArticleContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '34px',
+  alignItems: 'unset',
+  '@media screen and (max-width: 800px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+});
+
+export const ArticleTextContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '38px',
+  alignItems: 'unset',
+  '@media screen and (max-width: 800px)': {
+    alignItems: 'center',
+    order: 1,
+  },
 });
 
 export const SubarticleContainer = styled(Container)({
@@ -222,4 +250,26 @@ export const SubarticleContainer = styled(Container)({
   gap: '17px',
   width: '70%',
   alignItems: 'unset',
+  '@media screen and (max-width: 800px)': {
+    width: '100%',
+  },
+});
+
+export const ArticleNavigationContainer = styled(Container)({
+  gap: '42px',
+  alignItems: 'unset',
+  flexDirection: 'column',
+});
+
+export const NavigationItemContainer = styled(Container)({
+  gap: 24,
+  width: '100%',
+  ':hover': {
+    '*': {
+      color: TRUE_BLUE,
+    },
+  },
+  '@media screen and (max-width: 800px)': {
+    order: 0,
+  },
 });

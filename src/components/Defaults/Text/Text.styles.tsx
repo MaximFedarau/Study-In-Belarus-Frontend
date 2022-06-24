@@ -83,6 +83,9 @@ export const ArticlePathText = styled(DefaultText)({
   fontSize: '18px',
   fontFamily: 'Roboto Regular',
   fontWeight: 500,
+  '@media screen and (max-width: 800px)': {
+    textAlign: 'center',
+  },
 });
 
 export const ArticleHeaderText = styled(DefaultText)({
@@ -90,6 +93,9 @@ export const ArticleHeaderText = styled(DefaultText)({
   fontWeight: 700,
   fontSize: '36px',
   textTransform: 'capitalize',
+  '@media screen and (max-width: 800px)': {
+    textAlign: 'center',
+  },
 });
 
 export const SubarticleText = styled(DefaultText)({
@@ -99,8 +105,11 @@ export const SubarticleText = styled(DefaultText)({
   color: TRUE_BLUE,
 });
 
-export const ArticleText = styled(DefaultText)({
-  fontFamily: 'Roboto Regular',
-  fontWeight: 400,
-  fontSize: '18px',
-});
+export const ArticleText = styled(DefaultText)(
+  ({ isActive }: { isActive?: boolean }) => ({
+    fontFamily: 'Roboto Regular',
+    fontWeight: isActive ? 500 : 400,
+    fontSize: '18px',
+    color: isActive ? TRUE_BLUE : 'black',
+  }),
+);

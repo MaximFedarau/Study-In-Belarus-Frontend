@@ -98,3 +98,8 @@ export const FOOTER_CONTACT_NUMBERS = [
   '+375-17-306-52-71',
   '+375-29-691-38-08',
 ];
+
+//Advantages Page Image Sizes
+export const ADVANTAGES_IMAGE_SIZES = {
+  style: { width: '100%', height: '100%' },
+};
