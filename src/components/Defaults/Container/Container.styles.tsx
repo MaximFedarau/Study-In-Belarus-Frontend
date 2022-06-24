@@ -184,4 +184,5 @@ export const NotFoundInfoContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
   gap: '23px',
+  alignItems: 'unset',
 });

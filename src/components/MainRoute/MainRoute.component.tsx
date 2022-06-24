@@ -1,5 +1,6 @@
 //Pages
 import Home from 'pages/Home/Home.page';
+import Advantages from 'pages/Advantages/Advantages.page';
 
 //Components
 import MainLayout from 'components/MainLayout/MainLayout.component';
@@ -15,7 +16,7 @@ export default function MainRoute(): RouteObject {
       { path: '/', element: <Home /> },
       {
         path: '/advantages',
-        element: <div style={{ minHeight: '100vh' }}>Advantages</div>,
+        element: <Advantages />,
       },
     ],
   };
