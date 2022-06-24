@@ -28,7 +28,7 @@ export const SubsectionText = styled(DefaultText)({
   maxWidth: '266px',
 });
 
-export const FooterLinkText = styled(DefaultText)({
+export const BottomLink = styled(DefaultText)({
   userSelect: 'none',
   fontFamily: 'Cera Pro Bold',
   fontSize: '18px',
@@ -38,7 +38,7 @@ export const FooterLinkText = styled(DefaultText)({
   textAlign: 'center',
 });
 
-export const FooterContactText = styled(DefaultText)({
+export const ContactsText = styled(DefaultText)({
   fontFamily: 'Cera Pro Light',
   fontSize: '18px',
   lineHeight: '21px',

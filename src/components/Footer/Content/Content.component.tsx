@@ -9,7 +9,7 @@ import {
   FooterContentContainer,
   FooterTextContainer,
 } from '../../Defaults/Container/Container.styles';
-import { FooterLinkText } from '../../Defaults/Text/Text.styles';
+import { BottomLink } from '../../Defaults/Text/Text.styles';
 import Contacts from '../Contacts/Contacts.component';
 
 //Icons
@@ -21,7 +21,7 @@ export default function Content(): ReactElement {
       <LogoSVG />
       <FooterTextContainer>
         {Object.keys(NAVIGATION_DRAWER_ITEMS).map((category) => (
-          <FooterLinkText>{category}</FooterLinkText>
+          <BottomLink>{category}</BottomLink>
         ))}
       </FooterTextContainer>
       <Contacts />
