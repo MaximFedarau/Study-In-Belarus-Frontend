@@ -14,7 +14,7 @@ import Button from 'components/Defaults/Button/Button.component';
 import { Drawer as MUIDrawer } from '@mui/material';
 
 //Icons
-import CloseIcon from 'assets/images/close.svg';
+import CloseIcon from 'assets/images/navigation/close.svg';
 import DrawerItemsList from 'components/Navigation/DrawerItemsList/DrawerItemsList.component';
 
 //Interface for Props

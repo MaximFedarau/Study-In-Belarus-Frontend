@@ -9,7 +9,7 @@ import {
 import ButtonsContainer from 'components/Navigation/ButtonsContainer/ButtonsContainer.component';
 
 //Icons
-import { ReactComponent as LogoSvg } from 'assets/images/logo.svg';
+import { ReactComponent as LogoSvg } from 'assets/images/navigation/logo.svg';
 
 //React Router
 import { Link } from 'react-router-dom';

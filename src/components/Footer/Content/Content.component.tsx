@@ -13,7 +13,7 @@ import { BottomLink } from '../../Defaults/Text/Text.styles';
 import Contacts from '../Contacts/Contacts.component';
 
 //Icons
-import { ReactComponent as LogoSVG } from '../../../assets/images/logo.svg';
+import { ReactComponent as LogoSVG } from 'assets/images/navigation/logo.svg';
 
 export default function Content(): ReactElement {
   return (
