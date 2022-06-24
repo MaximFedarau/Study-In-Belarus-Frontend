@@ -83,8 +83,10 @@ export const ArticlePathText = styled(DefaultText)({
   fontSize: '18px',
   fontFamily: 'Roboto Regular',
   fontWeight: 500,
+  marginLeft: 70,
   '@media screen and (max-width: 800px)': {
     textAlign: 'center',
+    marginLeft: 0,
   },
 });
 

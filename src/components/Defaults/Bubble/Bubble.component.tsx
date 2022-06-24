@@ -6,7 +6,7 @@ import { BubbleText, BubbleContainer } from './Bubble.styles';
 
 //Interface for Props
 interface BubbleProps {
-  children: number;
+  children: number | string;
   isActive?: boolean;
   size?: { width?: string; height?: string };
 }

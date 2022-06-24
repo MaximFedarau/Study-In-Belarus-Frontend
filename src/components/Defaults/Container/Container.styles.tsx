@@ -201,10 +201,10 @@ export const NotFoundInfoContainer = styled(Container)({
 // * Advantages Page
 
 export const AdvantagesContainer = styled(Container)({
-  minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
   gap: '74px',
+  width: '100%',
   '@media screen and (max-width: 800px)': {
     marginBottom: '48px',
     gap: '48px',
@@ -230,6 +230,14 @@ export const ArticleContainer = styled(Container)({
   '@media screen and (max-width: 800px)': {
     flexDirection: 'column',
     alignItems: 'center',
+  },
+});
+
+export const ArrowContainer = styled(Container)({
+  marginTop: '75px',
+  alignItems: 'unset',
+  '@media screen and (max-width: 800px)': {
+    marginTop: 0,
   },
 });
 
