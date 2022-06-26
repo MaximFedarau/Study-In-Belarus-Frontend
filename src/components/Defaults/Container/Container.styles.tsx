@@ -203,7 +203,7 @@ export const NotFoundInfoContainer = styled(Container)({
 export const AdvantagesContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
-  gap: '74px',
+  gap: 64,
   width: '100%',
   '@media screen and (max-width: 800px)': {
     marginBottom: '48px',
@@ -211,14 +211,22 @@ export const AdvantagesContainer = styled(Container)({
   },
 });
 
+export const AdvantagesHeaderContainer = styled(Container)({
+  alignItems: 'unset',
+  width: '100%',
+  maxWidth: 2000,
+});
+
 export const AdvantagesContentContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
-  gap: '38px',
+  gap: 17,
   alignItems: 'unset',
-  padding: '0 3% 0 5%',
+  padding: '0 3% 0 3%',
+  maxWidth: 2000,
   '@media screen and (max-width: 800px)': {
     padding: '0 5% 0 5%',
+    alignItems: 'center',
   },
 });
 
@@ -230,25 +238,29 @@ export const ArticleContainer = styled(Container)({
   '@media screen and (max-width: 800px)': {
     flexDirection: 'column',
     alignItems: 'center',
+    gap: 17,
   },
 });
 
 export const ArrowContainer = styled(Container)({
-  marginTop: '75px',
+  margin: '2.2rem 20px 0 0',
   alignItems: 'unset',
   '@media screen and (max-width: 800px)': {
-    marginTop: 0,
+    margin: 0,
+    width: '100%',
+    justifyContent: 'center',
   },
 });
 
 export const ArticleTextContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
-  gap: '38px',
+  gap: 15,
   alignItems: 'unset',
   '@media screen and (max-width: 800px)': {
     alignItems: 'center',
     order: 1,
+    marginTop: 13,
   },
 });
 
@@ -267,6 +279,9 @@ export const ArticleNavigationContainer = styled(Container)({
   gap: '42px',
   alignItems: 'unset',
   flexDirection: 'column',
+  '@media screen and (max-width: 800px)': {
+    order: 0,
+  },
 });
 
 export const NavigationItemContainer = styled(Container)({
@@ -276,8 +291,5 @@ export const NavigationItemContainer = styled(Container)({
     '*': {
       color: TRUE_BLUE,
     },
-  },
-  '@media screen and (max-width: 800px)': {
-    order: 0,
   },
 });

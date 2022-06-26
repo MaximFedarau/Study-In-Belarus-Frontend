@@ -5,7 +5,10 @@ import React, { ReactElement } from 'react';
 import { ADVANTAGES_IMAGE_SIZES } from 'constants/constants';
 
 //Components
-import { AdvantagesContainer } from 'components/Defaults/Container/Container.styles';
+import {
+  AdvantagesContainer,
+  AdvantagesHeaderContainer,
+} from 'components/Defaults/Container/Container.styles';
 import Content from 'components/Advantages/Content/Content.component';
 
 //Icons
@@ -17,10 +20,10 @@ export default function Advantages(): ReactElement {
   }, []);
   return (
     <AdvantagesContainer>
-      <div>
+      <AdvantagesHeaderContainer>
         {/* div is for Safari */}
         <StudentsSVG {...ADVANTAGES_IMAGE_SIZES} />
-      </div>
+      </AdvantagesHeaderContainer>
       <Content />
     </AdvantagesContainer>
   );
