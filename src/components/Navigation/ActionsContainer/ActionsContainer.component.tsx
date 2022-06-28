@@ -14,9 +14,9 @@ import IconButton from 'components/Defaults/IconButton/IconButton.component';
 export default function ActionsContainer(): ReactElement {
   return (
     <NavigationActionsContainer>
-      {NAVIGATION_ACTIONS_ICONS.map((Icon) => {
+      {NAVIGATION_ACTIONS_ICONS.map((Icon, index) => {
         return (
-          <IconButton {...NAVIGATION_ICON_BUTTON_SIZES}>
+          <IconButton key={index} {...NAVIGATION_ICON_BUTTON_SIZES}>
             <Icon />
           </IconButton>
         );
