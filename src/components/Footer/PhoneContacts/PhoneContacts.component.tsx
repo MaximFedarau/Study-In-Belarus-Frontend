@@ -1,6 +1,9 @@
 //Types
 import { ReactElement } from 'react';
 
+//Constants
+import { FOOTER_CONTACT_NUMBERS } from 'constants/constants';
+
 //Components
 import {
   FooterContactsItemsContainer,
@@ -16,9 +19,9 @@ export default function PhoneContacts(): ReactElement {
     <FooterContactsItemsContainer>
       <LocalPhoneIcon />
       <FooterPhoneNumbersContainer>
-        <ContactsText>+375-17-306-52-59</ContactsText>
-        <ContactsText>+375-17-306-52-71</ContactsText>
-        <ContactsText>+375-29-691-38-08</ContactsText>
+        {FOOTER_CONTACT_NUMBERS.map((number) => (
+          <ContactsText key={number}>{number}</ContactsText>
+        ))}
       </FooterPhoneNumbersContainer>
     </FooterContactsItemsContainer>
   );

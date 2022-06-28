@@ -21,7 +21,7 @@ export default function Content(): ReactElement {
       <LogoSVG />
       <FooterTextContainer>
         {Object.keys(NAVIGATION_DRAWER_ITEMS).map((category) => (
-          <BottomLink>{category}</BottomLink>
+          <BottomLink key={category}>{category}</BottomLink>
         ))}
       </FooterTextContainer>
       <Contacts />

@@ -91,3 +91,10 @@ export const FOOTER_BACKGROUND_BY_PATH = {
 export const FOOTER_NETWORK_ICON_OPTIONS = {
   style: { width: '53px', height: '53px', cursor: 'pointer' },
 };
+
+//Footer Contact Numbers
+export const FOOTER_CONTACT_NUMBERS = [
+  '+375-17-306-52-59',
+  '+375-17-306-52-71',
+  '+375-29-691-38-08',
+];
