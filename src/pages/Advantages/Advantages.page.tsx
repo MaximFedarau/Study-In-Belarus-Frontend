@@ -1,5 +1,5 @@
 //Types
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 //Constants
 import { ADVANTAGES_IMAGE_SIZES } from 'constants/constants';
@@ -14,15 +14,12 @@ import Content from 'components/Advantages/Content/Content.component';
 //Icons
 import { ReactComponent as StudentsSVG } from 'assets/images/advantages/students.svg';
 
-//React Helmet
-import { Helmet } from 'react-helmet';
-
 export default function Advantages(): ReactElement {
+  React.useEffect(() => {
+    document.title = 'Advantages of Studying in Belarus';
+  }, []);
   return (
     <AdvantagesContainer>
-      {/* <Helmet>
-        <title>Advantages of Studying in Belarus</title>
-      </Helmet> */}
       <AdvantagesHeaderContainer>
         {/* div is for Safari */}
         <StudentsSVG {...ADVANTAGES_IMAGE_SIZES} />

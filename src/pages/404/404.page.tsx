@@ -1,5 +1,5 @@
 //Types
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 //Components
 import {
@@ -14,15 +14,12 @@ import {
   NotFoundFooter,
 } from 'components/Defaults/Text/Text.styles';
 
-//React Helmet
-import { Helmet } from 'react-helmet';
-
 export default function Page404(): ReactElement {
+  React.useEffect(() => {
+    document.title = '404';
+  }, []);
   return (
     <NotFoundContainer>
-      {/* <Helmet>
-        <title>404</title>
-      </Helmet> */}
       <NotFoundContentContainer>
         <NotFoundHeaderContainer>
           <NotFoundHeader>Study in Belarus</NotFoundHeader>
