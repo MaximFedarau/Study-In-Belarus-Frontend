@@ -5,7 +5,6 @@ import React, { ReactElement } from 'react';
 import {
   NotFoundContainer,
   NotFoundContentContainer,
-  NotFoundHeaderContainer,
   NotFoundInfoContainer,
 } from 'components/Defaults/Container/Container.styles';
 import {
@@ -21,9 +20,7 @@ export default function Page404(): ReactElement {
   return (
     <NotFoundContainer>
       <NotFoundContentContainer>
-        <NotFoundHeaderContainer>
-          <NotFoundHeader>Study in Belarus</NotFoundHeader>
-        </NotFoundHeaderContainer>
+        <NotFoundHeader>Study in Belarus</NotFoundHeader>
         <NotFoundInfoContainer>
           <NotFoundText>A 404 error has occurred. To continue:</NotFoundText>
           <NotFoundText>Reload current page, or</NotFoundText>
@@ -31,10 +28,10 @@ export default function Page404(): ReactElement {
             Navigate to the home page. Also check your internet connection and
             reload current page.
           </NotFoundText>
-          <NotFoundFooter>
-            {`© ${new Date().getFullYear()} Study in Belarus. All rights reserved.`}
-          </NotFoundFooter>
         </NotFoundInfoContainer>
+        <NotFoundFooter>
+          {`© ${new Date().getFullYear()} Study in Belarus. All rights reserved.`}
+        </NotFoundFooter>
       </NotFoundContentContainer>
     </NotFoundContainer>
   );

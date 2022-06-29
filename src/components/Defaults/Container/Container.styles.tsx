@@ -2,7 +2,7 @@
 import { styled, Box, AppBar } from '@mui/material';
 
 //Constants
-import { WINDOWS_BLUE, WINDOWS_GRAY, TRUE_BLUE } from 'constants/colors';
+import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
 
 // * Default
 
@@ -71,7 +71,8 @@ export const NavigationDrawerLinksContainer = styled(Container)(
 
 // * Footer
 
-export const FooterMainContainer = styled(Container)({
+export const FooterMainContainer = styled('footer')({
+  display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
 });
@@ -186,12 +187,7 @@ export const NotFoundContentContainer = styled(Container)({
   marginBottom: '64px',
 });
 
-export const NotFoundHeaderContainer = styled(Container)({
-  background: WINDOWS_GRAY,
-  padding: '1px 12px 1px 12px',
-});
-
-export const NotFoundInfoContainer = styled(Container)({
+export const NotFoundInfoContainer = styled('section')({
   display: 'flex',
   flexDirection: 'column',
   gap: '23px',
@@ -211,7 +207,9 @@ export const AdvantagesContainer = styled(Container)({
   },
 });
 
-export const AdvantagesHeaderContainer = styled(Container)({
+export const AdvantagesHeaderContainer = styled('header')({
+  display: 'flex',
+  flexDirection: 'row',
   alignItems: 'unset',
   width: '100%',
   maxWidth: 2000,
@@ -242,7 +240,8 @@ export const ArticleContainer = styled(Container)({
   },
 });
 
-export const ArrowContainer = styled(Container)({
+export const ArrowContainer = styled('aside')({
+  display: 'flex',
   margin: '2.2rem 20px 0 0',
   alignItems: 'unset',
   '@media screen and (max-width: 800px)': {
@@ -252,7 +251,7 @@ export const ArrowContainer = styled(Container)({
   },
 });
 
-export const ArticleTextContainer = styled(Container)({
+export const ArticleTextContainer = styled('section')({
   display: 'flex',
   flexDirection: 'column',
   gap: 15,
@@ -264,7 +263,7 @@ export const ArticleTextContainer = styled(Container)({
   },
 });
 
-export const SubarticleContainer = styled(Container)({
+export const SubarticleContainer = styled('section')({
   display: 'flex',
   flexDirection: 'column',
   gap: '17px',
@@ -275,7 +274,8 @@ export const SubarticleContainer = styled(Container)({
   },
 });
 
-export const ArticleNavigationContainer = styled(Container)({
+export const ArticleNavigationContainer = styled('aside')({
+  display: 'flex',
   gap: '42px',
   alignItems: 'unset',
   flexDirection: 'column',

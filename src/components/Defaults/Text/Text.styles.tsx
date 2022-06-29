@@ -2,7 +2,7 @@
 import { styled, Typography } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE, SUVA_GREY } from '../../../constants/colors';
+import { TRUE_BLUE, SUVA_GREY, WINDOWS_GRAY } from '../../../constants/colors';
 
 // * Default
 
@@ -55,11 +55,13 @@ export const ContactsText = styled(DefaultText)({
 });
 
 // * 404
-export const NotFoundHeader = styled(DefaultText)({
+export const NotFoundHeader = styled('header')({
   color: '#0000a3',
   fontFamily: 'Windows Regular',
   fontSize: 18,
   fontWeight: 'bold',
+  background: WINDOWS_GRAY,
+  padding: '1px 12px 1px 12px',
 });
 
 export const NotFoundText = styled(DefaultText)({
@@ -69,7 +71,7 @@ export const NotFoundText = styled(DefaultText)({
   fontSize: 20,
 });
 
-export const NotFoundFooter = styled(DefaultText)({
+export const NotFoundFooter = styled('footer')({
   color: 'white',
   fontFamily: 'Windows Regular',
   fontWeight: 'bold',
@@ -78,12 +80,14 @@ export const NotFoundFooter = styled(DefaultText)({
 });
 
 // * Advantages
-export const ArticlePathText = styled(DefaultText)({
+export const ArticlePathText = styled('nav')({
   color: SUVA_GREY,
   fontSize: '18px',
   fontFamily: 'Roboto Regular',
   fontWeight: 500,
   marginLeft: 90,
+  lineHeight: 1.5,
+  letterSpacing: '0.00938em',
   '@media screen and (max-width: 800px)': {
     textAlign: 'center',
     marginLeft: 0,
