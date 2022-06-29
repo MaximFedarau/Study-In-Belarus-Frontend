@@ -53,12 +53,12 @@ export const NavigationDrawerLinksContainer = styled(Container)(
 
 export const FooterMainContainer = styled(Container)({
   flexDirection: 'column',
-  alignItems: 'unset',
+  alignItems: 'center',
 });
 
 export const FooterWaveContainer = styled(Container)({
   display: 'none',
-  '@media screen and (max-width: 1180px)': {
+  '@media screen and (max-width: 1070px)': {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'end',
@@ -77,16 +77,16 @@ export const FooterContainer = styled(Container)(
     backgroundImage: `url(${image})`,
     width: '100vw',
     height: '588px',
+    maxWidth: 2000,
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'bottom',
-    backgroundSize: 'contain',
+    backgroundPosition: 'top',
+    backgroundSize: 'cover',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'flex-end',
-    '@media screen and (max-width: 1180px)': {
+    alignItems: '',
+    '@media screen and (max-width: 1070px)': {
       background: mobileBackground,
       height: '100%',
-      justifyContent: 'center',
     },
   }),
 );
@@ -94,15 +94,15 @@ export const FooterContainer = styled(Container)(
 export const FooterContentContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
-  alignSelf: 'flex-end',
+  alignSelf: 'center',
   gap: '57px',
   alignItems: 'unset',
-  marginBottom: '5%',
-  '@media screen and (max-width: 1180px)': {
+  marginTop: '5%',
+  '@media screen and (max-width: 1070px)': {
     alignItems: 'center',
     gap: '40px',
     width: '100%',
-    marginBottom: 0,
+    margin: 0,
   },
 });
 
@@ -111,7 +111,7 @@ export const FooterTextContainer = styled(Container)({
   flexDirection: 'row',
   alignItems: 'unset',
   gap: '19px',
-  '@media screen and (max-width: 1180px)': {
+  '@media screen and (max-width: 1070px)': {
     flexDirection: 'column',
     alignItems: 'center',
   },
@@ -122,7 +122,7 @@ export const FooterContactsContainer = styled(Container)({
   flexDirection: 'row',
   gap: '40px',
   justifyContent: 'center',
-  '@media screen and (max-width: 1180px)': {
+  '@media screen and (max-width: 1070px)': {
     flexDirection: 'column',
     alignItems: 'center',
   },
