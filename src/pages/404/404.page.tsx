@@ -1,6 +1,9 @@
 //Types
 import React, { ReactElement } from 'react';
 
+//Constants
+import { ERROR_MESSAGES } from 'constants/constants';
+
 //Components
 import {
   NotFoundContainer,
@@ -22,12 +25,9 @@ export default function Page404(): ReactElement {
       <NotFoundContentContainer>
         <NotFoundHeader>Study in Belarus</NotFoundHeader>
         <NotFoundInfoContainer>
-          <NotFoundText>A 404 error has occurred. To continue:</NotFoundText>
-          <NotFoundText>Reload current page, or</NotFoundText>
-          <NotFoundText>
-            Navigate to the home page. Also check your internet connection and
-            reload current page.
-          </NotFoundText>
+          {ERROR_MESSAGES.map((message) => (
+            <NotFoundText key={message}>{message}</NotFoundText>
+          ))}
         </NotFoundInfoContainer>
         <NotFoundFooter>
           {`© ${new Date().getFullYear()} Study in Belarus. All rights reserved.`}

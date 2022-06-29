@@ -99,6 +99,13 @@ export const FOOTER_CONTACT_NUMBERS = [
   '+375-29-691-38-08',
 ];
 
+//404 page error messages
+export const ERROR_MESSAGES = [
+  'A 404 error has occurred. To continue:',
+  'Reload current page, or',
+  'Navigate to the home page. Also check your internet connection and reload current page.',
+];
+
 //Advantages Page Image Sizes
 export const ADVANTAGES_IMAGE_SIZES = {
   style: { width: '100%', height: '100%' },
