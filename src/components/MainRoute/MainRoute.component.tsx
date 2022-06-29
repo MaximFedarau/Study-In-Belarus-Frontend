@@ -15,7 +15,7 @@ export default function MainRoute(): RouteObject {
       { path: '/', element: <Home /> },
       {
         path: '/advantages',
-        element: <div>Advantages</div>,
+        element: <div style={{ minHeight: '100vh' }}>Advantages</div>,
       },
     ],
   };

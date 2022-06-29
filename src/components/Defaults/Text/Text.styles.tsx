@@ -27,3 +27,23 @@ export const SubsectionText = styled(DefaultText)({
   lineHeight: '23px',
   maxWidth: '266px',
 });
+
+export const BottomLink = styled(DefaultText)({
+  userSelect: 'none',
+  fontFamily: 'Cera Pro Bold',
+  fontSize: '18px',
+  lineHeight: '21px',
+  cursor: 'pointer',
+  textTransform: 'uppercase',
+  textAlign: 'center',
+});
+
+export const ContactsText = styled(DefaultText)({
+  fontFamily: 'Cera Pro Light',
+  fontSize: '18px',
+  lineHeight: '21px',
+  maxWidth: '250px',
+  '@media screen and (max-width: 1180px)': {
+    textAlign: 'center',
+  },
+});

@@ -4,6 +4,8 @@ import { BUTTON_SIZE, BUTTON_VARIANT } from 'constants/enum';
 
 //Consntants
 import { TRUE_BLUE } from './colors';
+import WHITE_WAVE from '../assets/images/wave.svg';
+import BLUE_WAVE from '../assets/images/blue_wave.svg';
 
 //Icons
 import SearchIcon from '@mui/icons-material/Search';
@@ -34,6 +36,11 @@ export const BUTTON_SIZE_STYLING = {
   },
 };
 
+export const URLS = {
+  HOME: '/',
+  ADVANTAGES: '/advantages',
+};
+
 export const NAVIGATION_ICON_BUTTON_SIZES = { width: 35, height: 35 };
 
 export const NAVIGATION_ACTIONS_ICONS = [
@@ -46,7 +53,7 @@ export const NAVIGATION_DRAWER_ITEMS: NavigatonDrawerItemsInterface = {
   'Why Belarus': [
     {
       name: 'Advantages of Studying in Belarus',
-      link: '/advantages',
+      link: URLS.ADVANTAGES,
     },
     {
       name: 'Development of Higher Education in the Republic of Belarus',
@@ -67,3 +74,27 @@ export const NAVIGATION_DRAWER_ITEMS: NavigatonDrawerItemsInterface = {
   NEWS: [],
   'EVENT CALENDAR': [],
 };
+
+//Footer Background color depending on Path
+export const FOOTER_BACKGROUND_BY_PATH = {
+  [URLS.HOME]: {
+    image: WHITE_WAVE,
+    mobileBackground: 'white',
+  },
+  [URLS.ADVANTAGES]: {
+    image: BLUE_WAVE,
+    mobileBackground: TRUE_BLUE,
+  },
+};
+
+//Footer Network Icons
+export const FOOTER_NETWORK_ICON_OPTIONS = {
+  style: { width: '53px', height: '53px', cursor: 'pointer' },
+};
+
+//Footer Contact Numbers
+export const FOOTER_CONTACT_NUMBERS = [
+  '+375-17-306-52-59',
+  '+375-17-306-52-71',
+  '+375-29-691-38-08',
+];

@@ -50,3 +50,99 @@ export const NavigationDrawerLinksContainer = styled(Container)(
     display: isSelected ? 'flex' : 'none',
   }),
 );
+
+export const FooterMainContainer = styled(Container)({
+  flexDirection: 'column',
+  alignItems: 'center',
+});
+
+export const FooterWaveContainer = styled(Container)({
+  display: 'none',
+  '@media screen and (max-width: 1070px)': {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'end',
+    justifyContent: 'end',
+  },
+});
+
+export const FooterContainer = styled(Container)(
+  ({
+    image,
+    mobileBackground,
+  }: {
+    image?: string;
+    mobileBackground?: string;
+  }) => ({
+    backgroundImage: `url(${image})`,
+    width: '100vw',
+    height: '588px',
+    maxWidth: 2000,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'top',
+    backgroundSize: 'cover',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: '',
+    '@media screen and (max-width: 1070px)': {
+      background: mobileBackground,
+      height: '100%',
+    },
+  }),
+);
+
+export const FooterContentContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  alignSelf: 'center',
+  gap: '57px',
+  alignItems: 'unset',
+  marginTop: '5%',
+  '@media screen and (max-width: 1070px)': {
+    alignItems: 'center',
+    gap: '40px',
+    width: '100%',
+    margin: 0,
+  },
+});
+
+export const FooterTextContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'unset',
+  gap: '19px',
+  '@media screen and (max-width: 1070px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+});
+
+export const FooterContactsContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '40px',
+  justifyContent: 'center',
+  '@media screen and (max-width: 1070px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+});
+
+export const FooterContactsItemsContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  gap: '16px',
+});
+
+export const FooterPhoneNumbersContainer = styled(Container)({
+  flexDirection: 'column',
+  alignItems: 'unset',
+});
+
+export const FooterNetworksContactsContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'center',
+  gap: '48px',
+});
