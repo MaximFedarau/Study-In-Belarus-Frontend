@@ -1,9 +1,16 @@
 //Types
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
+
+//React Helmet
+import { Helmet } from 'react-helmet';
 
 export default function Home(): ReactElement {
-  React.useEffect(() => {
-    document.title = 'Home';
-  }, []);
-  return <div style={{ minHeight: '100vh' }}>Home</div>;
+  return (
+    <div style={{ minHeight: '100vh' }}>
+      {/* <Helmet>
+        <title>Home</title>
+      </Helmet> */}
+      Home
+    </div>
+  );
 }
