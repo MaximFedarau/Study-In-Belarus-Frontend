@@ -154,7 +154,7 @@ export const LATEST_NEWS: NewsItemInterface[][] = [
 export const NEWS_ITEM_STYLING = {
   [DEFAULT_SIZES.SMALL]: {
     width: '97%',
-    height: '13vw',
+    height: '12.4vw',
     fontSize: 16,
     '@media screen and (max-width: 1070px)': {
       height: '20vw',

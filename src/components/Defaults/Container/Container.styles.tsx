@@ -250,7 +250,9 @@ export const LatestNewsColumnContainer = styled(Section)({
   gap: '27px',
   flexDirection: 'column',
   ':last-child': {
-    flexDirection: 'column-reverse',
+    '> section': {
+      order: -1,
+    },
   },
 });
 
