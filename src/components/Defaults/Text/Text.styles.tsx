@@ -79,7 +79,30 @@ export const NotFoundFooter = styled('footer')({
   textAlign: 'center',
 });
 
-// * Home
+// *
+
+export const CarouselStudentHeader = styled('h1')({
+  textTransform: 'capitalize',
+  '@media screen and (max-width: 910px)': {
+    textAlign: 'center',
+  },
+});
+
+export const CarouselStudentText = styled('p')({
+  textTransform: 'capitalize',
+  maxWidth: 480,
+  '@media screen and (max-width: 910px)': {
+    textAlign: 'center',
+  },
+});
+
+export const CarouselStudentAdditionalText = styled('em')({
+  textTransform: 'capitalize',
+  '@media screen and (max-width: 910px)': {
+    textAlign: 'center',
+  },
+});
+
 export const LatestNewsHeaderText = styled(DefaultText)({
   color: 'white',
   fontWeight: 700,

@@ -1,11 +1,16 @@
 //Types
-import { NavigatonDrawerItemsInterface, NewsItemInterface } from './types';
+import {
+  NavigatonDrawerItemsInterface,
+  NewsItemInterface,
+  CarouselStudentInterface,
+} from './types';
 import { DEFAULT_SIZES, BUTTON_VARIANT } from 'constants/enum';
 
 //Consntants
 import { TRUE_BLUE } from './colors';
 import WHITE_WAVE from 'assets/images/footer/wave.svg';
 import BLUE_WAVE from 'assets/images/footer/blue_wave.svg';
+import BEZZOT_AMANOV from 'assets/images/home/bezzot_amanov.svg';
 import NEWS_IMAGE from 'assets/images/home/news_image.svg';
 
 //Icons
@@ -108,6 +113,18 @@ export const ERROR_MESSAGES = [
 ];
 
 //Home Page News
+
+export const CAROUSEL_STUDENTS: CarouselStudentInterface[] = [
+  {
+    name: 'Bezzot Amanov',
+    speech:
+      'Reputable teachers and scientists make Belarusian education highly valed in our country',
+    image: BEZZOT_AMANOV,
+    country: 'Turkmenistan ',
+    education: 'Student of MSU A. Kuleshova',
+  },
+];
+
 export const LATEST_NEWS: NewsItemInterface[][] = [
   [
     {
@@ -151,6 +168,7 @@ export const LATEST_NEWS: NewsItemInterface[][] = [
   ],
 ];
 
+//News Item Styling depending on Size
 export const NEWS_ITEM_STYLING = {
   [DEFAULT_SIZES.SMALL]: {
     width: '97%',

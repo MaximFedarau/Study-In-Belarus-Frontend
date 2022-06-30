@@ -19,7 +19,7 @@ interface NewsItemProps extends NewsItemInterface {
 }
 
 export default function NewsItem({
-  title: children,
+  title,
   date,
   image,
   size,
@@ -27,7 +27,7 @@ export default function NewsItem({
   return (
     <NewsItemContainer size={size} image={image}>
       {date && <NewsItemDateText>{dateFormatting(date)}</NewsItemDateText>}
-      <NewsItemHeader>{children}</NewsItemHeader>
+      <NewsItemHeader>{title}</NewsItemHeader>
     </NewsItemContainer>
   );
 }

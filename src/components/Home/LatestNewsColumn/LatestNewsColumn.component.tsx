@@ -21,21 +21,10 @@ export default function LatestNewsColumn({
   const mainNews = children[0];
   return (
     <LatestNewsColumnContainer>
-      <NewsItem
-        {...{
-          ...mainNews,
-          size: DEFAULT_SIZES.LARGE,
-        }}
-      >
-        {mainNews.title}
-      </NewsItem>
+      <NewsItem {...mainNews} size={DEFAULT_SIZES.LARGE} />
       <LatestNewsColumnSubcontainer>
         {children.slice(1).map((newsItem, index) => (
-          <React.Fragment key={index}>
-            <NewsItem {...{ ...newsItem, size: DEFAULT_SIZES.SMALL }}>
-              {newsItem.title}
-            </NewsItem>
-          </React.Fragment>
+          <NewsItem key={index} {...newsItem} size={DEFAULT_SIZES.SMALL} />
         ))}
       </LatestNewsColumnSubcontainer>
     </LatestNewsColumnContainer>

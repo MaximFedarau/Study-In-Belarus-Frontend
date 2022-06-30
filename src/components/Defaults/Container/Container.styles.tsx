@@ -29,6 +29,15 @@ export const Section = styled('section')(
   }),
 );
 
+export const Article = styled('article')(
+  ({ width, height }: { width?: string; height?: string }) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    width,
+    height,
+  }),
+);
+
 // * Outlet Container
 export const OutletContainer = styled(Box)({
   display: 'flex',
@@ -200,7 +209,7 @@ export const NotFoundContentContainer = styled(Container)({
   marginBottom: '64px',
 });
 
-export const NotFoundInfoContainer = styled('section')({
+export const NotFoundInfoContainer = styled(Section)({
   display: 'flex',
   flexDirection: 'column',
   gap: '23px',
@@ -208,6 +217,44 @@ export const NotFoundInfoContainer = styled('section')({
 });
 
 // * Home Page
+
+export const CarouselContainer = styled(Section)({
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  height: '50vh',
+  width: '100%',
+  maxWidth: 2000,
+  position: 'relative',
+  boxShadow: '0px 4px 30px rgba(0, 0, 0, 0.3)',
+});
+
+export const CarouselArrowWrapper = styled(Container)({
+  marginLeft: '3%',
+  transform: 'rotate(180deg)',
+  ':last-child': {
+    marginRight: '3%',
+    marginLeft: 0,
+    transform: 'unset',
+  },
+});
+
+export const CarouselStudentInfo = styled(Article)({
+  flexDirection: 'row',
+  alignItems: 'center',
+  gap: 30,
+  '@media screen and (max-width: 910px)': {
+    flexDirection: 'column',
+    gap: 0,
+  },
+});
+
+export const CarouselStudentAdditionalInfo = styled(Section)({
+  '@media screen and (max-width: 910px)': {
+    alignItems: 'center',
+  },
+});
+
 export const HomeContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
@@ -262,7 +309,7 @@ export const LatestNewsColumnSubcontainer = styled(Section)({
   gap: 30,
 });
 
-export const NewsItemContainer = styled('article')(
+export const NewsItemContainer = styled(Article)(
   ({ image, size }: { image: string; size?: DEFAULT_SIZES }) => ({
     backgroundImage: `url(${image})`,
     backgroundRepeat: 'no-repeat',
@@ -340,9 +387,7 @@ export const ArrowContainer = styled('aside')({
   },
 });
 
-export const ArticleTextContainer = styled('article')({
-  display: 'flex',
-  flexDirection: 'column',
+export const ArticleTextContainer = styled(Article)({
   gap: 15,
   alignItems: 'unset',
   '@media screen and (max-width: 800px)': {
@@ -352,9 +397,7 @@ export const ArticleTextContainer = styled('article')({
   },
 });
 
-export const SubarticleContainer = styled('section')({
-  display: 'flex',
-  flexDirection: 'column',
+export const SubarticleContainer = styled(Section)({
   gap: '17px',
   width: '70%',
   alignItems: 'unset',

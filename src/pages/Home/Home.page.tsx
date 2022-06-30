@@ -2,7 +2,8 @@
 import React, { ReactElement } from 'react';
 
 //Components
-import LatestNews from 'components/Home/LatesNews/LatestNews.component';
+import Carousel from 'components/Home/Carousel/Carousel.component';
+import LatestNews from 'components/Home/LatestNews/LatestNews.component';
 
 import { HomeContainer } from 'components/Defaults/Container/Container.styles';
 
@@ -12,8 +13,8 @@ export default function Home(): ReactElement {
   }, []);
   return (
     <HomeContainer>
-      <div>{/* Part with waves */}</div>
-      <div>{/* Part with carousel */}</div>
+      <section>{/* Part with waves */}</section>
+      <Carousel />
       <LatestNews />
     </HomeContainer>
   );
