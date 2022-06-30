@@ -230,7 +230,7 @@ export const LatestNewsHeader = styled('header')({
   justifyContent: 'space-between',
   alignItems: 'flex-end',
   width: '80%',
-  '@media screen and (max-width: 800px)': {
+  '@media screen and (max-width: 1070px)': {
     flexDirection: 'column',
     alignItems: 'center',
   },
@@ -240,7 +240,7 @@ export const LatesNewsContent = styled(Section)({
   flexDirection: 'row',
   gap: 30,
   margin: '5% 10% 0 10.5%',
-  '@media screen and (max-width: 800px)': {
+  '@media screen and (max-width: 1070px)': {
     flexDirection: 'column',
     alignItems: 'center',
   },
@@ -258,9 +258,6 @@ export const LatestNewsColumnSubcontainer = styled(Section)({
   flexDirection: 'row',
   justifyContent: 'space-between',
   gap: 30,
-  '@media screen and (max-width: 800px)': {
-    flexDirection: 'column',
-  },
 });
 
 export const NewsItemContainer = styled('article')(
