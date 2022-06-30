@@ -2,12 +2,16 @@
 import { styled, Typography } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE } from '../../../constants/colors';
+import { TRUE_BLUE, SUVA_GREY, WINDOWS_GRAY } from '../../../constants/colors';
+
+// * Default
 
 export const DefaultText = styled(Typography)({
   color: 'black',
   fontSize: '14px',
 });
+
+// * Navigation
 
 export const SectionText = styled(DefaultText)(
   ({ isSelected }: { isSelected?: boolean }) => ({
@@ -28,6 +32,8 @@ export const SubsectionText = styled(DefaultText)({
   maxWidth: '266px',
 });
 
+// * Footer
+
 export const BottomLink = styled(DefaultText)({
   userSelect: 'none',
   fontFamily: 'Cera Pro Bold',
@@ -47,3 +53,70 @@ export const ContactsText = styled(DefaultText)({
     textAlign: 'center',
   },
 });
+
+// * 404
+export const NotFoundHeader = styled('header')({
+  color: '#0000a3',
+  fontFamily: 'Windows Regular',
+  fontSize: 18,
+  fontWeight: 'bold',
+  background: WINDOWS_GRAY,
+  padding: '1px 12px 1px 12px',
+});
+
+export const NotFoundText = styled(DefaultText)({
+  color: 'white',
+  fontFamily: 'Windows Regular',
+  fontWeight: 'bold',
+  fontSize: 20,
+});
+
+export const NotFoundFooter = styled('footer')({
+  color: 'white',
+  fontFamily: 'Windows Regular',
+  fontWeight: 'bold',
+  fontSize: 20,
+  textAlign: 'center',
+});
+
+// * Advantages
+export const ArticlePathText = styled('nav')({
+  color: SUVA_GREY,
+  fontSize: '18px',
+  fontFamily: 'Roboto Regular',
+  fontWeight: 500,
+  marginLeft: 90,
+  lineHeight: 1.5,
+  letterSpacing: '0.00938em',
+  '@media screen and (max-width: 800px)': {
+    textAlign: 'center',
+    marginLeft: 0,
+  },
+});
+
+export const ArticleHeaderText = styled(DefaultText)({
+  fontFamily: 'Roboto Regular',
+  fontWeight: 700,
+  fontSize: '36px',
+  textTransform: 'capitalize',
+  lineHeight: '42px',
+  '@media screen and (max-width: 800px)': {
+    textAlign: 'center',
+  },
+});
+
+export const SubarticleText = styled(DefaultText)({
+  fontFamily: 'Roboto Regular',
+  fontWeight: 400,
+  fontSize: '20px',
+  color: TRUE_BLUE,
+});
+
+export const ArticleText = styled(DefaultText)(
+  ({ isActive }: { isActive?: boolean }) => ({
+    fontFamily: 'Roboto Regular',
+    fontWeight: isActive ? 500 : 400,
+    fontSize: '18px',
+    color: isActive ? TRUE_BLUE : 'black',
+  }),
+);

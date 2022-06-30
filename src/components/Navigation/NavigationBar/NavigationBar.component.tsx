@@ -9,14 +9,14 @@ import {
 import ButtonsContainer from 'components/Navigation/ButtonsContainer/ButtonsContainer.component';
 
 //Icons
-import { ReactComponent as LogoSvg } from 'assets/images/logo.svg';
+import { ReactComponent as LogoSvg } from 'assets/images/navigation/logo.svg';
 
 //React Router
 import { Link } from 'react-router-dom';
 
 export default function NavigationBar(): ReactElement {
   return (
-    <NavigationContainer width="100%" height="72px">
+    <NavigationContainer>
       <NavigationContentContainer width="95%">
         <Link to="/">
           <LogoSvg width={95} height={45} />

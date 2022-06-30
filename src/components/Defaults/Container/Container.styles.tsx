@@ -1,5 +1,10 @@
 //MUI
-import { styled, Box } from '@mui/material';
+import { styled, Box, AppBar } from '@mui/material';
+
+//Constants
+import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
+
+// * Default
 
 export const Container = styled(Box)(
   ({ width, height }: { width?: string; height?: string }) => ({
@@ -11,8 +16,21 @@ export const Container = styled(Box)(
   }),
 );
 
-export const NavigationContainer = styled(Container)({
+// * Outlet Container
+export const OutletContainer = styled(Box)({
+  display: 'flex',
+  marginTop: '72px',
+});
+
+// * Navigation
+
+export const NavigationContainer = styled(AppBar)({
   justifyContent: 'center',
+  display: 'flex',
+  background: 'white',
+  width: '100%',
+  height: '72px',
+  boxShadow: 'none',
 });
 
 export const NavigationContentContainer = styled(Container)({
@@ -51,7 +69,10 @@ export const NavigationDrawerLinksContainer = styled(Container)(
   }),
 );
 
-export const FooterMainContainer = styled(Container)({
+// * Footer
+
+export const FooterMainContainer = styled('footer')({
+  display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
 });
@@ -145,4 +166,130 @@ export const FooterNetworksContactsContainer = styled(Container)({
   flexDirection: 'row',
   alignItems: 'center',
   gap: '48px',
+});
+
+// * 404
+
+export const NotFoundContainer = styled(Container)({
+  width: '100vw',
+  height: '100vh',
+  background: WINDOWS_BLUE,
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
+export const NotFoundContentContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '16px',
+  marginBottom: '64px',
+});
+
+export const NotFoundInfoContainer = styled('section')({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '23px',
+  alignItems: 'unset',
+});
+
+// * Advantages Page
+
+export const AdvantagesContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 64,
+  width: '100%',
+  '@media screen and (max-width: 800px)': {
+    marginBottom: '48px',
+    gap: '48px',
+  },
+});
+
+export const AdvantagesHeaderContainer = styled('header')({
+  display: 'flex',
+  flexDirection: 'row',
+  alignItems: 'unset',
+  width: '100%',
+  maxWidth: 2000,
+});
+
+export const AdvantagesContentContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 17,
+  alignItems: 'unset',
+  padding: '0 3% 0 3%',
+  maxWidth: 2000,
+  '@media screen and (max-width: 800px)': {
+    padding: '0 5% 0 5%',
+    alignItems: 'center',
+  },
+});
+
+export const ArticleContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: '34px',
+  alignItems: 'unset',
+  '@media screen and (max-width: 800px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: 17,
+  },
+});
+
+export const ArrowContainer = styled('aside')({
+  display: 'flex',
+  margin: '2.2rem 20px 0 0',
+  alignItems: 'unset',
+  '@media screen and (max-width: 800px)': {
+    margin: 0,
+    width: '100%',
+    justifyContent: 'center',
+  },
+});
+
+export const ArticleTextContainer = styled('section')({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: 15,
+  alignItems: 'unset',
+  '@media screen and (max-width: 800px)': {
+    alignItems: 'center',
+    order: 1,
+    marginTop: 13,
+  },
+});
+
+export const SubarticleContainer = styled('section')({
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '17px',
+  width: '70%',
+  alignItems: 'unset',
+  '@media screen and (max-width: 800px)': {
+    width: '100%',
+  },
+});
+
+export const ArticleNavigationContainer = styled('aside')({
+  display: 'flex',
+  gap: '42px',
+  alignItems: 'unset',
+  flexDirection: 'column',
+  '@media screen and (max-width: 800px)': {
+    order: 0,
+  },
+});
+
+export const NavigationItemContainer = styled(Container)({
+  gap: 24,
+  width: '100%',
+  ':hover': {
+    '*': {
+      color: TRUE_BLUE,
+    },
+  },
 });

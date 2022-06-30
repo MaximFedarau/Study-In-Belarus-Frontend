@@ -4,13 +4,13 @@ import { BUTTON_SIZE, BUTTON_VARIANT } from 'constants/enum';
 
 //Consntants
 import { TRUE_BLUE } from './colors';
-import WHITE_WAVE from '../assets/images/wave.svg';
-import BLUE_WAVE from '../assets/images/blue_wave.svg';
+import WHITE_WAVE from 'assets/images/footer/wave.svg';
+import BLUE_WAVE from 'assets/images/footer/blue_wave.svg';
 
 //Icons
 import SearchIcon from '@mui/icons-material/Search';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
-import { ReactComponent as ENLanguageButtonSvg } from 'assets/images/EN_language_button.svg';
+import { ReactComponent as ENLanguageButtonSvg } from 'assets/images/navigation/EN_language_button.svg';
 
 export const BUTTON_VARIANT_STYLING = {
   [BUTTON_VARIANT.CONTAINED]: {
@@ -98,3 +98,15 @@ export const FOOTER_CONTACT_NUMBERS = [
   '+375-17-306-52-71',
   '+375-29-691-38-08',
 ];
+
+//404 page error messages
+export const ERROR_MESSAGES = [
+  'A 404 error has occurred. To continue:',
+  'Reload current page, or',
+  'Navigate to the home page. Also check your internet connection and reload current page.',
+];
+
+//Advantages Page Image Sizes
+export const ADVANTAGES_IMAGE_SIZES = {
+  style: { width: '100%', height: '100%' },
+};

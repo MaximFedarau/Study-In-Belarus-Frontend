@@ -10,7 +10,7 @@ import IconButton from 'components/Defaults/IconButton/IconButton.component';
 import Drawer from 'components/Navigation/Drawer/Drawer.component';
 
 //Icons
-import { ReactComponent as DrawerButtonSvg } from 'assets/images/drawer_button.svg';
+import { ReactComponent as DrawerButtonSvg } from 'assets/images/navigation/drawer_button.svg';
 import ActionsContainer from 'components/Navigation/ActionsContainer/ActionsContainer.component';
 
 export default function ButtonsContainer(): ReactElement {
