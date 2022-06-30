@@ -4,8 +4,8 @@ export enum BUTTON_VARIANT {
   OUTLINED = 'outlined',
 }
 
-//Button Sizes
-export enum BUTTON_SIZE {
+//Default Sizes Systme
+export enum DEFAULT_SIZES {
   SMALL = 'small',
   MEDIUM = 'medium',
   LARGE = 'large',

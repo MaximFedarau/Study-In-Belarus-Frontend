@@ -8,3 +8,10 @@ interface DrawerLinkInterface {
 export interface NavigatonDrawerItemsInterface {
   [key: string]: DrawerLinkInterface[];
 }
+
+//Interface for News
+export interface NewsItemInterface {
+  title: string;
+  date?: Date;
+  image: string;
+}

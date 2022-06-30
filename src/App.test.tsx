@@ -1,9 +1,22 @@
-import React from 'react';
+//RTL
 import { render, screen } from '@testing-library/react';
+
+//Components
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+//React Navigation
+import { BrowserRouter } from 'react-router-dom';
+
+test('App has header and footer.', () => {
+  render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+  );
+  const header = screen.getByRole('banner');
+  expect(header).toBeInTheDocument();
+  const footer = screen.getByRole('contentinfo');
+  expect(footer).toBeInTheDocument();
 });
+
+// ! Add tests for routes.

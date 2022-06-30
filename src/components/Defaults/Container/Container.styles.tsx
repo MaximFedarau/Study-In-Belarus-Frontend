@@ -1,8 +1,12 @@
+//Types
+import { DEFAULT_SIZES } from 'constants/enum';
+
 //MUI
 import { styled, Box, AppBar } from '@mui/material';
 
 //Constants
 import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
+import { NEWS_ITEM_STYLING } from 'constants/constants';
 
 // * Default
 
@@ -13,6 +17,15 @@ export const Container = styled(Box)(
     width,
     height,
     alignItems: 'center',
+  }),
+);
+
+export const Section = styled('section')(
+  ({ width, height }: { width?: string; height?: string }) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    width,
+    height,
   }),
 );
 
@@ -194,6 +207,83 @@ export const NotFoundInfoContainer = styled('section')({
   alignItems: 'unset',
 });
 
+// * Home Page
+export const HomeContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
+});
+
+export const LatestNewsContainer = styled(Section)({
+  width: '100%',
+  maxWidth: 2000,
+  background: TRUE_BLUE,
+  alignItems: 'center',
+  justifyContent: 'center',
+  minHeight: 280,
+  padding: '10% 0 10% 0',
+});
+
+export const LatestNewsHeader = styled('header')({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'flex-end',
+  width: '80%',
+  '@media screen and (max-width: 800px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+});
+
+export const LatesNewsContent = styled(Section)({
+  flexDirection: 'row',
+  gap: 30,
+  margin: '5% 10% 0 10.5%',
+  '@media screen and (max-width: 800px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+  },
+});
+
+export const LatestNewsColumnContainer = styled(Section)({
+  gap: '27px',
+  flexDirection: 'column',
+  ':last-child': {
+    flexDirection: 'column-reverse',
+  },
+});
+
+export const LatestNewsColumnSubcontainer = styled(Section)({
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  gap: 30,
+  '@media screen and (max-width: 800px)': {
+    flexDirection: 'column',
+  },
+});
+
+export const NewsItemContainer = styled('article')(
+  ({ image, size }: { image: string; size?: DEFAULT_SIZES }) => ({
+    backgroundImage: `url(${image})`,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    boxShadow: '0 0 0 1600px rgba(0,0,0,0.5) inset',
+    padding: '0 0 3% 3%',
+    cursor: 'pointer',
+    ':hover': {
+      boxShadow: '0 0 0 1600px rgba(255, 255, 255, 0.5) inset',
+      '*': {
+        color: 'black !important',
+      },
+    },
+    ...NEWS_ITEM_STYLING[size!],
+  }),
+);
+
 // * Advantages Page
 
 export const AdvantagesContainer = styled(Container)({
@@ -251,7 +341,7 @@ export const ArrowContainer = styled('aside')({
   },
 });
 
-export const ArticleTextContainer = styled('section')({
+export const ArticleTextContainer = styled('article')({
   display: 'flex',
   flexDirection: 'column',
   gap: 15,

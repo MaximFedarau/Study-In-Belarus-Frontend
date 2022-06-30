@@ -79,6 +79,41 @@ export const NotFoundFooter = styled('footer')({
   textAlign: 'center',
 });
 
+// * Home
+export const LatestNewsHeaderText = styled(DefaultText)({
+  color: 'white',
+  fontWeight: 700,
+  fontSize: 96,
+  lineHeight: 1,
+  '@media screen and (max-width: 800px)': {
+    fontSize: '5rem',
+    textAlign: 'center',
+    lineHeight: '5rem',
+  },
+});
+
+export const NewsItemHeader = styled('header')({
+  color: 'white',
+  fontSize: '1em',
+  fontWeight: 700,
+});
+
+export const NewsItemDateText = styled(DefaultText)({
+  color: 'white',
+  fontSize: '.8em',
+  fontWeight: 400,
+});
+
+export const LatestNewsHeaderSubText = styled(DefaultText)({
+  color: 'white',
+  fontSize: 18,
+  lineHeight: 2.6,
+  cursor: 'pointer',
+  '@media screen and (max-width: 800px)': {
+    textAlign: 'center',
+  },
+});
+
 // * Advantages
 export const ArticlePathText = styled('nav')({
   color: SUVA_GREY,
