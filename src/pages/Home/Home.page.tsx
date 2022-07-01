@@ -1,5 +1,6 @@
 //Types
 import React, { ReactElement } from 'react';
+import { PAGES_TITLES } from 'constants/enum';
 
 //Components
 import Carousel from 'components/Home/Carousel/Carousel/Carousel.component';
@@ -9,7 +10,7 @@ import { HomeContainer } from 'components/Defaults/Container/Container.styles';
 
 export default function Home(): ReactElement {
   React.useEffect(() => {
-    document.title = 'Home';
+    document.title = PAGES_TITLES.HOME;
   }, []);
   return (
     <HomeContainer>

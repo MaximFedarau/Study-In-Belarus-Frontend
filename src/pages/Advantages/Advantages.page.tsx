@@ -1,5 +1,6 @@
 //Types
 import React, { ReactElement } from 'react';
+import { PAGES_TITLES } from 'constants/enum';
 
 //Constants
 import { ADVANTAGES_IMAGE_SIZES } from 'constants/constants';
@@ -16,7 +17,7 @@ import { ReactComponent as StudentsSVG } from 'assets/images/advantages/students
 
 export default function Advantages(): ReactElement {
   React.useEffect(() => {
-    document.title = 'Advantages of Studying in Belarus';
+    document.title = PAGES_TITLES.ADVANTAGES_OF_STUDYING_IN_BELARUS;
   }, []);
   return (
     <AdvantagesContainer>

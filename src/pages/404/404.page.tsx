@@ -1,5 +1,6 @@
 //Types
 import React, { ReactElement } from 'react';
+import { PAGES_TITLES } from 'constants/enum';
 
 //Constants
 import { ERROR_MESSAGES } from 'constants/constants';
@@ -18,7 +19,7 @@ import {
 
 export default function Page404(): ReactElement {
   React.useEffect(() => {
-    document.title = '404';
+    document.title = PAGES_TITLES.NOT_FOUND;
   }, []);
   return (
     <NotFoundContainer>
