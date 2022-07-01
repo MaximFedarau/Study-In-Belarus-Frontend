@@ -16,7 +16,7 @@ import {
 //MUI
 import { Avatar } from '@mui/material';
 
-export default function CarouselStudent({
+export default function Student({
   name,
   speech,
   image,

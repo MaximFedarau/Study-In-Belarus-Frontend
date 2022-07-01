@@ -2,8 +2,8 @@
 import React, { ReactElement } from 'react';
 
 //Components
-import Carousel from 'components/Home/Carousel/Carousel.component';
-import LatestNews from 'components/Home/LatestNews/LatestNews.component';
+import Carousel from 'components/Home/Carousel/Carousel/Carousel.component';
+import LatestNews from 'components/Home/LatestNews/LatestNews/LatestNews.component';
 
 import { HomeContainer } from 'components/Defaults/Container/Container.styles';
 

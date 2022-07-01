@@ -5,7 +5,7 @@ import { ReactElement } from 'react';
 import { LATEST_NEWS } from 'constants/constants';
 
 //Components
-import LatestNewsColumn from '../LatestNewsColumn/LatestNewsColumn.component';
+import Column from '../Column/Column.component';
 import {
   LatestNewsContainer,
   LatestNewsHeader,
@@ -24,8 +24,8 @@ export default function LatestNews(): ReactElement {
         <LatestNewsHeaderSubText>All News</LatestNewsHeaderSubText>
       </LatestNewsHeader>
       <LatesNewsContent>
-        <LatestNewsColumn>{LATEST_NEWS[0]}</LatestNewsColumn>
-        <LatestNewsColumn>{LATEST_NEWS[1]}</LatestNewsColumn>
+        <Column>{LATEST_NEWS[0]}</Column>
+        <Column>{LATEST_NEWS[1]}</Column>
       </LatesNewsContent>
     </LatestNewsContainer>
   );

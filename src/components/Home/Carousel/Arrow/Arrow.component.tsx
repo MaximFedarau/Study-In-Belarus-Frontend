@@ -9,7 +9,7 @@ import { CarouselArrowWrapper } from 'components/Defaults/Container/Container.st
 //Icons
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-export default function CarouseArrow(): ReactElement {
+export default function Arrow(): ReactElement {
   const ARROW_SIZES = { style: { width: 50, height: 50 } };
   return (
     <CarouselArrowWrapper>

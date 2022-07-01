@@ -8,14 +8,14 @@ import {
   LatestNewsColumnContainer,
   LatestNewsColumnSubcontainer,
 } from 'components/Defaults/Container/Container.styles';
-import NewsItem from 'components/Home/NewsItem/NewsItem.component';
+import NewsItem from 'components/Home/LatestNews/NewsItem/NewsItem.component';
 
 //Interface for Props
 interface LatestNewsColumnProps {
   children: NewsItemInterface[];
 }
 
-export default function LatestNewsColumn({
+export default function Column({
   children,
 }: LatestNewsColumnProps): ReactElement {
   const mainNews = children[0];
