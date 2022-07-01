@@ -296,6 +296,7 @@ export const LatesNewsContent = styled(Section)({
 export const LatestNewsColumnContainer = styled(Section)({
   gap: '27px',
   flexDirection: 'column',
+  maxWidth: 860,
   ':last-child': {
     '> section': {
       order: -1,

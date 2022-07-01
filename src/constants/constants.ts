@@ -174,6 +174,8 @@ export const NEWS_ITEM_STYLING = {
     width: '97%',
     height: '12.4vw',
     fontSize: 16,
+    maxWidth: 400,
+    maxHeight: 200,
     '@media screen and (max-width: 1070px)': {
       height: '20vw',
       fontSize: '2vw',
@@ -184,6 +186,8 @@ export const NEWS_ITEM_STYLING = {
     width: '97%',
     height: '27vw',
     fontSize: 24,
+    maxWidth: 850,
+    maxHeight: 550,
     '@media screen and (max-width: 1070px)': {
       height: '40vw',
       fontSize: '4vw',

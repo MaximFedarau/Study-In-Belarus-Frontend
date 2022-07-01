@@ -3,6 +3,9 @@ import { ReactElement } from 'react';
 import { CarouselStudentInterface } from 'constants/types';
 
 //Components
+
+import { StudentAvatar } from './Student.styles';
+
 import {
   CarouselStudentInfo,
   CarouselStudentAdditionalInfo,
@@ -13,9 +16,6 @@ import {
   CarouselStudentAdditionalText,
 } from 'components/Defaults/Text/Text.styles';
 
-//MUI
-import { Avatar } from '@mui/material';
-
 export default function Student({
   name,
   speech,
@@ -25,7 +25,7 @@ export default function Student({
 }: CarouselStudentInterface): ReactElement {
   return (
     <CarouselStudentInfo>
-      <Avatar sx={{ width: '20vw', height: '20vw' }} src={image} />
+      <StudentAvatar src={image} />
       <section>
         <CarouselStudentHeader>{name}</CarouselStudentHeader>
         <CarouselStudentText>{speech}</CarouselStudentText>
