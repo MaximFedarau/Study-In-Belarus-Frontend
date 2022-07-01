@@ -173,7 +173,7 @@ export const NEWS_ITEM_STYLING = {
   [DEFAULT_SIZES.SMALL]: {
     width: '97%',
     height: '12.4vw',
-    fontSize: 16,
+    fontSize: 15,
     maxWidth: 400,
     maxHeight: 200,
     '@media screen and (max-width: 1070px)': {

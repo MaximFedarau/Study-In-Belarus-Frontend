@@ -119,6 +119,13 @@ export const NewsItemHeader = styled('header')({
   color: 'white',
   fontSize: '1em',
   fontWeight: 700,
+  maxWidth: '99%',
+  '@media screen and (max-width: 820px)': {
+    '-webkit-line-clamp': '2',
+    display: '-webkit-box',
+    '-webkit-box-orient': 'vertical',
+    overflow: 'hidden',
+  },
 });
 
 export const NewsItemDateText = styled(DefaultText)({
