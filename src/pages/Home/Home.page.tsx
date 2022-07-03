@@ -1,6 +1,6 @@
 //Types
 import React, { ReactElement } from 'react';
-import { PAGES_TITLES } from 'constants/enum';
+import { PAGES_TITLES } from 'constants/types/enum';
 
 //Components
 import Greetings from 'components/Home/Greetings/Greetings/Greetings.component';

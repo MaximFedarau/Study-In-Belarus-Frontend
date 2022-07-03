@@ -1,9 +1,9 @@
 //Types
 import React, { ReactElement } from 'react';
-import { PAGES_TITLES } from 'constants/enum';
+import { PAGES_TITLES } from 'constants/types/enum';
 
 //Constants
-import { ADVANTAGES_IMAGE_SIZES } from 'constants/constants';
+import { ADVANTAGES_IMAGE_SIZES } from 'constants/constants/styles';
 
 //Components
 import {

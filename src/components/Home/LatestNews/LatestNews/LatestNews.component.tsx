@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { LATEST_NEWS } from 'constants/constants';
+import { LATEST_NEWS } from 'constants/constants/data';
 
 //Components
 import Column from '../Column/Column.component';

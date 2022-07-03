@@ -5,8 +5,8 @@ import { styled, Button } from '@mui/material';
 import {
   BUTTON_VARIANT_STYLING,
   BUTTON_SIZE_STYLING,
-} from 'constants/constants';
-import { DEFAULT_SIZES, BUTTON_VARIANT } from 'constants/enum';
+} from 'constants/constants/styles';
+import { DEFAULT_SIZES, BUTTON_VARIANT } from 'constants/types/enum';
 
 export const ButtonShell = styled(Button)(
   ({

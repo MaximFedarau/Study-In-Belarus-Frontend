@@ -2,7 +2,7 @@
 import { render } from '@testing-library/react';
 
 //Constants
-import { PAGES_TITLES } from 'constants/enum';
+import { PAGES_TITLES } from 'constants/types/enum';
 
 //Components
 import App from './App';

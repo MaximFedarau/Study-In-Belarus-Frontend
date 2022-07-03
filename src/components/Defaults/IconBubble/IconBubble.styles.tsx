@@ -2,7 +2,7 @@
 import { styled } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE } from '../../../constants/colors';
+import { TRUE_BLUE } from '../../../constants/constants/colors';
 
 //Components
 import { Container } from '../Container/Container.styles';

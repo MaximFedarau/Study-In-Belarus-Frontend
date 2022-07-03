@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { CAROUSEL_STUDENTS } from 'constants/constants';
+import { CAROUSEL_STUDENTS } from 'constants/constants/ui';
 
 //Components
 import Arrow from '../Arrow/Arrow.component';

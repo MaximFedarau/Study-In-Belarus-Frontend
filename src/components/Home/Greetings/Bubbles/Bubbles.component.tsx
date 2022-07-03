@@ -1,6 +1,6 @@
 //Types
 import { ReactElement } from 'react';
-import { DEFAULT_SIZES } from 'constants/enum';
+import { DEFAULT_SIZES } from 'constants/types/enum';
 
 //Components
 import Bubble from 'components/Defaults/Bubble/Bubble.component';
@@ -9,6 +9,7 @@ import TextBubble from 'components/Defaults/TextBubble/TextBubble.component';
 import {
   BubblesContainer,
   HorizontalBubbles,
+  LastHorizontalBubbles,
 } from 'components/Defaults/Container/Container.styles';
 
 export default function Bubbles(): ReactElement {
@@ -60,14 +61,7 @@ export default function Bubbles(): ReactElement {
           </Bubble>
         </div>
       </HorizontalBubbles>
-      <section
-        style={{
-          position: 'relative',
-          display: 'flex',
-          flexDirection: 'row',
-          right: 250,
-        }}
-      >
+      <LastHorizontalBubbles>
         <div
           style={{
             position: 'relative',
@@ -100,7 +94,7 @@ export default function Bubbles(): ReactElement {
             5
           </TextBubble>
         </div>
-      </section>
+      </LastHorizontalBubbles>
     </BubblesContainer>
   );
 }

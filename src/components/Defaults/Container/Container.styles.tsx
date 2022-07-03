@@ -1,12 +1,12 @@
 //Types
-import { DEFAULT_SIZES } from 'constants/enum';
+import { DEFAULT_SIZES } from 'constants/types/enum';
 
 //MUI
 import { styled, Box, AppBar } from '@mui/material';
 
 //Constants
-import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
-import { NEWS_ITEM_STYLING } from 'constants/constants';
+import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/constants/colors';
+import { NEWS_ITEM_STYLING } from 'constants/constants/styles';
 
 //Icons
 import wave from 'assets/images/home/wave.svg';
@@ -270,6 +270,12 @@ export const BubblesContainer = styled(Section)({
 
 export const HorizontalBubbles = styled(Section)({
   flexDirection: 'row',
+});
+
+export const LastHorizontalBubbles = styled(Section)({
+  position: 'relative',
+  flexDirection: 'row',
+  right: 250,
 });
 
 export const CarouselContainer = styled(Section)({

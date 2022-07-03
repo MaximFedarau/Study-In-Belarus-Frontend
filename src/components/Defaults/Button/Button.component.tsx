@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import { ButtonProps as MUIButtonProps } from '@mui/material';
 
 //Constants
-import { DEFAULT_SIZES, BUTTON_VARIANT } from 'constants/enum';
+import { DEFAULT_SIZES, BUTTON_VARIANT } from 'constants/types/enum';
 
 //Components
 import { ButtonShell } from './Button.styles';

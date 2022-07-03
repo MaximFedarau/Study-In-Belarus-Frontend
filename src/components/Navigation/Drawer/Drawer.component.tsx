@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 
 //Constants
 import { NavigationPaperStyle } from 'components/Defaults/Drawer/Drawer.styles';
-import { BUTTON_VARIANT, DEFAULT_SIZES } from 'constants/enum';
+import { BUTTON_VARIANT, DEFAULT_SIZES } from 'constants/types/enum';
 
 //Components
 import { NavigationDrawerLoginContainer } from 'components/Defaults/Container/Container.styles';

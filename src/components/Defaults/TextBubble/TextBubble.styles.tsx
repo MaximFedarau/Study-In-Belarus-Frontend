@@ -2,9 +2,9 @@
 import { styled, Box } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE } from 'constants/colors';
-import { BUBBLES_TEXT_STYLING } from 'constants/constants';
-import { DEFAULT_SIZES } from 'constants/enum';
+import { TRUE_BLUE } from 'constants/constants/colors';
+import { BUBBLES_TEXT_STYLING } from 'constants/constants/styles';
+import { DEFAULT_SIZES } from 'constants/types/enum';
 
 //Components
 import { DefaultText } from '../Text/Text.styles';
