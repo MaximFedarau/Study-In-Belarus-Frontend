@@ -9,8 +9,8 @@ import { ERROR_MESSAGES } from 'constants/constants/data';
 import {
   NotFoundContainer,
   NotFoundContentContainer,
-  NotFoundInfoContainer,
 } from 'components/Defaults/Container/Container.styles';
+import { NotFoundInfoContainer } from 'components/Defaults/Section/Section.styles';
 import {
   NotFoundHeader,
   NotFoundText,

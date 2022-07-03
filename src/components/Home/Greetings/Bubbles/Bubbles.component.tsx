@@ -10,7 +10,7 @@ import {
   BubblesContainer,
   HorizontalBubbles,
   LastHorizontalBubbles,
-} from 'components/Defaults/Container/Container.styles';
+} from 'components/Defaults/Section/Section.styles';
 
 export default function Bubbles(): ReactElement {
   return (
@@ -20,7 +20,7 @@ export default function Bubbles(): ReactElement {
           style={{
             position: 'relative',
             zIndex: 1,
-            right: 120,
+            right: 140,
           }}
         >
           <TextBubble

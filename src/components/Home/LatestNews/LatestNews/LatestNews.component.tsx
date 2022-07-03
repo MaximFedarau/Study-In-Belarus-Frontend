@@ -8,9 +8,9 @@ import { LATEST_NEWS } from 'constants/constants/data';
 import Column from '../Column/Column.component';
 import {
   LatestNewsContainer,
-  LatestNewsHeader,
   LatesNewsContent,
-} from 'components/Defaults/Container/Container.styles';
+} from 'components/Defaults/Section/Section.styles';
+import { LatestNewsHeader } from 'components/Defaults/Container/Container.styles';
 import {
   LatestNewsHeaderSubText,
   LatestNewsHeaderText,

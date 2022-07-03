@@ -8,7 +8,7 @@ import { CAROUSEL_STUDENTS } from 'constants/constants/ui';
 import Arrow from '../Arrow/Arrow.component';
 import Student from '../Student/Student.component';
 
-import { CarouselContainer } from 'components/Defaults/Container/Container.styles';
+import { CarouselContainer } from 'components/Defaults/Section/Section.styles';
 
 export default function Carousel(): ReactElement {
   const studentInfo = CAROUSEL_STUDENTS[0];

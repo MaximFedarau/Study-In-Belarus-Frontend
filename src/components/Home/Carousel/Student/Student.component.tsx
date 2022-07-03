@@ -6,10 +6,8 @@ import { CarouselStudentInterface } from 'constants/types/types';
 
 import { StudentAvatar } from './Student.styles';
 
-import {
-  CarouselStudentInfo,
-  CarouselStudentAdditionalInfo,
-} from 'components/Defaults/Container/Container.styles';
+import { CarouselStudentInfo } from 'components/Defaults/Article/Article.styles';
+import { CarouselStudentAdditionalInfo } from 'components/Defaults/Section/Section.styles';
 import {
   CarouselStudentHeader,
   CarouselStudentText,

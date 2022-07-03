@@ -7,7 +7,7 @@ import { DEFAULT_SIZES } from 'constants/types/enum';
 import { dateFormatting } from 'utils/dateFormatting';
 
 //Components
-import { NewsItemContainer } from 'components/Defaults/Container/Container.styles';
+import { NewsItemContainer } from 'components/Defaults/Article/Article.styles';
 import {
   NewsItemHeader,
   NewsItemDateText,

@@ -4,10 +4,8 @@ import { ReactElement } from 'react';
 //Components
 import Bubbles from '../Bubbles/Bubbles.component';
 
-import {
-  GreetingsContainer,
-  GreetingsHeader,
-} from 'components/Defaults/Container/Container.styles';
+import { GreetingsHeader } from 'components/Defaults/Container/Container.styles';
+import { GreetingsContainer } from 'components/Defaults/Section/Section.styles';
 
 //Icons
 import { ReactComponent as StudentWithSignSVG } from 'assets/images/home/student_with_sign.svg';

@@ -1,5 +1,5 @@
 //Types
-import React, { ReactElement } from 'react';
+import { ReactElement } from 'react';
 import { NewsItemInterface } from 'constants/types/types';
 import { DEFAULT_SIZES } from 'constants/types/enum';
 
@@ -7,7 +7,7 @@ import { DEFAULT_SIZES } from 'constants/types/enum';
 import {
   LatestNewsColumnContainer,
   LatestNewsColumnSubcontainer,
-} from 'components/Defaults/Container/Container.styles';
+} from 'components/Defaults/Section/Section.styles';
 import NewsItem from 'components/Home/LatestNews/NewsItem/NewsItem.component';
 
 //Interface for Props
