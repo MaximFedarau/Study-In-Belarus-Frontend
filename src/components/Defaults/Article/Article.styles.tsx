@@ -18,6 +18,11 @@ export const Article = styled('article')(
 );
 
 // * Home Page
+
+export const GreetingsWelcomePart = styled(Article)({
+  overflow: 'hidden',
+});
+
 export const CarouselStudentInfo = styled(Article)({
   flexDirection: 'row',
   alignItems: 'center',

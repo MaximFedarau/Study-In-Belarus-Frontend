@@ -15,7 +15,7 @@ export const BubbleWrapper = styled(Box)(
   ({
     width,
     height,
-    type,
+    type = DEFAULT_SIZES.MEDIUM,
   }: {
     width?: string;
     height?: string;
@@ -23,7 +23,7 @@ export const BubbleWrapper = styled(Box)(
   }) => ({
     width,
     height,
-    ...(type ? BUBBLES_TEXT_STYLING[type].container : {}),
+    ...BUBBLES_TEXT_STYLING[type].container,
   }),
 );
 
@@ -31,7 +31,7 @@ export const BubbleContainer = styled(Box)(
   ({
     width,
     height,
-    type,
+    type = DEFAULT_SIZES.MEDIUM,
   }: {
     width?: string;
     height?: string;
@@ -46,7 +46,7 @@ export const BubbleContainer = styled(Box)(
     height: height,
     alignItems: 'center',
     flexDirection: 'column',
-    ...(type ? BUBBLES_TEXT_STYLING[type].container : {}),
+    ...BUBBLES_TEXT_STYLING[type].container,
     ':hover': {
       '*': {
         color: TRUE_BLUE,
@@ -56,17 +56,29 @@ export const BubbleContainer = styled(Box)(
 );
 
 export const BubbleText = styled(DefaultText)(
-  ({ isActive, type }: { isActive?: boolean; type?: DEFAULT_SIZES }) => ({
+  ({
+    isActive,
+    type = DEFAULT_SIZES.MEDIUM,
+  }: {
+    isActive?: boolean;
+    type?: DEFAULT_SIZES;
+  }) => ({
     fontFamily: 'Roboto Regular',
     fontWeight: 700,
     fontSize: '2em',
     color: isActive ? TRUE_BLUE : 'black',
-    ...(type ? BUBBLES_TEXT_STYLING[type].mainText : {}),
+    ...BUBBLES_TEXT_STYLING[type].mainText,
   }),
 );
 
 export const BubbleSubtext = styled(DefaultText)(
-  ({ isActive, type }: { isActive?: boolean; type?: DEFAULT_SIZES }) => ({
+  ({
+    isActive,
+    type = DEFAULT_SIZES.MEDIUM,
+  }: {
+    isActive?: boolean;
+    type?: DEFAULT_SIZES;
+  }) => ({
     fontFamily: 'Roboto Regular',
     fontWeight: 400,
     fontSize: '20px',
@@ -74,6 +86,6 @@ export const BubbleSubtext = styled(DefaultText)(
     maxWidth: 150,
     color: isActive ? TRUE_BLUE : 'black',
     textTransform: 'uppercase',
-    ...(type ? BUBBLES_TEXT_STYLING[type].subtext : {}),
+    ...BUBBLES_TEXT_STYLING[type].subtext,
   }),
 );

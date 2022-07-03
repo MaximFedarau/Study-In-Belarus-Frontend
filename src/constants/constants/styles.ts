@@ -124,3 +124,8 @@ export const NEWS_ITEM_STYLING = {
 export const ADVANTAGES_IMAGE_SIZES = {
   style: { width: '100%', height: '100%' },
 };
+
+//Home Page Main Image Size
+export const HOME_MAIN_IMAGE_SIZES = {
+  style: { width: '100%', height: '100%' },
+};

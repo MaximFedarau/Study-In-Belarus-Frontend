@@ -1,11 +1,15 @@
 //Types
 import { ReactElement } from 'react';
 
+//Constants
+import { HOME_MAIN_IMAGE_SIZES } from 'constants/constants/styles';
+
 //Components
 import Bubbles from '../Bubbles/Bubbles.component';
 
 import { GreetingsHeader } from 'components/Defaults/Container/Container.styles';
 import { GreetingsContainer } from 'components/Defaults/Section/Section.styles';
+import { GreetingsWelcomePart } from 'components/Defaults/Article/Article.styles';
 
 //Icons
 import { ReactComponent as StudentWithSignSVG } from 'assets/images/home/student_with_sign.svg';
@@ -13,23 +17,12 @@ import { ReactComponent as StudentWithSignSVG } from 'assets/images/home/student
 export default function Greetings(): ReactElement {
   return (
     <GreetingsContainer>
-      <article
-        style={{
-          overflow: 'hidden',
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
+      <GreetingsWelcomePart>
         <GreetingsHeader>
-          <StudentWithSignSVG
-            style={{
-              width: '100%',
-              height: '100%',
-            }}
-          />
+          <StudentWithSignSVG {...HOME_MAIN_IMAGE_SIZES} />
         </GreetingsHeader>
         <Bubbles />
-      </article>
+      </GreetingsWelcomePart>
     </GreetingsContainer>
   );
 }

@@ -11,18 +11,19 @@ import {
   HorizontalBubbles,
   LastHorizontalBubbles,
 } from 'components/Defaults/Section/Section.styles';
+import {
+  FirstBubbleWrapper,
+  SecondBubbleWrapper,
+  ThirdBubbleWrapper,
+  FourthBubbleWrapper,
+  FifthBubbleWrapper,
+} from './Bubbles.styles';
 
 export default function Bubbles(): ReactElement {
   return (
     <BubblesContainer>
       <HorizontalBubbles>
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 1,
-            right: 140,
-          }}
-        >
+        <FirstBubbleWrapper>
           <TextBubble
             type={DEFAULT_SIZES.SMALL}
             size={{ width: '18vw', height: '18vw' }}
@@ -30,13 +31,8 @@ export default function Bubbles(): ReactElement {
           >
             1
           </TextBubble>
-        </div>
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 2,
-          }}
-        >
+        </FirstBubbleWrapper>
+        <SecondBubbleWrapper>
           <Bubble
             type={DEFAULT_SIZES.LARGE}
             subtext={'Learn about admission criteria and learning environment'.toUpperCase()}
@@ -44,31 +40,18 @@ export default function Bubbles(): ReactElement {
           >
             2
           </Bubble>
-        </div>
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 1,
-            right: 85,
-          }}
-        >
+        </SecondBubbleWrapper>
+        <ThirdBubbleWrapper>
           <Bubble
-            type={DEFAULT_SIZES.MEDIUM}
             subtext={'Prepare the documents and apply'.toUpperCase()}
             size={{ width: '25vw', height: '25vw' }}
           >
             3
           </Bubble>
-        </div>
+        </ThirdBubbleWrapper>
       </HorizontalBubbles>
       <LastHorizontalBubbles>
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 1,
-            bottom: 100,
-          }}
-        >
+        <FourthBubbleWrapper>
           <Bubble
             type={DEFAULT_SIZES.LARGE}
             subtext={'Receive your invitation and get your visa'.toUpperCase()}
@@ -76,15 +59,8 @@ export default function Bubbles(): ReactElement {
           >
             4
           </Bubble>
-        </div>
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 2,
-            right: 50,
-            top: 40,
-          }}
-        >
+        </FourthBubbleWrapper>
+        <FifthBubbleWrapper>
           <TextBubble
             size={{ width: '16vw', height: '16vw' }}
             reverse
@@ -93,7 +69,7 @@ export default function Bubbles(): ReactElement {
           >
             5
           </TextBubble>
-        </div>
+        </FifthBubbleWrapper>
       </LastHorizontalBubbles>
     </BubblesContainer>
   );
