@@ -8,6 +8,9 @@ import { styled, Box, AppBar } from '@mui/material';
 import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
 import { NEWS_ITEM_STYLING } from 'constants/constants';
 
+//Icons
+import wave from 'assets/images/home/wave.svg';
+
 // * Default
 
 export const Container = styled(Box)(
@@ -217,6 +220,57 @@ export const NotFoundInfoContainer = styled(Section)({
 });
 
 // * Home Page
+
+export const GreetingsContainer = styled(Section)({
+  minHeight: 2198,
+  width: '100%',
+  backgroundImage: `url(${wave})`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'top',
+  backgroundSize: 'contain',
+  display: 'flex',
+  flexDirection: 'column',
+  marginTop: 120,
+  maxWidth: 2000,
+  '@media screen and (max-width: 1070px)': {
+    // background: 'red',
+  },
+  '@media screen and (min-width: 1441px)': {
+    backgroundSize: 'contain',
+    minHeight: 3050,
+  },
+});
+
+export const GreetingsHeader = styled('header')({
+  maxWidth: 2000,
+  marginTop: 'calc(200px - 10vw)',
+  paddingLeft: '6%',
+  width: '100%',
+  '@media screen and (min-width: 1500px)': {
+    marginTop: 50,
+  },
+});
+
+export const BubblesContainer = styled(Section)({
+  width: '100%',
+  position: 'relative',
+  alignItems: 'flex-end',
+  zIndex: 2,
+  maxWidth: 2000,
+  bottom: '4.6%',
+  left: '-5%',
+  '@media screen and (min-width: 1500px)': {
+    bottom: '5%',
+  },
+  '@media screen and (min-width: 1800px)': {
+    bottom: '5%',
+    left: '-9%',
+  },
+});
+
+export const HorizontalBubbles = styled(Section)({
+  flexDirection: 'row',
+});
 
 export const CarouselContainer = styled(Section)({
   flexDirection: 'row',

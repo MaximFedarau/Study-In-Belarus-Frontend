@@ -121,9 +121,9 @@ export const NewsItemHeader = styled('header')({
   fontWeight: 700,
   maxWidth: '99%',
   '@media screen and (max-width: 820px)': {
-    '-webkit-line-clamp': '2',
+    WebkitLineClamp: '2',
     display: '-webkit-box',
-    '-webkit-box-orient': 'vertical',
+    WebkitBoxOrient: 'vertical',
     overflow: 'hidden',
   },
 });

@@ -3,6 +3,7 @@ import {
   NavigatonDrawerItemsInterface,
   NewsItemInterface,
   CarouselStudentInterface,
+  HomeBubblesStylesInterface,
 } from './types';
 import { DEFAULT_SIZES, BUTTON_VARIANT } from 'constants/enum';
 
@@ -111,6 +112,46 @@ export const ERROR_MESSAGES = [
   'Reload current page, or',
   'Navigate to the home page. Also check your internet connection and reload current page.',
 ];
+
+// Home Page Bubbles Text
+export const BUBBLES_TEXT_STYLING: HomeBubblesStylesInterface = {
+  [DEFAULT_SIZES.SMALL]: {
+    container: {
+      maxWidth: 314,
+      maxHeight: 314,
+    },
+    mainText: {
+      fontSize: '56px',
+    },
+    subtext: {
+      minWidth: 210,
+    },
+  },
+  [DEFAULT_SIZES.MEDIUM]: {
+    container: {
+      maxWidth: 461,
+      maxHeight: 461,
+    },
+    mainText: {
+      fontSize: '56px',
+    },
+    subtext: {
+      maxWidth: 150,
+    },
+  },
+  [DEFAULT_SIZES.LARGE]: {
+    container: {
+      maxWidth: 499,
+      maxHeight: 499,
+    },
+    mainText: {
+      fontSize: '56px',
+    },
+    subtext: {
+      maxWidth: 300,
+    },
+  },
+};
 
 //Home Page News
 

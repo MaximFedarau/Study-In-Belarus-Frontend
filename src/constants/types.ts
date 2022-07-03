@@ -1,3 +1,6 @@
+import React from 'react';
+import { DEFAULT_SIZES } from './enum';
+
 //Interface for Drawer Link Component
 interface DrawerLinkInterface {
   link: string;
@@ -8,6 +11,15 @@ interface DrawerLinkInterface {
 export interface NavigatonDrawerItemsInterface {
   [key: string]: DrawerLinkInterface[];
 }
+
+//Interface for Home page Bubbles
+export type HomeBubblesStylesInterface = {
+  [key in DEFAULT_SIZES]: {
+    container: React.CSSProperties;
+    mainText: React.CSSProperties;
+    subtext: React.CSSProperties;
+  };
+};
 
 //Interface for Carousel Student Interface
 export interface CarouselStudentInterface {

@@ -3,6 +3,7 @@ import React, { ReactElement } from 'react';
 import { PAGES_TITLES } from 'constants/enum';
 
 //Components
+import Greetings from 'components/Home/Greetings/Greetings/Greetings.component';
 import Carousel from 'components/Home/Carousel/Carousel/Carousel.component';
 import LatestNews from 'components/Home/LatestNews/LatestNews/LatestNews.component';
 
@@ -14,7 +15,7 @@ export default function Home(): ReactElement {
   }, []);
   return (
     <HomeContainer>
-      <section>{/* Part with waves */}</section>
+      <Greetings />
       <Carousel />
       <LatestNews />
     </HomeContainer>
