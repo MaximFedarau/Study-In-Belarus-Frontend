@@ -21,6 +21,9 @@ export const Article = styled('article')(
 
 export const GreetingsWelcomePart = styled(Article)({
   overflow: 'hidden',
+  '@media screen and (max-width: 1170px)': {
+    display: 'none',
+  },
 });
 
 export const CarouselStudentInfo = styled(Article)({

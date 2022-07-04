@@ -2,6 +2,8 @@
 import React, { ReactElement } from 'react';
 
 //Components
+import { IconWrapper } from './PointItem.styles';
+
 import { PointItemContainer } from 'components/Defaults/Container/Container.styles';
 import { PointText } from 'components/Defaults/Text/Text.styles';
 
@@ -21,7 +23,9 @@ export default function PointItem({
 }: PointItemProps): ReactElement {
   return (
     <PointItemContainer>
-      <Icon width={133} height={133} />
+      <IconWrapper>
+        <Icon width="100%" height="100%" />
+      </IconWrapper>
       <PointText>{children}</PointText>
     </PointItemContainer>
   );

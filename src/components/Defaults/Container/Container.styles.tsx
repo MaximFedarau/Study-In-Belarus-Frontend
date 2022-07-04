@@ -199,6 +199,24 @@ export const GreetingsHeader = styled('header')({
   },
 });
 
+export const TopWaveContainer = styled(Container)({
+  flexDirection: 'column',
+});
+
+export const BottomWaveContainer = styled(Container)({
+  marginBottom: 100,
+});
+
+export const GatesContainer = styled(Container)({
+  width: '100%',
+  height: '100%',
+  maxWidth: 653,
+  maxHeight: 933,
+  '@media screen and (max-width: 1170px)': {
+    display: 'none',
+  },
+});
+
 export const PointItemContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'row',
@@ -207,6 +225,19 @@ export const PointItemContainer = styled(Container)({
   ':hover': {
     '> p': {
       textShadow: '0px 4px 15px rgba(0, 0, 0, 0.25)',
+    },
+  },
+  '@media screen and (max-width: 1170px)': {
+    gap: '7vw',
+    cursor: 'pointer',
+    ':hover': {
+      '> div': {
+        transform: 'scale(1.1) rotate(-30deg)',
+        boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.5);',
+      },
+      '> p': {
+        borderBottom: '1px solid #fff',
+      },
     },
   },
 });

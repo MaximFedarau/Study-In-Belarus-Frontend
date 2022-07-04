@@ -56,18 +56,12 @@ export const BubbleContainer = styled(Box)(
 );
 
 export const BubbleText = styled(DefaultText)(
-  ({
-    isActive,
-    type = DEFAULT_SIZES.MEDIUM,
-  }: {
-    isActive?: boolean;
-    type?: DEFAULT_SIZES;
-  }) => ({
+  ({ isActive, type }: { isActive?: boolean; type?: DEFAULT_SIZES }) => ({
     fontFamily: 'Roboto Regular',
     fontWeight: 700,
     fontSize: '2em',
     color: isActive ? TRUE_BLUE : 'black',
-    ...BUBBLES_TEXT_STYLING[type].mainText,
+    ...(type ? BUBBLES_TEXT_STYLING[type].mainText : {}),
   }),
 );
 

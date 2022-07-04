@@ -43,6 +43,7 @@ export default function Bubbles(): ReactElement {
         </SecondBubbleWrapper>
         <ThirdBubbleWrapper>
           <Bubble
+            type={DEFAULT_SIZES.MEDIUM}
             subtext={'Prepare the documents and apply'.toUpperCase()}
             size={{ width: '25vw', height: '25vw' }}
           >

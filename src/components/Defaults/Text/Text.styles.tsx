@@ -89,6 +89,12 @@ export const PointText = styled(DefaultText)({
   fontFamily: 'Roboto Regular',
   fontWeight: 400,
   fontSize: 18,
+  '@media screen and (max-width: 1170px)': {
+    color: 'white',
+    textAlign: 'center',
+    borderBottom: '1px solid transparent',
+    transition: 'all .5s ease-in',
+  },
 });
 
 export const CarouselStudentHeader = styled('h1')({

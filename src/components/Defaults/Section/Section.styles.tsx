@@ -57,15 +57,26 @@ export const EducationContainer = styled(Section)({
   flexDirection: 'row',
   justifyContent: 'space-between',
   position: 'relative',
-  bottom: '1.5%',
+  bottom: '1.45%',
   maxWidth: 2000,
   width: '100%',
-  gap: 0,
+  '@media screen and (max-width: 1170px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'unset',
+    position: 'static',
+    background: TRUE_BLUE,
+    paddingBottom: 10,
+  },
 });
 
 export const PointsSection = styled(Section)({
   gap: 87,
-  marginLeft: '10%',
+  marginLeft: '12%',
+  '@media screen and (max-width: 1170px)': {
+    marginLeft: 0,
+    alignItems: 'center',
+  },
 });
 
 export const BubblesContainer = styled(Section)({
