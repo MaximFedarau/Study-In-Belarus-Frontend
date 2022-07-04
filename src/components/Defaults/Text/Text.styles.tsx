@@ -83,7 +83,13 @@ export const NotFoundFooter = styled('footer')({
   textAlign: 'center',
 });
 
-// *
+// * Home
+
+export const PointText = styled(DefaultText)({
+  fontFamily: 'Roboto Regular',
+  fontWeight: 400,
+  fontSize: 18,
+});
 
 export const CarouselStudentHeader = styled('h1')({
   textTransform: 'capitalize',

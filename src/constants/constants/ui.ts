@@ -9,10 +9,34 @@ import SearchIcon from '@mui/icons-material/Search';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import { ReactComponent as ENLanguageButtonSvg } from 'assets/images/navigation/EN_language_button.svg';
 
+import { ReactComponent as BookSVG } from 'assets/images/home/icons/book.svg';
+import { ReactComponent as BriefcaseSVG } from 'assets/images/home/icons/briefcase.svg';
+import { ReactComponent as CoffeeSVG } from 'assets/images/home/icons/coffee.svg';
+import { ReactComponent as UniversitySVG } from 'assets/images/home/icons/university.svg';
+
 export const NAVIGATION_ACTIONS_ICONS = [
   SearchIcon,
   RemoveRedEyeOutlinedIcon,
   ENLanguageButtonSvg,
+];
+
+export const POINTS_OF_STUDYING = [
+  {
+    icon: UniversitySVG,
+    text: 'UNIVERSITIES OF BELARUS',
+  },
+  {
+    icon: BookSVG,
+    text: 'LEARNING BENEFITS',
+  },
+  {
+    icon: BriefcaseSVG,
+    text: 'WORK FOR INTERNATIONAL STUDENTS',
+  },
+  {
+    icon: CoffeeSVG,
+    text: 'LIFE IN BELARUS',
+  },
 ];
 
 //Home Page News

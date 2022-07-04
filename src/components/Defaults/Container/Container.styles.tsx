@@ -199,6 +199,18 @@ export const GreetingsHeader = styled('header')({
   },
 });
 
+export const PointItemContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: 100,
+  alignItems: 'center',
+  ':hover': {
+    '> p': {
+      textShadow: '0px 4px 15px rgba(0, 0, 0, 0.25)',
+    },
+  },
+});
+
 export const CarouselArrowWrapper = styled(Container)({
   marginLeft: '3%',
   transform: 'rotate(180deg)',

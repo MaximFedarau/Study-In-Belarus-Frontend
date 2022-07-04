@@ -5,7 +5,7 @@ import { styled } from '@mui/material';
 import { TRUE_BLUE } from 'constants/constants/colors';
 
 //Icons
-import wave from 'assets/images/home/wave.svg';
+import wave from 'assets/images/home/wave_with_sign.svg';
 
 // * Default
 
@@ -27,7 +27,6 @@ export const NotFoundInfoContainer = styled(Section)({
 });
 
 // * Home Page
-// * Home Page
 
 export const GreetingsContainer = styled(Section)({
   minHeight: 2198,
@@ -35,18 +34,38 @@ export const GreetingsContainer = styled(Section)({
   backgroundImage: `url(${wave})`,
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'top',
-  backgroundSize: 'contain',
+  backgroundSize: 'cover',
   display: 'flex',
   flexDirection: 'column',
   marginTop: 120,
   maxWidth: 2000,
-  '@media screen and (max-width: 1070px)': {
-    // background: 'red',
+  '@media screen and (max-width: 1170px)': {
+    background: 'white',
   },
   '@media screen and (min-width: 1441px)': {
-    backgroundSize: 'contain',
-    minHeight: 3050,
+    height: 2500,
   },
+  '@media screen and (min-width: 1641px)': {
+    height: 2900,
+  },
+  '@media screen and (min-width: 1900px)': {
+    height: 3080,
+  },
+});
+
+export const EducationContainer = styled(Section)({
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  position: 'relative',
+  bottom: '1.5%',
+  maxWidth: 2000,
+  width: '100%',
+  gap: 0,
+});
+
+export const PointsSection = styled(Section)({
+  gap: 87,
+  marginLeft: '10%',
 });
 
 export const BubblesContainer = styled(Section)({
