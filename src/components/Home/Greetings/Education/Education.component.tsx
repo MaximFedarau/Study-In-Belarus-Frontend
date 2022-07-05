@@ -25,7 +25,7 @@ export default function Education(): ReactElement {
   return (
     <>
       <TopWaveContainer>
-        <MobileTitle>
+        <MobileTitle sticked>
           Education in Belarus for <a>foreign</a> citizens
         </MobileTitle>
         <MobileWave src={wave} />

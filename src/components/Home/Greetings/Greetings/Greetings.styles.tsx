@@ -15,16 +15,18 @@ export const MobileWave = styled('img')(
   }),
 );
 
-export const MobileTitle = styled('h1')({
-  display: 'none',
-  '@media screen and (max-width: 1170px)': {
-    display: 'block',
-    textTransform: 'uppercase',
-    fontSize: '7vw',
-    textAlign: 'center',
-    position: 'sticky',
-    top: 80,
-    zIndex: -1,
-    color: TRUE_BLUE,
-  },
-});
+export const MobileTitle = styled('h1')(
+  ({ textColor, sticked }: { sticked?: boolean; textColor?: string }) => ({
+    display: 'none',
+    '@media screen and (max-width: 1170px)': {
+      display: 'block',
+      textTransform: 'uppercase',
+      fontSize: '7vw',
+      textAlign: 'center',
+      position: sticked ? 'sticky' : 'static',
+      top: 80,
+      zIndex: -1,
+      color: textColor || TRUE_BLUE,
+    },
+  }),
+);

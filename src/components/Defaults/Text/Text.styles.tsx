@@ -97,6 +97,12 @@ export const PointText = styled(DefaultText)({
   },
 });
 
+export const SalutationMobileBubbleText = styled(DefaultText)({
+  display: 'none',
+  fontSize: '20px',
+  textTransform: 'uppercase',
+});
+
 export const CarouselStudentHeader = styled('h1')({
   textTransform: 'capitalize',
   '@media screen and (max-width: 910px)': {

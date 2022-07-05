@@ -20,6 +20,14 @@ export const NAVIGATION_ACTIONS_ICONS = [
   ENLanguageButtonSvg,
 ];
 
+export const HOME_MOBILE_BUBBLES = [
+  'Choose Your profession, university and programme',
+  'Learn about admission criteria and learning environment',
+  'Prepare the documents and apply',
+  'Receive your invitation and get your visa',
+  'Pass the interview',
+];
+
 export const POINTS_OF_STUDYING = [
   {
     icon: UniversitySVG,

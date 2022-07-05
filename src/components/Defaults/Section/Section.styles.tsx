@@ -41,6 +41,8 @@ export const GreetingsContainer = styled(Section)({
   maxWidth: 2000,
   '@media screen and (max-width: 1170px)': {
     background: 'white',
+    marginTop: 0,
+    minHeight: 'unset',
   },
   '@media screen and (min-width: 1441px)': {
     height: 2500,
@@ -50,6 +52,14 @@ export const GreetingsContainer = styled(Section)({
   },
   '@media screen and (min-width: 1900px)': {
     height: 3080,
+  },
+});
+
+export const SalutationMobileContainer = styled(Section)({
+  display: 'none',
+  '@media screen and (max-width: 1170px)': {
+    display: 'block',
+    marginBottom: '50px',
   },
 });
 

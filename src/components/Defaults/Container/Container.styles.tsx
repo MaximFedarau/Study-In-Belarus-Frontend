@@ -199,6 +199,45 @@ export const GreetingsHeader = styled('header')({
   },
 });
 
+export const MobileBubbleContainer = styled(Container)({
+  cursor: 'pointer',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '10%',
+  borderBottom: '3px solid transparent',
+  margin: 12,
+  padding: 12,
+  alignSelf: 'center',
+  ':hover': {
+    borderBottom: `3px solid ${TRUE_BLUE}`,
+    borderRadius: '5%',
+    transition: 'border 0.5s ease-in-out',
+    '*': {
+      color: TRUE_BLUE,
+    },
+    '> p': {
+      display: 'block',
+      animation: 'bubble-animation 0.5s ease-in-out',
+    },
+  },
+  '@keyframes bubble-animation': {
+    '0%': {
+      opacity: 0.3,
+      transform: 'translateY(0)',
+    },
+    '50%': {
+      opacity: 0.6,
+      transform: 'translateY(10px)',
+    },
+    '100%': {
+      opacity: 1,
+      transform: 'translateY(0)',
+    },
+  },
+});
+
 export const TopWaveContainer = styled(Container)({
   flexDirection: 'column',
 });
