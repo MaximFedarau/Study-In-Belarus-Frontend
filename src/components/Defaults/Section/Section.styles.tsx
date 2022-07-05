@@ -20,10 +20,7 @@ export const Section = styled('section')(
 
 // * 404
 export const NotFoundInfoContainer = styled(Section)({
-  display: 'flex',
-  flexDirection: 'column',
   gap: '23px',
-  alignItems: 'unset',
 });
 
 // * Home Page
@@ -35,8 +32,6 @@ export const GreetingsContainer = styled(Section)({
   backgroundRepeat: 'no-repeat',
   backgroundPosition: 'top',
   backgroundSize: 'cover',
-  display: 'flex',
-  flexDirection: 'column',
   marginTop: 120,
   maxWidth: 2000,
   '@media screen and (max-width: 1170px)': {
@@ -140,7 +135,7 @@ export const LatestNewsContainer = styled(Section)({
   alignItems: 'center',
   justifyContent: 'center',
   minHeight: 280,
-  padding: '10% 0 10% 0',
+  padding: '10% 0',
 });
 
 export const LatesNewsContent = styled(Section)({

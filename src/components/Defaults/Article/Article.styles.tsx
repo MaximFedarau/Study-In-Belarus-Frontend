@@ -50,7 +50,7 @@ export const NewsItemContainer = styled(Article)(
     ':hover': {
       boxShadow: '0 0 0 1600px rgba(255, 255, 255, 0.5) inset',
       '*': {
-        color: 'black !important',
+        color: 'black',
       },
     },
     ...NEWS_ITEM_STYLING[size!],

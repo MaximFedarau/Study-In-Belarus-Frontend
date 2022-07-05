@@ -5,7 +5,7 @@ import { DEFAULT_SIZES } from 'constants/types/enum';
 import { styled, Box } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE } from '../../../constants/constants/colors';
+import { TRUE_BLUE } from 'constants/constants/colors';
 import { BUBBLES_TEXT_STYLING } from 'constants/constants/styles';
 
 //Components
