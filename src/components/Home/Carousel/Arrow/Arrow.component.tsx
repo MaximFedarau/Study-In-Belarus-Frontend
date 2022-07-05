@@ -6,15 +6,18 @@ import IconButton from 'components/Defaults/IconButton/IconButton.component';
 
 import { CarouselArrowWrapper } from 'components/Defaults/Container/Container.styles';
 
-//Icons
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { ArrowIcon } from './Arrow.styles';
 
-export default function Arrow(): ReactElement {
-  const ARROW_SIZES = { style: { width: 50, height: 50 } };
+//Interface for Props
+interface ArrowProps {
+  onClick?: () => void;
+}
+
+export default function Arrow({ onClick }: ArrowProps): ReactElement {
   return (
-    <CarouselArrowWrapper>
+    <CarouselArrowWrapper onClick={onClick}>
       <IconButton>
-        <ArrowForwardIosIcon {...ARROW_SIZES} />
+        <ArrowIcon />
       </IconButton>
     </CarouselArrowWrapper>
   );

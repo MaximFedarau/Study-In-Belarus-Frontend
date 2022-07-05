@@ -1,7 +1,7 @@
 //MUI
 import { styled } from '@mui/material';
 
-export const BelarusText = styled('a')({
+export const ColouredText = styled('a')({
   cursor: 'pointer',
   ':hover': {
     backgroundImage: 'linear-gradient(90deg, white, #CA4246, #8B9862)',

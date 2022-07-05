@@ -1,5 +1,5 @@
 //Types
-import { ReactElement } from 'react';
+import React, { ReactElement } from 'react';
 
 //Constants
 import { CAROUSEL_STUDENTS } from 'constants/constants/ui';
@@ -11,17 +11,36 @@ import Student from '../Student/Student.component';
 import { CarouselContainer } from 'components/Defaults/Section/Section.styles';
 
 export default function Carousel(): ReactElement {
-  const studentInfo = CAROUSEL_STUDENTS[0];
-  // ! Test possibility!
-  // ? If there is more than one item.
-  // ? Create index using React.useState(). const [studentIndex, setStudentIndex] = React.useState<number>(0);
-  // ? And pass this index to studentInfo variable. const studentInfo = CAROUSEL_STUDENTS[studentIndex];
-  // ? To change items, create click handler for both arrows. One arrow will increment index, other decrement.
+  const [studentIndex, setStudentIndex] = React.useState<number>(0);
+
+  const studentInfo = CAROUSEL_STUDENTS[studentIndex];
+
+  function onNextArrowClick(): void {
+    console.log(CAROUSEL_STUDENTS);
+    const newIndex = studentIndex + 1;
+
+    if (newIndex >= CAROUSEL_STUDENTS.length) {
+      setStudentIndex(0);
+    } else {
+      setStudentIndex(newIndex);
+    }
+  }
+
+  function onPreviousArrowClick(): void {
+    const newIndex = studentIndex - 1;
+
+    if (newIndex < 0) {
+      setStudentIndex(CAROUSEL_STUDENTS.length - 1);
+    } else {
+      setStudentIndex(newIndex);
+    }
+  }
+
   return (
     <CarouselContainer>
-      <Arrow />
+      <Arrow onClick={onNextArrowClick} />
       <Student {...studentInfo} />
-      <Arrow />
+      <Arrow onClick={onPreviousArrowClick} />
     </CarouselContainer>
   );
 }

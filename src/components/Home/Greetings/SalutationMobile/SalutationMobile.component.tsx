@@ -9,7 +9,7 @@ import { DEFAULT_SIZES } from 'constants/types/enum';
 import Bubble from 'components/Defaults/Bubble/Bubble.component';
 
 import { MobileTitle } from '../Greetings/Greetings.styles';
-import { BelarusText } from './SalutationMobile.styles';
+import { ColouredText } from './SalutationMobile.styles';
 import { SalutationMobileBubbleText } from 'components/Defaults/Text/Text.styles';
 
 import { MobileBubbleContainer } from 'components/Defaults/Container/Container.styles';
@@ -23,7 +23,7 @@ export default function SalutationMobile(): ReactElement {
     <SalutationMobileContainer>
       <MobileTitle textColor="black">
         Welcome to {''}
-        <BelarusText>Belarus</BelarusText>
+        <ColouredText>Belarus</ColouredText>
       </MobileTitle>
       <PointsSection>
         {HOME_MOBILE_BUBBLES.map((text, index) => {
