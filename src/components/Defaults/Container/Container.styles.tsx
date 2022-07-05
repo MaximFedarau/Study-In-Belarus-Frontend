@@ -205,7 +205,7 @@ export const MobileBubbleContainer = styled(Container)({
   flexDirection: 'row',
   justifyContent: 'center',
   alignItems: 'center',
-  gap: '5vw',
+  gap: '10%',
   borderBottom: '3px solid transparent',
   margin: 12,
   padding: 12,
@@ -218,9 +218,7 @@ export const MobileBubbleContainer = styled(Container)({
       color: TRUE_BLUE,
     },
     '> p': {
-      display: 'flex',
-      position: 'static', // ! for Safari
-      visibility: 'visible',
+      display: 'block',
       animation: 'bubble-animation 0.5s ease-in-out',
     },
   },
