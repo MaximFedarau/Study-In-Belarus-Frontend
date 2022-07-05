@@ -219,7 +219,7 @@ export const MobileBubbleContainer = styled(Container)({
     },
     '> p': {
       display: 'flex',
-      position: 'static',
+      position: 'static', // ! for Safari
       visibility: 'visible',
       animation: 'bubble-animation 0.5s ease-in-out',
     },
