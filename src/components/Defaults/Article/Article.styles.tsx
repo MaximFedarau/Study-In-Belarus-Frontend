@@ -38,17 +38,16 @@ export const CarouselStudentInfo = styled(Article)({
 
 export const NewsItemContainer = styled(Article)(
   ({ image, size }: { image: string; size?: DEFAULT_SIZES }) => ({
-    backgroundImage: `url(${image})`,
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(${image})`,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-end',
-    boxShadow: '0 0 0 1600px rgba(0,0,0,0.5) inset',
     padding: '0 0 3% 3%',
     cursor: 'pointer',
     ':hover': {
-      boxShadow: '0 0 0 1600px rgba(255, 255, 255, 0.5) inset',
+      backgroundImage: `linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url(${image})`,
       '*': {
         color: 'black',
       },
