@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { ADVANTAGES_IMAGE_SIZES } from 'constants/constants/styles';
+import { ADVANTAGES_IMAGE_SIZES } from 'constants/styles';
 
 //Components
 import { ArticleTextContainer } from 'components/Defaults/Article/Article.styles';

@@ -1,7 +1,7 @@
 //Types
 import { ReactElement } from 'react';
-import { NewsItemInterface } from 'constants/types/types';
-import { DEFAULT_SIZES } from 'constants/types/enum';
+import { NewsItemInterface } from 'types/types';
+import { DEFAULT_SIZES } from 'types/enum';
 
 //Constants
 import { dateFormatting } from 'utils/dateFormatting';

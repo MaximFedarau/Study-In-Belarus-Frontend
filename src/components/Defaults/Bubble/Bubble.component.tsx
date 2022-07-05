@@ -1,6 +1,6 @@
 //Types
 import { ReactElement } from 'react';
-import { DEFAULT_SIZES } from 'constants/types/enum';
+import { DEFAULT_SIZES } from 'types/enum';
 
 //Components
 import {

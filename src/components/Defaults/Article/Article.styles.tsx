@@ -1,11 +1,11 @@
 //Types
-import { DEFAULT_SIZES } from 'constants/types/enum';
+import { DEFAULT_SIZES } from 'types/enum';
 
 //MUI
 import { styled } from '@mui/material';
 
 //Constants
-import { NEWS_ITEM_STYLING } from 'constants/constants/styles';
+import { NEWS_ITEM_STYLING } from 'constants/styles';
 
 // * Defaults
 export const Article = styled('article')(

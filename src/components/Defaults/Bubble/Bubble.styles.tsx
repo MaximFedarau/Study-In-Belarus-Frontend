@@ -1,12 +1,12 @@
 //Types
-import { DEFAULT_SIZES } from 'constants/types/enum';
+import { DEFAULT_SIZES } from 'types/enum';
 
 //MUI
 import { styled, Box } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE } from 'constants/constants/colors';
-import { BUBBLES_TEXT_STYLING } from 'constants/constants/styles';
+import { TRUE_BLUE } from 'constants/colors';
+import { BUBBLES_TEXT_STYLING } from 'constants/styles';
 
 //Components
 import { DefaultText } from '../Text/Text.styles';

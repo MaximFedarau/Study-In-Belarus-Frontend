@@ -2,7 +2,7 @@
 import { styled } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE } from 'constants/constants/colors';
+import { TRUE_BLUE } from 'constants/colors';
 
 //Icons
 import wave from 'assets/images/home/wave_with_sign.svg';

@@ -1,6 +1,6 @@
 //Types
 import { HomeBubblesStylesInterface } from '../types/types';
-import { DEFAULT_SIZES, BUTTON_VARIANT } from 'constants/types/enum';
+import { DEFAULT_SIZES, BUTTON_VARIANT } from 'types/enum';
 
 //Consntants
 import { TRUE_BLUE } from './colors';

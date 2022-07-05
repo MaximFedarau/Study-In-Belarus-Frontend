@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { FOOTER_BACKGROUND_BY_PATH } from '../../../constants/constants/styles';
+import { FOOTER_BACKGROUND_BY_PATH } from '../../../constants/styles';
 
 //Components
 import {

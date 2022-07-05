@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { FOOTER_CONTACT_NUMBERS } from 'constants/constants/data';
+import { FOOTER_CONTACT_NUMBERS } from 'constants/data';
 
 //Components
 import {

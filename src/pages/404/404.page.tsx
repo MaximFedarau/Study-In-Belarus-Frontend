@@ -1,9 +1,9 @@
 //Types
 import React, { ReactElement } from 'react';
-import { PAGES_TITLES } from 'constants/types/enum';
+import { PAGES_TITLES } from 'types/enum';
 
 //Constants
-import { ERROR_MESSAGES } from 'constants/constants/data';
+import { ERROR_MESSAGES } from 'constants/data';
 
 //Components
 import {

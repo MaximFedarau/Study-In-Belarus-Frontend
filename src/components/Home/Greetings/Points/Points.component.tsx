@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { POINTS_OF_STUDYING } from 'constants/constants/ui';
+import { POINTS_OF_STUDYING } from 'constants/ui';
 
 //Components
 import PointItem from '../PointItem/PointItem.component';

@@ -2,11 +2,7 @@
 import { styled, Typography } from '@mui/material';
 
 //Constants
-import {
-  TRUE_BLUE,
-  SUVA_GREY,
-  WINDOWS_GRAY,
-} from '../../../constants/constants/colors';
+import { TRUE_BLUE, SUVA_GREY, WINDOWS_GRAY } from '../../../constants/colors';
 
 // * Default
 

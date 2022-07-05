@@ -2,7 +2,7 @@
 import { styled, Box, AppBar } from '@mui/material';
 
 //Constants
-import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/constants/colors';
+import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
 
 // * Default
 

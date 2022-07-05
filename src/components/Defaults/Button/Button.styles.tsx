@@ -2,11 +2,8 @@
 import { styled, Button } from '@mui/material';
 
 //Constants
-import {
-  BUTTON_VARIANT_STYLING,
-  BUTTON_SIZE_STYLING,
-} from 'constants/constants/styles';
-import { DEFAULT_SIZES, BUTTON_VARIANT } from 'constants/types/enum';
+import { BUTTON_VARIANT_STYLING, BUTTON_SIZE_STYLING } from 'constants/styles';
+import { DEFAULT_SIZES, BUTTON_VARIANT } from 'types/enum';
 
 export const ButtonShell = styled(Button)(
   ({

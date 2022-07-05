@@ -2,8 +2,8 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { HOME_MOBILE_BUBBLES } from 'constants/constants/ui';
-import { DEFAULT_SIZES } from 'constants/types/enum';
+import { HOME_MOBILE_BUBBLES } from 'constants/ui';
+import { DEFAULT_SIZES } from 'types/enum';
 
 //Components
 import Bubble from 'components/Defaults/Bubble/Bubble.component';

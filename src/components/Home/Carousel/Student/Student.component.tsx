@@ -1,6 +1,6 @@
 //Types
 import { ReactElement } from 'react';
-import { CarouselStudentInterface } from 'constants/types/types';
+import { CarouselStudentInterface } from 'types/types';
 
 //Components
 

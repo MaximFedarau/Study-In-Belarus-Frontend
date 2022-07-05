@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //Consntants
-import { NAVIGATION_DRAWER_ITEMS } from '../../../constants/constants/data';
+import { NAVIGATION_DRAWER_ITEMS } from '../../../constants/data';
 
 //Components
 import {
