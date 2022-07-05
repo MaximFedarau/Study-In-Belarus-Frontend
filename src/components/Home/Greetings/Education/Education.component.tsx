@@ -10,14 +10,14 @@ import {
 } from 'components/Home/Greetings/Greetings/Greetings.styles';
 
 import {
-  GatesContainer,
+  EducationMainImageContainer,
   TopWaveContainer,
   BottomWaveContainer,
 } from 'components/Defaults/Container/Container.styles';
 import { EducationContainer } from 'components/Defaults/Section/Section.styles';
 
 //Icons
-import { ReactComponent as GatesSVG } from 'assets/images/home/city_gates.svg';
+import { ReactComponent as MainImage } from 'assets/images/home/city_gates.svg';
 
 import wave from 'assets/images/footer/blue_wave.svg';
 
@@ -32,9 +32,9 @@ export default function Education(): ReactElement {
       </TopWaveContainer>
       <EducationContainer>
         <Points />
-        <GatesContainer>
-          <GatesSVG width="100%" height="100%" />
-        </GatesContainer>
+        <EducationMainImageContainer>
+          <MainImage width="100%" height="100%" />
+        </EducationMainImageContainer>
       </EducationContainer>
       <BottomWaveContainer>
         <MobileWave reverse src={wave} />

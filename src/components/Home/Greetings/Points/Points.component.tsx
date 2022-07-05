@@ -13,10 +13,10 @@ export default function Points(): ReactElement {
   return (
     <PointsSection>
       {POINTS_OF_STUDYING.map((point) => {
-        const { icon: Icon } = point;
+        const { icon: Icon, text } = point;
         return (
-          <PointItem key={point.text} Icon={Icon}>
-            {point.text}
+          <PointItem key={text} Icon={Icon}>
+            {text}
           </PointItem>
         );
       })}

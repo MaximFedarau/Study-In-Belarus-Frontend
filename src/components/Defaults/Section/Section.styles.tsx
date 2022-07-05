@@ -105,7 +105,7 @@ export const HorizontalBubbles = styled(Section)({
   flexDirection: 'row',
 });
 
-export const LastHorizontalBubbles = styled(Section)({
+export const FinalStepsBubbles = styled(Section)({
   position: 'relative',
   flexDirection: 'row',
   right: 250,
@@ -115,10 +115,10 @@ export const CarouselContainer = styled(Section)({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  height: '50vh',
+  minHeight: '50vh',
   width: '100%',
   maxWidth: 2000,
-  position: 'relative',
+  padding: '16px 0',
   boxShadow: '0px 4px 30px rgba(0, 0, 0, 0.3)',
 });
 

@@ -247,7 +247,7 @@ export const BottomWaveContainer = styled(Container)({
   marginBottom: 100,
 });
 
-export const GatesContainer = styled(Container)({
+export const EducationMainImageContainer = styled(Container)({
   width: '100%',
   height: '100%',
   maxWidth: 653,

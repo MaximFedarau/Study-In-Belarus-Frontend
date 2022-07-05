@@ -61,14 +61,14 @@ export const CAROUSEL_STUDENTS: CarouselStudentInterface[] = [
   {
     name: "Bezzot Amanov's brother",
     speech: 'I completely agree with my brother😎',
-    image: BEZZOT_AMANOV,
+    image: 'https://mui.com/static/images/avatar/1.jpg',
     country: 'Turkmenistan ',
     education: 'Student of MSU A. Kuleshova',
   },
   {
     name: "Bezzot Amanov's third brother",
     speech: 'I completely agree with my first and second brothers😎😁',
-    image: BEZZOT_AMANOV,
+    image: 'https://mui.com/static/images/avatar/3.jpg',
     country: 'Turkmenistan ',
     education: 'Student of MSU A. Kuleshova',
   },

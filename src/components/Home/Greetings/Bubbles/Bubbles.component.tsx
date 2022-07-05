@@ -9,7 +9,7 @@ import TextBubble from 'components/Defaults/TextBubble/TextBubble.component';
 import {
   BubblesContainer,
   HorizontalBubbles,
-  LastHorizontalBubbles,
+  FinalStepsBubbles,
 } from 'components/Defaults/Section/Section.styles';
 import {
   FirstBubbleWrapper,
@@ -51,7 +51,7 @@ export default function Bubbles(): ReactElement {
           </Bubble>
         </ThirdBubbleWrapper>
       </HorizontalBubbles>
-      <LastHorizontalBubbles>
+      <FinalStepsBubbles>
         <FourthBubbleWrapper>
           <Bubble
             type={DEFAULT_SIZES.LARGE}
@@ -71,7 +71,7 @@ export default function Bubbles(): ReactElement {
             5
           </TextBubble>
         </FifthBubbleWrapper>
-      </LastHorizontalBubbles>
+      </FinalStepsBubbles>
     </BubblesContainer>
   );
 }
