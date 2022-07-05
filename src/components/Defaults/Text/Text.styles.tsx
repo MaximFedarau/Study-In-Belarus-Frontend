@@ -98,8 +98,9 @@ export const PointText = styled(DefaultText)({
 });
 
 export const SalutationMobileBubbleText = styled(DefaultText)({
-  display: 'none',
   fontSize: '20px',
+  position: 'absolute', // ! for Safari
+  visibility: 'hidden', // ! for Safari
   textTransform: 'uppercase',
 });
 

@@ -28,7 +28,7 @@ export default function SalutationMobile(): ReactElement {
       <PointsSection>
         {HOME_MOBILE_BUBBLES.map((text, index) => {
           return (
-            <MobileBubbleContainer>
+            <MobileBubbleContainer key={text}>
               <Bubble
                 size={{ width: '20vw', height: '20vw' }}
                 type={DEFAULT_SIZES.MEDIUM}

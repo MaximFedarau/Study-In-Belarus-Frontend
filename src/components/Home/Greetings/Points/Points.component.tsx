@@ -14,7 +14,11 @@ export default function Points(): ReactElement {
     <PointsSection>
       {POINTS_OF_STUDYING.map((point) => {
         const { icon: Icon } = point;
-        return <PointItem Icon={Icon}>{point.text}</PointItem>;
+        return (
+          <PointItem key={point.text} Icon={Icon}>
+            {point.text}
+          </PointItem>
+        );
       })}
     </PointsSection>
   );
