@@ -4,8 +4,7 @@ import { STYLING_SIZES } from 'types/enum';
 import { StyledOptions } from '@emotion/styled';
 import { MuiStyledOptions, MUIStyledCommonProps } from '@mui/system';
 
-export function mobileCSS(
-  breakpoint: STYLING_SIZES,
+export function smallTabletCSS(
   styles:
     | React.CSSProperties
     | StyledOptions<React.Component>
@@ -14,6 +13,6 @@ export function mobileCSS(
     | { [key: string]: any },
 ) {
   return {
-    [`@media screen and (max-width: ${breakpoint})`]: styles,
+    [`@media screen and (max-width: ${STYLING_SIZES.SMALL_TABLET})`]: styles,
   };
 }

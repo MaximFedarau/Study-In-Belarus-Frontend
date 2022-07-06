@@ -1,12 +1,12 @@
-//Types
-import { STYLING_SIZES } from 'types/enum';
-
 //MUI
 import { styled } from '@mui/material';
 
 //Constants
 import { TRUE_BLUE } from 'constants/colors';
-import { mobileCSS } from 'utils/mobileCSS';
+
+import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
+import { smallTabletCSS } from 'utils/styles/smallTabletCSS';
+import { largePhoneCSS } from 'utils/styles/largePhoneCSS';
 
 //Icons
 import wave from 'assets/images/home/wave_with_sign.svg';
@@ -38,7 +38,7 @@ export const GreetingsContainer = styled(Section)({
   backgroundSize: 'cover',
   marginTop: 120,
   maxWidth: 2000,
-  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
+  ...largeTabletCSS({
     background: 'white',
     marginTop: 0,
     minHeight: 'unset',
@@ -56,7 +56,7 @@ export const GreetingsContainer = styled(Section)({
 
 export const SalutationMobileContainer = styled(Section)({
   display: 'none',
-  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
+  ...largeTabletCSS({
     display: 'block',
     marginBottom: '50px',
   }),
@@ -69,7 +69,7 @@ export const EducationContainer = styled(Section)({
   bottom: '1.45%',
   maxWidth: 2000,
   width: '100%',
-  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
+  ...largeTabletCSS({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'unset',
@@ -82,7 +82,7 @@ export const EducationContainer = styled(Section)({
 export const PointsSection = styled(Section)({
   gap: 87,
   marginLeft: '12%',
-  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
+  ...largeTabletCSS({
     marginLeft: 0,
     alignItems: 'center',
   }),
@@ -146,7 +146,7 @@ export const LatesNewsContent = styled(Section)({
   flexDirection: 'row',
   gap: 30,
   margin: '5% 10% 0 10.5%',
-  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
+  ...smallTabletCSS({
     flexDirection: 'column',
     alignItems: 'center',
   }),
@@ -174,7 +174,7 @@ export const SubarticleContainer = styled(Section)({
   gap: '17px',
   width: '70%',
   alignItems: 'unset',
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     width: '100%',
   }),
 });

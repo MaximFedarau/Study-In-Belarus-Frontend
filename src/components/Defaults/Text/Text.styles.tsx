@@ -1,12 +1,11 @@
-//Types
-import { DEFAULT_SIZES, STYLING_SIZES } from 'types/enum';
-
 //MUI
 import { styled, Typography } from '@mui/material';
 
 //Constants
 import { TRUE_BLUE, SUVA_GREY, WINDOWS_GRAY } from 'constants/colors';
-import { mobileCSS } from 'utils/mobileCSS';
+
+import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
+import { largePhoneCSS } from 'utils/styles/largePhoneCSS';
 
 // * Default
 
@@ -53,7 +52,7 @@ export const ContactsText = styled(DefaultText)({
   fontSize: '18px',
   lineHeight: '21px',
   maxWidth: '250px',
-  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
+  ...largeTabletCSS({
     textAlign: 'center',
   }),
 });
@@ -89,7 +88,7 @@ export const PointText = styled(DefaultText)({
   fontFamily: 'Roboto Regular',
   fontWeight: 400,
   fontSize: 18,
-  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
+  ...largeTabletCSS({
     color: 'white',
     textAlign: 'center',
     // * borderBottom: '1px solid transparent', <- чтобы она появлялась с нуля
@@ -131,7 +130,7 @@ export const LatestNewsHeaderText = styled(DefaultText)({
   fontWeight: 700,
   fontSize: 96,
   lineHeight: 1,
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     fontSize: '5rem',
     textAlign: 'center',
     lineHeight: '5rem',
@@ -143,7 +142,7 @@ export const NewsItemHeader = styled('header')({
   fontSize: '1em',
   fontWeight: 700,
   paddingRight: '1%',
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     WebkitLineClamp: '2',
     display: '-webkit-box',
     WebkitBoxOrient: 'vertical',
@@ -162,7 +161,7 @@ export const LatestNewsHeaderSubText = styled(DefaultText)({
   fontSize: 18,
   lineHeight: 2.6,
   cursor: 'pointer',
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     textAlign: 'center',
   }),
 });
@@ -176,7 +175,7 @@ export const ArticlePathText = styled('nav')({
   marginLeft: 90,
   lineHeight: 1.5,
   letterSpacing: '0.00938em',
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     textAlign: 'center',
     marginLeft: 0,
   }),
@@ -188,7 +187,7 @@ export const ArticleHeaderText = styled(DefaultText)({
   fontSize: '36px',
   textTransform: 'capitalize',
   lineHeight: '42px',
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     textAlign: 'center',
   }),
 });

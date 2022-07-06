@@ -1,12 +1,12 @@
-//Types
-import { STYLING_SIZES } from 'types/enum';
-
 //MUI
 import { styled, Box, AppBar } from '@mui/material';
 
 //Constants
 import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
-import { mobileCSS } from 'utils/mobileCSS';
+
+import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
+import { smallTabletCSS } from 'utils/styles/smallTabletCSS';
+import { largePhoneCSS } from 'utils/styles/largePhoneCSS';
 
 // * Default
 
@@ -83,7 +83,7 @@ export const FooterMainContainer = styled('footer')({
 
 export const FooterWaveContainer = styled(Container)({
   display: 'none',
-  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
+  ...smallTabletCSS({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'end',
@@ -109,7 +109,7 @@ export const FooterContainer = styled(Container)(
     display: 'flex',
     justifyContent: 'center',
     alignItems: '',
-    ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
+    ...smallTabletCSS({
       background: mobileBackground,
       height: '100%',
     }),
@@ -123,7 +123,7 @@ export const FooterContentContainer = styled(Container)({
   gap: '57px',
   alignItems: 'unset',
   marginTop: '5%',
-  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
+  ...smallTabletCSS({
     alignItems: 'center',
     gap: '40px',
     width: '100%',
@@ -136,7 +136,7 @@ export const FooterTextContainer = styled(Container)({
   flexDirection: 'row',
   alignItems: 'unset',
   gap: '19px',
-  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
+  ...smallTabletCSS({
     flexDirection: 'column',
     alignItems: 'center',
   }),
@@ -147,7 +147,7 @@ export const FooterContactsContainer = styled(Container)({
   flexDirection: 'row',
   gap: '40px',
   justifyContent: 'center',
-  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
+  ...smallTabletCSS({
     flexDirection: 'column',
     alignItems: 'center',
   }),
@@ -256,7 +256,7 @@ export const EducationMainImageContainer = styled(Container)({
   height: '100%',
   maxWidth: 653,
   maxHeight: 933,
-  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
+  ...largeTabletCSS({
     display: 'none',
   }),
 });
@@ -271,7 +271,7 @@ export const PointItemContainer = styled(Container)({
       textShadow: '0px 4px 15px rgba(0, 0, 0, 0.25)',
     },
   },
-  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
+  ...largeTabletCSS({
     gap: '7vw',
     cursor: 'pointer',
     ':hover': {
@@ -308,7 +308,7 @@ export const LatestNewsHeader = styled('header')({
   justifyContent: 'space-between',
   alignItems: 'flex-end',
   width: '80%',
-  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
+  ...smallTabletCSS({
     flexDirection: 'column',
     alignItems: 'center',
   }),
@@ -321,7 +321,7 @@ export const AdvantagesContainer = styled(Container)({
   flexDirection: 'column',
   gap: 64,
   width: '100%',
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     marginBottom: '48px',
     gap: '48px',
   }),
@@ -342,7 +342,7 @@ export const AdvantagesContentContainer = styled(Container)({
   alignItems: 'unset',
   padding: '0 3%',
   maxWidth: 2000,
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     padding: '0 5%',
     alignItems: 'center',
   }),
@@ -353,7 +353,7 @@ export const ArticleContainer = styled(Container)({
   flexDirection: 'row',
   gap: '34px',
   alignItems: 'unset',
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     flexDirection: 'column',
     alignItems: 'center',
     gap: 17,
@@ -364,7 +364,7 @@ export const ArrowContainer = styled('aside')({
   display: 'flex',
   margin: '2.2rem 20px 0 0',
   alignItems: 'unset',
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     margin: 0,
     width: '100%',
     justifyContent: 'center',
@@ -376,7 +376,7 @@ export const ArticleNavigationContainer = styled('aside')({
   gap: '42px',
   alignItems: 'unset',
   flexDirection: 'column',
-  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+  ...largePhoneCSS({
     order: 0,
   }),
 });
