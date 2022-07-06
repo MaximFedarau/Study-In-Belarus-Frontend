@@ -1,11 +1,12 @@
 //Types
-import { DEFAULT_SIZES } from 'types/enum';
+import { DEFAULT_SIZES, STYLING_SIZES } from 'types/enum';
 
 //MUI
 import { styled } from '@mui/material';
 
 //Constants
 import { NEWS_ITEM_STYLING } from 'constants/styles';
+import { mobileCSS } from 'utils/mobileCSS';
 
 // * Defaults
 export const Article = styled('article')(
@@ -21,9 +22,7 @@ export const Article = styled('article')(
 
 export const GreetingsWelcomePart = styled(Article)({
   overflow: 'hidden',
-  '@media screen and (max-width: 1170px)': {
-    display: 'none',
-  },
+  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, { display: 'none' }),
 });
 
 export const CarouselStudentInfo = styled(Article)({
@@ -60,9 +59,9 @@ export const NewsItemContainer = styled(Article)(
 export const ArticleTextContainer = styled(Article)({
   gap: 15,
   alignItems: 'unset',
-  '@media screen and (max-width: 800px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
     alignItems: 'center',
     order: 1,
     marginTop: 13,
-  },
+  }),
 });

@@ -1,8 +1,12 @@
+//Types
+import { STYLING_SIZES } from 'types/enum';
+
 //MUI
 import { styled } from '@mui/material';
 
 //Constants
 import { TRUE_BLUE } from 'constants/colors';
+import { mobileCSS } from 'utils/mobileCSS';
 
 //Icons
 import wave from 'assets/images/home/wave_with_sign.svg';
@@ -34,11 +38,11 @@ export const GreetingsContainer = styled(Section)({
   backgroundSize: 'cover',
   marginTop: 120,
   maxWidth: 2000,
-  '@media screen and (max-width: 1170px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
     background: 'white',
     marginTop: 0,
     minHeight: 'unset',
-  },
+  }),
   '@media screen and (min-width: 1441px)': {
     height: 2500,
   },
@@ -52,10 +56,10 @@ export const GreetingsContainer = styled(Section)({
 
 export const SalutationMobileContainer = styled(Section)({
   display: 'none',
-  '@media screen and (max-width: 1170px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
     display: 'block',
     marginBottom: '50px',
-  },
+  }),
 });
 
 export const EducationContainer = styled(Section)({
@@ -65,23 +69,23 @@ export const EducationContainer = styled(Section)({
   bottom: '1.45%',
   maxWidth: 2000,
   width: '100%',
-  '@media screen and (max-width: 1170px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'unset',
     position: 'static',
     background: TRUE_BLUE,
     paddingBottom: 10,
-  },
+  }),
 });
 
 export const PointsSection = styled(Section)({
   gap: 87,
   marginLeft: '12%',
-  '@media screen and (max-width: 1170px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
     marginLeft: 0,
     alignItems: 'center',
-  },
+  }),
 });
 
 export const BubblesContainer = styled(Section)({
@@ -142,10 +146,10 @@ export const LatesNewsContent = styled(Section)({
   flexDirection: 'row',
   gap: 30,
   margin: '5% 10% 0 10.5%',
-  '@media screen and (max-width: 1070px)': {
+  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
     flexDirection: 'column',
     alignItems: 'center',
-  },
+  }),
 });
 
 export const LatestNewsColumnContainer = styled(Section)({
@@ -170,7 +174,7 @@ export const SubarticleContainer = styled(Section)({
   gap: '17px',
   width: '70%',
   alignItems: 'unset',
-  '@media screen and (max-width: 800px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
     width: '100%',
-  },
+  }),
 });

@@ -1,8 +1,10 @@
 //Types
 import { HomeBubblesStylesInterface } from '../types/types';
-import { DEFAULT_SIZES, BUTTON_VARIANT } from 'types/enum';
+import { DEFAULT_SIZES, BUTTON_VARIANT, STYLING_SIZES } from 'types/enum';
 
 //Consntants
+import { mobileCSS } from 'utils/mobileCSS';
+
 import { TRUE_BLUE } from './colors';
 import WHITE_WAVE from 'assets/images/footer/wave.svg';
 import BLUE_WAVE from 'assets/images/footer/blue_wave.svg';
@@ -101,10 +103,10 @@ export const NEWS_ITEM_STYLING = {
     fontSize: 15,
     maxWidth: 400,
     maxHeight: 200,
-    '@media screen and (max-width: 1070px)': {
+    ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
       height: '20vw',
       fontSize: '2vw',
-    },
+    }),
   },
   [DEFAULT_SIZES.MEDIUM]: {},
   [DEFAULT_SIZES.LARGE]: {
@@ -113,10 +115,10 @@ export const NEWS_ITEM_STYLING = {
     fontSize: 24,
     maxWidth: 850,
     maxHeight: 550,
-    '@media screen and (max-width: 1070px)': {
+    ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
       height: '40vw',
       fontSize: '4vw',
-    },
+    }),
   },
 };
 

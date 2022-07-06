@@ -1,8 +1,12 @@
+//Types
+import { STYLING_SIZES } from 'types/enum';
+
 //MUI
 import { styled, Box, AppBar } from '@mui/material';
 
 //Constants
 import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
+import { mobileCSS } from 'utils/mobileCSS';
 
 // * Default
 
@@ -79,12 +83,12 @@ export const FooterMainContainer = styled('footer')({
 
 export const FooterWaveContainer = styled(Container)({
   display: 'none',
-  '@media screen and (max-width: 1070px)': {
+  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'end',
     justifyContent: 'end',
-  },
+  }),
 });
 
 export const FooterContainer = styled(Container)(
@@ -105,10 +109,10 @@ export const FooterContainer = styled(Container)(
     display: 'flex',
     justifyContent: 'center',
     alignItems: '',
-    '@media screen and (max-width: 1070px)': {
+    ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
       background: mobileBackground,
       height: '100%',
-    },
+    }),
   }),
 );
 
@@ -119,12 +123,12 @@ export const FooterContentContainer = styled(Container)({
   gap: '57px',
   alignItems: 'unset',
   marginTop: '5%',
-  '@media screen and (max-width: 1070px)': {
+  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
     alignItems: 'center',
     gap: '40px',
     width: '100%',
     margin: 0,
-  },
+  }),
 });
 
 export const FooterTextContainer = styled(Container)({
@@ -132,10 +136,10 @@ export const FooterTextContainer = styled(Container)({
   flexDirection: 'row',
   alignItems: 'unset',
   gap: '19px',
-  '@media screen and (max-width: 1070px)': {
+  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
     flexDirection: 'column',
     alignItems: 'center',
-  },
+  }),
 });
 
 export const FooterContactsContainer = styled(Container)({
@@ -143,10 +147,10 @@ export const FooterContactsContainer = styled(Container)({
   flexDirection: 'row',
   gap: '40px',
   justifyContent: 'center',
-  '@media screen and (max-width: 1070px)': {
+  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
     flexDirection: 'column',
     alignItems: 'center',
-  },
+  }),
 });
 
 export const FooterContactsItemsContainer = styled(Container)({
@@ -252,9 +256,9 @@ export const EducationMainImageContainer = styled(Container)({
   height: '100%',
   maxWidth: 653,
   maxHeight: 933,
-  '@media screen and (max-width: 1170px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
     display: 'none',
-  },
+  }),
 });
 
 export const PointItemContainer = styled(Container)({
@@ -267,7 +271,7 @@ export const PointItemContainer = styled(Container)({
       textShadow: '0px 4px 15px rgba(0, 0, 0, 0.25)',
     },
   },
-  '@media screen and (max-width: 1170px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
     gap: '7vw',
     cursor: 'pointer',
     ':hover': {
@@ -279,7 +283,7 @@ export const PointItemContainer = styled(Container)({
         borderBottom: '1px solid #fff',
       },
     },
-  },
+  }),
 });
 
 export const CarouselArrowWrapper = styled(Container)({
@@ -304,10 +308,10 @@ export const LatestNewsHeader = styled('header')({
   justifyContent: 'space-between',
   alignItems: 'flex-end',
   width: '80%',
-  '@media screen and (max-width: 1070px)': {
+  ...mobileCSS(STYLING_SIZES.SMALL_TABLET, {
     flexDirection: 'column',
     alignItems: 'center',
-  },
+  }),
 });
 
 // * Advantages Page
@@ -317,10 +321,10 @@ export const AdvantagesContainer = styled(Container)({
   flexDirection: 'column',
   gap: 64,
   width: '100%',
-  '@media screen and (max-width: 800px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
     marginBottom: '48px',
     gap: '48px',
-  },
+  }),
 });
 
 export const AdvantagesHeaderContainer = styled('header')({
@@ -336,12 +340,12 @@ export const AdvantagesContentContainer = styled(Container)({
   flexDirection: 'column',
   gap: 17,
   alignItems: 'unset',
-  padding: '0 3% 0 3%',
+  padding: '0 3%',
   maxWidth: 2000,
-  '@media screen and (max-width: 800px)': {
-    padding: '0 5% 0 5%',
+  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
+    padding: '0 5%',
     alignItems: 'center',
-  },
+  }),
 });
 
 export const ArticleContainer = styled(Container)({
@@ -349,22 +353,22 @@ export const ArticleContainer = styled(Container)({
   flexDirection: 'row',
   gap: '34px',
   alignItems: 'unset',
-  '@media screen and (max-width: 800px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
     flexDirection: 'column',
     alignItems: 'center',
     gap: 17,
-  },
+  }),
 });
 
 export const ArrowContainer = styled('aside')({
   display: 'flex',
   margin: '2.2rem 20px 0 0',
   alignItems: 'unset',
-  '@media screen and (max-width: 800px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
     margin: 0,
     width: '100%',
     justifyContent: 'center',
-  },
+  }),
 });
 
 export const ArticleNavigationContainer = styled('aside')({
@@ -372,9 +376,9 @@ export const ArticleNavigationContainer = styled('aside')({
   gap: '42px',
   alignItems: 'unset',
   flexDirection: 'column',
-  '@media screen and (max-width: 800px)': {
+  ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
     order: 0,
-  },
+  }),
 });
 
 export const NavigationItemContainer = styled(Container)({
