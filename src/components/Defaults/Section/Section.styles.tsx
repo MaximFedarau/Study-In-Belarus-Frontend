@@ -73,7 +73,7 @@ export const EducationContainer = styled(Section)({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'unset',
-    position: 'static',
+    bottom: 0,
     background: TRUE_BLUE,
     paddingBottom: 10,
   }),

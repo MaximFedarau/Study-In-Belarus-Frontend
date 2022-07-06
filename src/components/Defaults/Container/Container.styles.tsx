@@ -210,7 +210,7 @@ export const MobileBubbleContainer = styled(Container)({
   justifyContent: 'center',
   alignItems: 'center',
   gap: '5vw', // ! for Safari
-  borderBottom: '3px solid transparent',
+  // * borderBottom: '3px solid transparent', <- чтобы появлялась с нуля
   margin: 12,
   padding: 12,
   alignSelf: 'center',

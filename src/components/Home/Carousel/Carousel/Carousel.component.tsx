@@ -16,7 +16,6 @@ export default function Carousel(): ReactElement {
   const studentInfo = CAROUSEL_STUDENTS[studentIndex];
 
   function onNextArrowClick(): void {
-    console.log(CAROUSEL_STUDENTS);
     const newIndex = studentIndex + 1;
 
     if (newIndex >= CAROUSEL_STUDENTS.length) {

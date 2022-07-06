@@ -92,7 +92,7 @@ export const PointText = styled(DefaultText)({
   ...mobileCSS(STYLING_SIZES.LARGE_TABLET, {
     color: 'white',
     textAlign: 'center',
-    borderBottom: '1px solid transparent',
+    // * borderBottom: '1px solid transparent', <- чтобы она появлялась с нуля
     transition: 'all .5s ease-in',
   }),
 });
@@ -142,7 +142,7 @@ export const NewsItemHeader = styled('header')({
   color: 'white',
   fontSize: '1em',
   fontWeight: 700,
-  maxWidth: '99%',
+  paddingRight: '1%',
   ...mobileCSS(STYLING_SIZES.LARGE_PHONE, {
     WebkitLineClamp: '2',
     display: '-webkit-box',
