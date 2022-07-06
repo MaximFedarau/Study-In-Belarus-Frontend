@@ -3,6 +3,7 @@ import { styled } from '@mui/material';
 
 //Constants
 import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
+import { smallMobileCSS } from 'utils/styles/smallMobileCSS';
 
 export const IconWrapper = styled('div')({
   width: '100%',
@@ -18,8 +19,8 @@ export const IconWrapper = styled('div')({
     justifyContent: 'center',
     transition: 'transform .5s ease-in, box-shadow .5s ease-in',
   }),
-  '@media screen and (max-width: 319px)': {
+  ...smallMobileCSS({
     maxWidth: 50,
     maxHeight: 50,
-  },
+  }),
 });

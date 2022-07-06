@@ -6,7 +6,7 @@ import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
 
 import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
 import { smallTabletCSS } from 'utils/styles/smallTabletCSS';
-import { largePhoneCSS } from 'utils/styles/largePhoneCSS';
+import { largeMobileCSS } from 'utils/styles/largeMobileCSS';
 
 // * Default
 
@@ -321,7 +321,7 @@ export const AdvantagesContainer = styled(Container)({
   flexDirection: 'column',
   gap: 64,
   width: '100%',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     marginBottom: '48px',
     gap: '48px',
   }),
@@ -342,7 +342,7 @@ export const AdvantagesContentContainer = styled(Container)({
   alignItems: 'unset',
   padding: '0 3%',
   maxWidth: 2000,
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     padding: '0 5%',
     alignItems: 'center',
   }),
@@ -353,7 +353,7 @@ export const ArticleContainer = styled(Container)({
   flexDirection: 'row',
   gap: '34px',
   alignItems: 'unset',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     flexDirection: 'column',
     alignItems: 'center',
     gap: 17,
@@ -364,7 +364,7 @@ export const ArrowContainer = styled('aside')({
   display: 'flex',
   margin: '2.2rem 20px 0 0',
   alignItems: 'unset',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     margin: 0,
     width: '100%',
     justifyContent: 'center',
@@ -376,7 +376,7 @@ export const ArticleNavigationContainer = styled('aside')({
   gap: '42px',
   alignItems: 'unset',
   flexDirection: 'column',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     order: 0,
   }),
 });

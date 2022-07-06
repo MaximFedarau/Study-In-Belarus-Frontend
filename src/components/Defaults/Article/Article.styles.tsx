@@ -7,8 +7,9 @@ import { styled } from '@mui/material';
 //Constants
 import { NEWS_ITEM_STYLING } from 'constants/styles';
 
-import { largePhoneCSS } from 'utils/styles/largePhoneCSS';
+import { largeMobileCSS } from 'utils/styles/largeMobileCSS';
 import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
+import { smallTabletCSS } from 'utils/styles/smallTabletCSS';
 
 // * Defaults
 export const Article = styled('article')(
@@ -31,10 +32,10 @@ export const CarouselStudentInfo = styled(Article)({
   flexDirection: 'row',
   alignItems: 'center',
   gap: 30,
-  '@media screen and (max-width: 910px)': {
+  ...smallTabletCSS({
     flexDirection: 'column',
     gap: 0,
-  },
+  }),
 });
 
 export const NewsItemContainer = styled(Article)(
@@ -61,7 +62,7 @@ export const NewsItemContainer = styled(Article)(
 export const ArticleTextContainer = styled(Article)({
   gap: 15,
   alignItems: 'unset',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     alignItems: 'center',
     order: 1,
     marginTop: 13,

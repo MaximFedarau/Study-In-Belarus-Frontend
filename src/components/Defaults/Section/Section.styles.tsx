@@ -6,7 +6,7 @@ import { TRUE_BLUE } from 'constants/colors';
 
 import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
 import { smallTabletCSS } from 'utils/styles/smallTabletCSS';
-import { largePhoneCSS } from 'utils/styles/largePhoneCSS';
+import { largeMobileCSS } from 'utils/styles/largeMobileCSS';
 
 //Icons
 import wave from 'assets/images/home/wave_with_sign.svg';
@@ -119,7 +119,7 @@ export const CarouselContainer = styled(Section)({
   flexDirection: 'row',
   justifyContent: 'space-between',
   alignItems: 'center',
-  minHeight: '50vh',
+  minHeight: '45vh',
   width: '100%',
   maxWidth: 2000,
   padding: '16px 0',
@@ -127,9 +127,9 @@ export const CarouselContainer = styled(Section)({
 });
 
 export const CarouselStudentAdditionalInfo = styled(Section)({
-  '@media screen and (max-width: 910px)': {
+  ...smallTabletCSS({
     alignItems: 'center',
-  },
+  }),
 });
 
 export const LatestNewsContainer = styled(Section)({
@@ -174,7 +174,7 @@ export const SubarticleContainer = styled(Section)({
   gap: '17px',
   width: '70%',
   alignItems: 'unset',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     width: '100%',
   }),
 });

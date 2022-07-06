@@ -1,17 +1,8 @@
 //Types
-import React from 'react';
 import { STYLING_SIZES } from 'types/enum';
-import { StyledOptions } from '@emotion/styled';
-import { MuiStyledOptions, MUIStyledCommonProps } from '@mui/system';
+import { MEDIA_QUERIES_STYLES } from 'types/types';
 
-export function smallTabletCSS(
-  styles:
-    | React.CSSProperties
-    | StyledOptions<React.Component>
-    | MuiStyledOptions
-    | MUIStyledCommonProps
-    | { [key: string]: any },
-) {
+export function smallTabletCSS(styles: MEDIA_QUERIES_STYLES) {
   return {
     [`@media screen and (max-width: ${STYLING_SIZES.SMALL_TABLET})`]: styles,
   };

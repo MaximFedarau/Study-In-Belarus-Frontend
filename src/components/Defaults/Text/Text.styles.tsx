@@ -5,7 +5,8 @@ import { styled, Typography } from '@mui/material';
 import { TRUE_BLUE, SUVA_GREY, WINDOWS_GRAY } from 'constants/colors';
 
 import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
-import { largePhoneCSS } from 'utils/styles/largePhoneCSS';
+import { largeMobileCSS } from 'utils/styles/largeMobileCSS';
+import { smallTabletCSS } from 'utils/styles/smallTabletCSS';
 
 // * Default
 
@@ -105,24 +106,24 @@ export const SalutationMobileBubbleText = styled(DefaultText)({
 
 export const CarouselStudentHeader = styled('h1')({
   textTransform: 'capitalize',
-  '@media screen and (max-width: 910px)': {
+  ...smallTabletCSS({
     textAlign: 'center',
-  },
+  }),
 });
 
 export const CarouselStudentText = styled('p')({
   textTransform: 'capitalize',
   maxWidth: 480,
-  '@media screen and (max-width: 910px)': {
+  ...smallTabletCSS({
     textAlign: 'center',
-  },
+  }),
 });
 
 export const CarouselStudentAdditionalText = styled('em')({
   textTransform: 'capitalize',
-  '@media screen and (max-width: 910px)': {
+  ...smallTabletCSS({
     textAlign: 'center',
-  },
+  }),
 });
 
 export const LatestNewsHeaderText = styled(DefaultText)({
@@ -130,7 +131,7 @@ export const LatestNewsHeaderText = styled(DefaultText)({
   fontWeight: 700,
   fontSize: 96,
   lineHeight: 1,
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     fontSize: '5rem',
     textAlign: 'center',
     lineHeight: '5rem',
@@ -142,7 +143,7 @@ export const NewsItemHeader = styled('header')({
   fontSize: '1em',
   fontWeight: 700,
   paddingRight: '1%',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     WebkitLineClamp: '2',
     display: '-webkit-box',
     WebkitBoxOrient: 'vertical',
@@ -161,7 +162,7 @@ export const LatestNewsHeaderSubText = styled(DefaultText)({
   fontSize: 18,
   lineHeight: 2.6,
   cursor: 'pointer',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     textAlign: 'center',
   }),
 });
@@ -175,7 +176,7 @@ export const ArticlePathText = styled('nav')({
   marginLeft: 90,
   lineHeight: 1.5,
   letterSpacing: '0.00938em',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     textAlign: 'center',
     marginLeft: 0,
   }),
@@ -187,7 +188,7 @@ export const ArticleHeaderText = styled(DefaultText)({
   fontSize: '36px',
   textTransform: 'capitalize',
   lineHeight: '42px',
-  ...largePhoneCSS({
+  ...largeMobileCSS({
     textAlign: 'center',
   }),
 });
