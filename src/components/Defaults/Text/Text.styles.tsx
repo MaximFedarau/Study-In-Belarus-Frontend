@@ -40,7 +40,8 @@ export const SubsectionText = styled(DefaultText)({
 
 export const BottomLink = styled(DefaultText)({
   userSelect: 'none',
-  fontFamily: 'Cera Pro Bold',
+  fontFamily: 'Roboto',
+  fontWeight: 400,
   fontSize: '18px',
   lineHeight: '21px',
   cursor: 'pointer',
@@ -86,7 +87,7 @@ export const NotFoundFooter = styled('footer')({
 // * Home
 
 export const PointText = styled(DefaultText)({
-  fontFamily: 'Roboto Regular',
+  fontFamily: 'Roboto',
   fontWeight: 400,
   fontSize: 18,
   ...largeTabletCSS({
@@ -103,10 +104,12 @@ export const SalutationMobileBubbleText = styled(DefaultText)({
   position: 'absolute', // ! for Safari
   visibility: 'hidden', // ! for Safari
   textTransform: 'uppercase',
+  fontFamily: 'Roboto',
 });
 
 export const CarouselStudentHeader = styled('h1')({
   textTransform: 'capitalize',
+  fontFamily: 'Roboto',
   ...smallTabletCSS({
     textAlign: 'center',
   }),
@@ -115,6 +118,8 @@ export const CarouselStudentHeader = styled('h1')({
 export const CarouselStudentText = styled('p')({
   textTransform: 'capitalize',
   maxWidth: 480,
+  fontFamily: 'Roboto',
+  fontWeight: 400,
   ...smallTabletCSS({
     textAlign: 'center',
   }),
@@ -172,7 +177,7 @@ export const LatestNewsHeaderSubText = styled(DefaultText)({
 export const ArticlePathText = styled('nav')({
   color: SUVA_GREY,
   fontSize: '18px',
-  fontFamily: 'Roboto Regular',
+  fontFamily: 'Roboto',
   fontWeight: 500,
   marginLeft: 90,
   lineHeight: 1.5,
@@ -184,7 +189,7 @@ export const ArticlePathText = styled('nav')({
 });
 
 export const ArticleHeaderText = styled(DefaultText)({
-  fontFamily: 'Roboto Regular',
+  fontFamily: 'Roboto',
   fontWeight: 700,
   fontSize: '36px',
   textTransform: 'capitalize',
@@ -195,7 +200,7 @@ export const ArticleHeaderText = styled(DefaultText)({
 });
 
 export const SubarticleText = styled(DefaultText)({
-  fontFamily: 'Roboto Regular',
+  fontFamily: 'Roboto',
   fontWeight: 400,
   fontSize: '20px',
   color: TRUE_BLUE,
@@ -203,7 +208,7 @@ export const SubarticleText = styled(DefaultText)({
 
 export const ArticleText = styled(DefaultText)(
   ({ isActive }: { isActive?: boolean }) => ({
-    fontFamily: 'Roboto Regular',
+    fontFamily: 'Roboto',
     fontWeight: isActive ? 500 : 400,
     fontSize: '18px',
     color: isActive ? TRUE_BLUE : 'black',

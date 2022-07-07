@@ -57,7 +57,7 @@ export const BubbleContainer = styled(Box)(
 
 export const BubbleText = styled(DefaultText)(
   ({ isActive, type }: { isActive?: boolean; type?: DEFAULT_SIZES }) => ({
-    fontFamily: 'Roboto Regular',
+    fontFamily: 'Cera Pro Bold',
     fontWeight: 700,
     fontSize: '2em',
     color: isActive ? TRUE_BLUE : 'black',
@@ -73,7 +73,7 @@ export const BubbleSubtext = styled(DefaultText)(
     isActive?: boolean;
     type?: DEFAULT_SIZES;
   }) => ({
-    fontFamily: 'Roboto Regular',
+    fontFamily: 'Cera Pro Light',
     fontWeight: 400,
     fontSize: '20px',
     textAlign: 'center',

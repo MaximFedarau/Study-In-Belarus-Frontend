@@ -48,7 +48,7 @@ export const MainText = styled(DefaultText)(
     type?: DEFAULT_SIZES;
   }) => ({
     fontWeight: 100,
-    fontFamily: 'Roboto Regular',
+    fontFamily: 'Cera Pro Light',
     fontSize: 24,
     textTransform: 'uppercase',
     order: reverse ? 2 : 0,
