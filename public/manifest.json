@@ -4,8 +4,8 @@
   "description": "We help students to find a university or college in Belarus.",
   "icons": [
     {
-      "src": "logo.svg",
-      "type": "image/svg+xml",
+      "src": "logo.ico",
+      "type": "image/x-icon",
       "sizes": "any"
     }
   ],
