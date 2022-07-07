@@ -285,6 +285,7 @@ export const PointItemContainer = styled(Container)({
         borderBottom: '1px solid #fff',
       },
     },
+    padding: '0 3%',
   }),
 });
 

@@ -92,6 +92,7 @@ export const PointText = styled(DefaultText)({
   ...largeTabletCSS({
     color: 'white',
     textAlign: 'center',
+    fontSize: '16.5px',
     // * borderBottom: '1px solid transparent', <- чтобы она появлялась с нуля
     transition: 'all .5s ease-in',
   }),

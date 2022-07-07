@@ -11,6 +11,8 @@ export const IconWrapper = styled('div')({
   maxWidth: 133,
   maxHeight: 133,
   ...largeTabletCSS({
+    maxHeight: '13vw',
+    maxWidth: '13vw',
     background: 'white',
     borderRadius: '50%',
     padding: '30px',
