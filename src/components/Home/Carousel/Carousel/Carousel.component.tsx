@@ -37,9 +37,9 @@ export default function Carousel(): ReactElement {
 
   return (
     <CarouselContainer>
-      <Arrow onClick={onNextArrowClick} />
-      <Student {...studentInfo} />
       <Arrow onClick={onPreviousArrowClick} />
+      <Student {...studentInfo} />
+      <Arrow onClick={onNextArrowClick} />
     </CarouselContainer>
   );
 }
