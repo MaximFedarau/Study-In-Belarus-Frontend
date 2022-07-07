@@ -11,6 +11,7 @@ import { smallTabletCSS } from 'utils/styles/smallTabletCSS';
 
 //Icons
 import { URLS } from './data';
+import { smallMobileCSS } from 'utils/styles/smallMobileCSS';
 
 export const BUTTON_VARIANT_STYLING = {
   [BUTTON_VARIANT.CONTAINED]: {
@@ -102,10 +103,16 @@ export const NEWS_ITEM_STYLING = {
     height: '12.4vw',
     fontSize: 15,
     maxWidth: 400,
-    maxHeight: 200,
+    maxHeight: 250,
     ...smallTabletCSS({
-      height: '20vw',
+      height: '25vw',
       fontSize: '2vw',
+      maxHeight: 300,
+    }),
+    ...smallMobileCSS({
+      height: '23.5vw',
+      fontSize: '2vw',
+      maxHeight: 300,
     }),
   },
   [DEFAULT_SIZES.MEDIUM]: {},
@@ -116,8 +123,9 @@ export const NEWS_ITEM_STYLING = {
     maxWidth: 850,
     maxHeight: 550,
     ...smallTabletCSS({
-      height: '40vw',
+      height: '55.5vw',
       fontSize: '4vw',
+      maxHeight: 600,
     }),
   },
 };

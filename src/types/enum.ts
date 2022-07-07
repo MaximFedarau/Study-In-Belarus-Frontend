@@ -3,7 +3,7 @@ export enum STYLING_SIZES {
   LARGE_TABLET = '1170px', // about 12 times per project
   SMALL_TABLET = '1070px', // about 9 times per project
   LARGE_PHONE = '800px', // about 12 times per project
-  SMALL_PHONE = '319px', // about 1 time per project
+  SMALL_PHONE = '400px', // about 1 time per project
 }
 
 export enum PAGES_TITLES {
