@@ -244,11 +244,13 @@ export const MobileBubbleContainer = styled(Container)({
 });
 
 export const TopWaveContainer = styled(Container)({
-  flexDirection: 'column',
+  display: 'none',
+  ...largeTabletCSS({ display: 'flex', flexDirection: 'column' }),
 });
 
 export const BottomWaveContainer = styled(Container)({
-  marginBottom: 100,
+  display: 'none',
+  ...largeTabletCSS({ display: 'flex', marginBottom: 100 }),
 });
 
 export const EducationMainImageContainer = styled(Container)({
