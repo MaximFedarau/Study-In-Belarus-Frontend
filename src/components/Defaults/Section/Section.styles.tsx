@@ -75,7 +75,7 @@ export const EducationContainer = styled(Section)({
     justifyContent: 'unset',
     bottom: 0,
     background: TRUE_BLUE,
-    paddingBottom: 10,
+    paddingBottom: 25,
   }),
 });
 
