@@ -2,7 +2,7 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { FOOTER_NETWORK_ICON_OPTIONS } from '../../../constants/constants';
+import { FOOTER_NETWORK_ICON_OPTIONS } from '../../../constants/styles';
 
 //Components
 import { FooterNetworksContactsContainer } from '../../Defaults/Container/Container.styles';

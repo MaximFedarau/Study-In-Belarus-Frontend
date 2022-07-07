@@ -4,6 +4,10 @@ import { styled, Box, AppBar } from '@mui/material';
 //Constants
 import { WINDOWS_BLUE, TRUE_BLUE } from 'constants/colors';
 
+import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
+import { smallTabletCSS } from 'utils/styles/smallTabletCSS';
+import { largeMobileCSS } from 'utils/styles/largeMobileCSS';
+
 // * Default
 
 export const Container = styled(Box)(
@@ -79,12 +83,12 @@ export const FooterMainContainer = styled('footer')({
 
 export const FooterWaveContainer = styled(Container)({
   display: 'none',
-  '@media screen and (max-width: 1070px)': {
+  ...smallTabletCSS({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'end',
     justifyContent: 'end',
-  },
+  }),
 });
 
 export const FooterContainer = styled(Container)(
@@ -105,10 +109,10 @@ export const FooterContainer = styled(Container)(
     display: 'flex',
     justifyContent: 'center',
     alignItems: '',
-    '@media screen and (max-width: 1070px)': {
+    ...smallTabletCSS({
       background: mobileBackground,
       height: '100%',
-    },
+    }),
   }),
 );
 
@@ -119,12 +123,12 @@ export const FooterContentContainer = styled(Container)({
   gap: '57px',
   alignItems: 'unset',
   marginTop: '5%',
-  '@media screen and (max-width: 1070px)': {
+  ...smallTabletCSS({
     alignItems: 'center',
     gap: '40px',
     width: '100%',
     margin: 0,
-  },
+  }),
 });
 
 export const FooterTextContainer = styled(Container)({
@@ -132,10 +136,10 @@ export const FooterTextContainer = styled(Container)({
   flexDirection: 'row',
   alignItems: 'unset',
   gap: '19px',
-  '@media screen and (max-width: 1070px)': {
+  ...smallTabletCSS({
     flexDirection: 'column',
     alignItems: 'center',
-  },
+  }),
 });
 
 export const FooterContactsContainer = styled(Container)({
@@ -143,10 +147,10 @@ export const FooterContactsContainer = styled(Container)({
   flexDirection: 'row',
   gap: '40px',
   justifyContent: 'center',
-  '@media screen and (max-width: 1070px)': {
+  ...smallTabletCSS({
     flexDirection: 'column',
     alignItems: 'center',
-  },
+  }),
 });
 
 export const FooterContactsItemsContainer = styled(Container)({
@@ -187,11 +191,127 @@ export const NotFoundContentContainer = styled(Container)({
   marginBottom: '64px',
 });
 
-export const NotFoundInfoContainer = styled('section')({
+// * Home Page
+
+export const GreetingsHeader = styled('header')({
+  maxWidth: 2000,
+  marginTop: 'calc(200px - 10vw)',
+  paddingLeft: '6%',
+  width: '100%',
+  '@media screen and (min-width: 1500px)': {
+    marginTop: 50,
+  },
+});
+
+export const MobileBubbleContainer = styled(Container)({
+  cursor: 'pointer',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'center',
+  alignItems: 'center',
+  gap: '5vw', // ! for Safari
+  // * borderBottom: '3px solid transparent', <- чтобы появлялась с нуля
+  margin: 12,
+  padding: 12,
+  alignSelf: 'center',
+  ':hover': {
+    borderBottom: `3px solid ${TRUE_BLUE}`,
+    borderRadius: '5%',
+    transition: 'border 0.5s ease-in-out',
+    '*': {
+      color: TRUE_BLUE,
+    },
+    '> p': {
+      position: 'static', // ! for Safari
+      visibility: 'visible', // ! for Safari
+      animation: 'bubble-animation 0.5s ease-in-out',
+    },
+  },
+  '@keyframes bubble-animation': {
+    '0%': {
+      opacity: 0.3,
+      transform: 'translateY(0)',
+    },
+    '50%': {
+      opacity: 0.6,
+      transform: 'translateY(10px)',
+    },
+    '100%': {
+      opacity: 1,
+      transform: 'translateY(0)',
+    },
+  },
+});
+
+export const TopWaveContainer = styled(Container)({
+  flexDirection: 'column',
+});
+
+export const BottomWaveContainer = styled(Container)({
+  marginBottom: 100,
+});
+
+export const EducationMainImageContainer = styled(Container)({
+  width: '100%',
+  height: '100%',
+  maxWidth: 653,
+  maxHeight: 933,
+  ...largeTabletCSS({
+    display: 'none',
+  }),
+});
+
+export const PointItemContainer = styled(Container)({
+  display: 'flex',
+  flexDirection: 'row',
+  gap: 100,
+  alignItems: 'center',
+  ':hover': {
+    '> p': {
+      textShadow: '0px 4px 15px rgba(0, 0, 0, 0.25)',
+    },
+  },
+  ...largeTabletCSS({
+    gap: '7vw',
+    cursor: 'pointer',
+    ':hover': {
+      '> div': {
+        transform: 'scale(1.1) rotate(-30deg)',
+        boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.5);',
+      },
+      '> p': {
+        borderBottom: '1px solid #fff',
+      },
+    },
+  }),
+});
+
+export const CarouselArrowWrapper = styled(Container)({
+  marginLeft: '3%',
+  transform: 'rotate(180deg)',
+  ':last-child': {
+    marginRight: '3%',
+    marginLeft: 0,
+    transform: 'unset',
+  },
+});
+
+export const HomeContainer = styled(Container)({
   display: 'flex',
   flexDirection: 'column',
-  gap: '23px',
-  alignItems: 'unset',
+  width: '100%',
+});
+
+export const LatestNewsHeader = styled('header')({
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'flex-end',
+  width: '80%',
+  ...smallTabletCSS({
+    flexDirection: 'column',
+    alignItems: 'center',
+  }),
 });
 
 // * Advantages Page
@@ -201,10 +321,10 @@ export const AdvantagesContainer = styled(Container)({
   flexDirection: 'column',
   gap: 64,
   width: '100%',
-  '@media screen and (max-width: 800px)': {
+  ...largeMobileCSS({
     marginBottom: '48px',
     gap: '48px',
-  },
+  }),
 });
 
 export const AdvantagesHeaderContainer = styled('header')({
@@ -220,12 +340,12 @@ export const AdvantagesContentContainer = styled(Container)({
   flexDirection: 'column',
   gap: 17,
   alignItems: 'unset',
-  padding: '0 3% 0 3%',
+  padding: '0 3%',
   maxWidth: 2000,
-  '@media screen and (max-width: 800px)': {
-    padding: '0 5% 0 5%',
+  ...largeMobileCSS({
+    padding: '0 5%',
     alignItems: 'center',
-  },
+  }),
 });
 
 export const ArticleContainer = styled(Container)({
@@ -233,45 +353,22 @@ export const ArticleContainer = styled(Container)({
   flexDirection: 'row',
   gap: '34px',
   alignItems: 'unset',
-  '@media screen and (max-width: 800px)': {
+  ...largeMobileCSS({
     flexDirection: 'column',
     alignItems: 'center',
     gap: 17,
-  },
+  }),
 });
 
 export const ArrowContainer = styled('aside')({
   display: 'flex',
   margin: '2.2rem 20px 0 0',
   alignItems: 'unset',
-  '@media screen and (max-width: 800px)': {
+  ...largeMobileCSS({
     margin: 0,
     width: '100%',
     justifyContent: 'center',
-  },
-});
-
-export const ArticleTextContainer = styled('section')({
-  display: 'flex',
-  flexDirection: 'column',
-  gap: 15,
-  alignItems: 'unset',
-  '@media screen and (max-width: 800px)': {
-    alignItems: 'center',
-    order: 1,
-    marginTop: 13,
-  },
-});
-
-export const SubarticleContainer = styled('section')({
-  display: 'flex',
-  flexDirection: 'column',
-  gap: '17px',
-  width: '70%',
-  alignItems: 'unset',
-  '@media screen and (max-width: 800px)': {
-    width: '100%',
-  },
+  }),
 });
 
 export const ArticleNavigationContainer = styled('aside')({
@@ -279,9 +376,9 @@ export const ArticleNavigationContainer = styled('aside')({
   gap: '42px',
   alignItems: 'unset',
   flexDirection: 'column',
-  '@media screen and (max-width: 800px)': {
+  ...largeMobileCSS({
     order: 0,
-  },
+  }),
 });
 
 export const NavigationItemContainer = styled(Container)({

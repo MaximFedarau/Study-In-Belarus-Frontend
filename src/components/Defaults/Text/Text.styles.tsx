@@ -2,7 +2,11 @@
 import { styled, Typography } from '@mui/material';
 
 //Constants
-import { TRUE_BLUE, SUVA_GREY, WINDOWS_GRAY } from '../../../constants/colors';
+import { TRUE_BLUE, SUVA_GREY, WINDOWS_GRAY } from 'constants/colors';
+
+import { largeTabletCSS } from 'utils/styles/largeTabletCSS';
+import { largeMobileCSS } from 'utils/styles/largeMobileCSS';
+import { smallTabletCSS } from 'utils/styles/smallTabletCSS';
 
 // * Default
 
@@ -49,9 +53,9 @@ export const ContactsText = styled(DefaultText)({
   fontSize: '18px',
   lineHeight: '21px',
   maxWidth: '250px',
-  '@media screen and (max-width: 1180px)': {
+  ...largeTabletCSS({
     textAlign: 'center',
-  },
+  }),
 });
 
 // * 404
@@ -79,6 +83,90 @@ export const NotFoundFooter = styled('footer')({
   textAlign: 'center',
 });
 
+// * Home
+
+export const PointText = styled(DefaultText)({
+  fontFamily: 'Roboto Regular',
+  fontWeight: 400,
+  fontSize: 18,
+  ...largeTabletCSS({
+    color: 'white',
+    textAlign: 'center',
+    // * borderBottom: '1px solid transparent', <- чтобы она появлялась с нуля
+    transition: 'all .5s ease-in',
+  }),
+});
+
+export const SalutationMobileBubbleText = styled(DefaultText)({
+  fontSize: '20px',
+  position: 'absolute', // ! for Safari
+  visibility: 'hidden', // ! for Safari
+  textTransform: 'uppercase',
+});
+
+export const CarouselStudentHeader = styled('h1')({
+  textTransform: 'capitalize',
+  ...smallTabletCSS({
+    textAlign: 'center',
+  }),
+});
+
+export const CarouselStudentText = styled('p')({
+  textTransform: 'capitalize',
+  maxWidth: 480,
+  ...smallTabletCSS({
+    textAlign: 'center',
+  }),
+});
+
+export const CarouselStudentAdditionalText = styled('em')({
+  textTransform: 'capitalize',
+  ...smallTabletCSS({
+    textAlign: 'center',
+  }),
+});
+
+export const LatestNewsHeaderText = styled(DefaultText)({
+  color: 'white',
+  fontWeight: 700,
+  fontSize: 96,
+  lineHeight: 1,
+  ...largeMobileCSS({
+    fontSize: '5rem',
+    textAlign: 'center',
+    lineHeight: '5rem',
+  }),
+});
+
+export const NewsItemHeader = styled('header')({
+  color: 'white',
+  fontSize: '1em',
+  fontWeight: 700,
+  paddingRight: '1%',
+  ...largeMobileCSS({
+    WebkitLineClamp: '2',
+    display: '-webkit-box',
+    WebkitBoxOrient: 'vertical',
+    overflow: 'hidden',
+  }),
+});
+
+export const NewsItemDateText = styled(DefaultText)({
+  color: 'white',
+  fontSize: '.8em',
+  fontWeight: 400,
+});
+
+export const LatestNewsHeaderSubText = styled(DefaultText)({
+  color: 'white',
+  fontSize: 18,
+  lineHeight: 2.6,
+  cursor: 'pointer',
+  ...largeMobileCSS({
+    textAlign: 'center',
+  }),
+});
+
 // * Advantages
 export const ArticlePathText = styled('nav')({
   color: SUVA_GREY,
@@ -88,10 +176,10 @@ export const ArticlePathText = styled('nav')({
   marginLeft: 90,
   lineHeight: 1.5,
   letterSpacing: '0.00938em',
-  '@media screen and (max-width: 800px)': {
+  ...largeMobileCSS({
     textAlign: 'center',
     marginLeft: 0,
-  },
+  }),
 });
 
 export const ArticleHeaderText = styled(DefaultText)({
@@ -100,9 +188,9 @@ export const ArticleHeaderText = styled(DefaultText)({
   fontSize: '36px',
   textTransform: 'capitalize',
   lineHeight: '42px',
-  '@media screen and (max-width: 800px)': {
+  ...largeMobileCSS({
     textAlign: 'center',
-  },
+  }),
 });
 
 export const SubarticleText = styled(DefaultText)({

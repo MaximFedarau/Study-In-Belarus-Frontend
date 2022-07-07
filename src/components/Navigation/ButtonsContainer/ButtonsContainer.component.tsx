@@ -2,7 +2,7 @@
 import React, { ReactElement } from 'react';
 
 //Constants
-import { NAVIGATION_ICON_BUTTON_SIZES } from 'constants/constants';
+import { NAVIGATION_ICON_BUTTON_SIZES } from 'constants/styles';
 
 //Components
 import { NavigationButtonsContainer } from 'components/Defaults/Container/Container.styles';

@@ -2,13 +2,11 @@
 import { ReactElement } from 'react';
 
 //Constants
-import { ADVANTAGES_IMAGE_SIZES } from 'constants/constants';
+import { ADVANTAGES_IMAGE_SIZES } from 'constants/styles';
 
 //Components
-import {
-  ArticleTextContainer,
-  SubarticleContainer,
-} from 'components/Defaults/Container/Container.styles';
+import { ArticleTextContainer } from 'components/Defaults/Article/Article.styles';
+import { SubarticleContainer } from 'components/Defaults/Section/Section.styles';
 import {
   ArticleHeaderText,
   ArticleText,

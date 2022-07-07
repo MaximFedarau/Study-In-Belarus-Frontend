@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 
 //Constants
 import { NavigationPaperStyle } from 'components/Defaults/Drawer/Drawer.styles';
-import { BUTTON_VARIANT, BUTTON_SIZE } from 'constants/enum';
+import { BUTTON_VARIANT, DEFAULT_SIZES } from 'types/enum';
 
 //Components
 import { NavigationDrawerLoginContainer } from 'components/Defaults/Container/Container.styles';
@@ -40,7 +40,7 @@ export default function Drawer({
       <NavigationDrawerLoginContainer>
         <Button
           shellVariant={BUTTON_VARIANT.OUTLINED}
-          shellSize={BUTTON_SIZE.LARGE}
+          shellSize={DEFAULT_SIZES.LARGE}
         >
           login for Universities
         </Button>
