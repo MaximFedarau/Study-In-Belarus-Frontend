@@ -10,7 +10,7 @@ import { GreetingsHeader } from 'components/Defaults/Container/Container.styles'
 import { GreetingsContainer } from 'components/Defaults/Section/Section.styles';
 
 //Icons
-import { ReactComponent as MainImage } from 'assets/images/home/student_with_sign.svg';
+import mainImage from 'assets/images/home/student_with_sign.png';
 
 export default function Salutation(): ReactElement {
   return (
@@ -18,7 +18,7 @@ export default function Salutation(): ReactElement {
       <SalutationMobile />
       <GreetingsWelcomePart>
         <GreetingsHeader>
-          <MainImage width="100%" height="100%" />
+          <img src={mainImage} loading="lazy" width="100%" height="100%" />
         </GreetingsHeader>
         <Bubbles />
       </GreetingsWelcomePart>

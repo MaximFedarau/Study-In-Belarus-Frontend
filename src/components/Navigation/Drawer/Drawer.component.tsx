@@ -45,7 +45,7 @@ export default function Drawer({
           login for Universities
         </Button>
         <IconButton width={48} height={48} onClickHandler={onCloseHandler}>
-          <img src={CloseIcon} />
+          <img loading="lazy" src={CloseIcon} />
         </IconButton>
       </NavigationDrawerLoginContainer>
       <DrawerItemsList />

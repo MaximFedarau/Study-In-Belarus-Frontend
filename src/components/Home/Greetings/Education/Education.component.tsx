@@ -28,7 +28,7 @@ export default function Education(): ReactElement {
         <MobileTitle sticked>
           Education in Belarus for <a>foreign</a> citizens
         </MobileTitle>
-        <MobileWave src={wave} />
+        <MobileWave loading="lazy" src={wave} />
       </TopWaveContainer>
       <EducationContainer>
         <Points />
@@ -37,7 +37,7 @@ export default function Education(): ReactElement {
         </EducationMainImageContainer>
       </EducationContainer>
       <BottomWaveContainer>
-        <MobileWave reverse src={wave} />
+        <MobileWave loading="lazy" reverse src={wave} />
       </BottomWaveContainer>
     </>
   );

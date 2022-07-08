@@ -2,9 +2,6 @@
 import React, { ReactElement } from 'react';
 import { PAGES_TITLES } from 'types/enum';
 
-//Constants
-import { ADVANTAGES_IMAGE_SIZES } from 'constants/styles';
-
 //Components
 import {
   AdvantagesContainer,
@@ -13,7 +10,7 @@ import {
 import Content from 'components/Advantages/Content/Content.component';
 
 //Icons
-import { ReactComponent as StudentsSVG } from 'assets/images/advantages/students.svg';
+import students from 'assets/images/advantages/students.jpg';
 
 export default function Advantages(): ReactElement {
   React.useEffect(() => {
@@ -23,7 +20,7 @@ export default function Advantages(): ReactElement {
     <AdvantagesContainer>
       <AdvantagesHeaderContainer>
         {/* div is for Safari */}
-        <StudentsSVG {...ADVANTAGES_IMAGE_SIZES} />
+        <img src={students} loading="lazy" width="100%" height="100%" />
       </AdvantagesHeaderContainer>
       <Content />
     </AdvantagesContainer>

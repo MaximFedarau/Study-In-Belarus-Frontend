@@ -1,9 +1,6 @@
 //Types
 import { ReactElement } from 'react';
 
-//Constants
-import { ADVANTAGES_IMAGE_SIZES } from 'constants/styles';
-
 //Components
 import { ArticleTextContainer } from 'components/Defaults/Article/Article.styles';
 import { SubarticleContainer } from 'components/Defaults/Section/Section.styles';
@@ -14,8 +11,8 @@ import {
 } from 'components/Defaults/Text/Text.styles';
 
 //Icons
-import { ReactComponent as EducationEndSVG } from 'assets/images/advantages/education_end.svg';
-import { ReactComponent as BooksSVG } from 'assets/images/advantages/books.svg';
+import education from 'assets/images/advantages/education_end.jpg';
+import book from 'assets/images/advantages/books.jpg';
 
 export default function ArticleContent(): ReactElement {
   return (
@@ -27,7 +24,7 @@ export default function ArticleContent(): ReactElement {
         </SubarticleText>
         <div>
           {/* div is for Safari */}
-          <EducationEndSVG {...ADVANTAGES_IMAGE_SIZES} />
+          <img src={education} loading="lazy" width="100%" height="100%" />
         </div>
         <ArticleText>
           <strong>51</strong> higher education institutions (universities,
@@ -48,7 +45,7 @@ export default function ArticleContent(): ReactElement {
         </SubarticleText>
         <div>
           {/* div is for Safari */}
-          <BooksSVG {...ADVANTAGES_IMAGE_SIZES} />
+          <img src={book} loading="lazy" width="100%" height="100%" />
         </div>
         <ArticleText>
           In the Republic of Belarus you can acquire fundamental knowledge in
