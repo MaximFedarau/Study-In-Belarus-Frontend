@@ -9,6 +9,7 @@ import { BUTTON_VARIANT, DEFAULT_SIZES } from 'types/enum';
 import { NavigationDrawerLoginContainer } from 'components/Defaults/Container/Container.styles';
 import IconButton from 'components/Defaults/IconButton/IconButton.component';
 import Button from 'components/Defaults/Button/Button.component';
+import OptimizedImage from 'components/Defaults/OptimizedImage/OptimizedImage.component';
 
 //MUI Components
 import { Drawer as MUIDrawer } from '@mui/material';
@@ -45,7 +46,7 @@ export default function Drawer({
           login for Universities
         </Button>
         <IconButton width={48} height={48} onClickHandler={onCloseHandler}>
-          <img loading="lazy" src={CloseIcon} />
+          <OptimizedImage src={CloseIcon} />
         </IconButton>
       </NavigationDrawerLoginContainer>
       <DrawerItemsList />

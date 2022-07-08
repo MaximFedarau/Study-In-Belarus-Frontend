@@ -2,6 +2,8 @@
 import { ReactElement } from 'react';
 
 //Components
+import OptimizedImage from 'components/Defaults/OptimizedImage/OptimizedImage.component';
+
 import { ArticleTextContainer } from 'components/Defaults/Article/Article.styles';
 import { SubarticleContainer } from 'components/Defaults/Section/Section.styles';
 import {
@@ -24,7 +26,7 @@ export default function ArticleContent(): ReactElement {
         </SubarticleText>
         <div>
           {/* div is for Safari */}
-          <img src={education} loading="lazy" width="100%" height="100%" />
+          <OptimizedImage src={education} width="100%" height="100%" />
         </div>
         <ArticleText>
           <strong>51</strong> higher education institutions (universities,
@@ -45,7 +47,7 @@ export default function ArticleContent(): ReactElement {
         </SubarticleText>
         <div>
           {/* div is for Safari */}
-          <img src={book} loading="lazy" width="100%" height="100%" />
+          <OptimizedImage src={book} width="100%" height="100%" />
         </div>
         <ArticleText>
           In the Republic of Belarus you can acquire fundamental knowledge in

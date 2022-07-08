@@ -2,6 +2,8 @@
 import { ReactElement } from 'react';
 
 //Components
+import OptimizedImage from 'components/Defaults/OptimizedImage/OptimizedImage.component';
+
 import SalutationMobile from '../SalutationMobile/SalutationMobile.component';
 import Bubbles from '../Bubbles/Bubbles.component';
 
@@ -18,7 +20,7 @@ export default function Salutation(): ReactElement {
       <SalutationMobile />
       <GreetingsWelcomePart>
         <GreetingsHeader>
-          <img src={mainImage} loading="lazy" width="100%" height="100%" />
+          <OptimizedImage src={mainImage} width="100%" height="100%" />
         </GreetingsHeader>
         <Bubbles />
       </GreetingsWelcomePart>

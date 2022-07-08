@@ -12,6 +12,7 @@ import {
 } from '../../Defaults/Container/Container.styles';
 
 import Content from '../Content/Content.component';
+import OptimizedImage from 'components/Defaults/OptimizedImage/OptimizedImage.component';
 
 //React Router
 import { useLocation } from 'react-router-dom';
@@ -22,9 +23,8 @@ export default function Footer(): ReactElement {
   return (
     <FooterMainContainer>
       <FooterWaveContainer>
-        <img
+        <OptimizedImage
           src={FOOTER_BACKGROUND_BY_PATH[location.pathname].image}
-          loading="lazy"
           width="100%"
           height="100%"
         />

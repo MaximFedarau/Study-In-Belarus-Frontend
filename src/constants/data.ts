@@ -5,7 +5,7 @@ import {
 } from '../types/types';
 
 //Consntants
-import NEWS_IMAGE from 'assets/images/home/news_image.svg';
+import NEWS_IMAGE from 'assets/images/home/news_image.png';
 
 export const URLS = {
   HOME: '/',

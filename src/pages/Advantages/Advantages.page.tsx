@@ -8,6 +8,7 @@ import {
   AdvantagesHeaderContainer,
 } from 'components/Defaults/Container/Container.styles';
 import Content from 'components/Advantages/Content/Content.component';
+import OptimizedImage from 'components/Defaults/OptimizedImage/OptimizedImage.component';
 
 //Icons
 import students from 'assets/images/advantages/students.jpg';
@@ -20,7 +21,7 @@ export default function Advantages(): ReactElement {
     <AdvantagesContainer>
       <AdvantagesHeaderContainer>
         {/* div is for Safari */}
-        <img src={students} loading="lazy" width="100%" height="100%" />
+        <OptimizedImage src={students} width="100%" height="100%" />
       </AdvantagesHeaderContainer>
       <Content />
     </AdvantagesContainer>
