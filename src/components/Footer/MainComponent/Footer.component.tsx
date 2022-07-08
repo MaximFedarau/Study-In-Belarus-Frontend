@@ -27,7 +27,6 @@ export default function Footer(): ReactElement {
           src={FOOTER_BACKGROUND_BY_PATH[location.pathname].image}
           width="100%"
           height="100%"
-          loading="lazy"
         />
       </FooterWaveContainer>
       <FooterContainer {...FOOTER_BACKGROUND_BY_PATH[location.pathname]}>
