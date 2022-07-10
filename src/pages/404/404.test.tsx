@@ -9,7 +9,6 @@ import Page404 from 'pages/404/404.page';
 
 describe('404 page attributes working correcty.', () => {
   test('404 page title is correct.', () => {
-    console.log(document);
     expect(document.title).toBe(PAGES_TITLES.NOT_FOUND);
   });
 });
