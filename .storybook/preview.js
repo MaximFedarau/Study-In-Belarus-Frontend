@@ -31,7 +31,15 @@ addParameters({
     canvas: {
       title: 'Playground'
     }
-  }
+  },
+  options: {
+    storySort: {
+      order: [
+        "Basic",
+        "Components"
+      ]
+    }
+  },
 })
 
 export const parameters = {
@@ -41,9 +49,6 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
-  },
-  darkMode: {
-    dark: 'Nest Hub Dark',
   },
   backgrounds: {
     default: 'twiitter',

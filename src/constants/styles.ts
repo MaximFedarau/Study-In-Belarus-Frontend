@@ -17,6 +17,10 @@ export const BUTTON_VARIANT_STYLING = {
   [BUTTON_VARIANT.CONTAINED]: {
     backgroundColor: TRUE_BLUE,
     color: 'white',
+    ':hover': {
+      opacity: 0.9,
+      backgroundColor: TRUE_BLUE,
+    },
   },
   [BUTTON_VARIANT.OUTLINED]: {
     backgroundColor: 'white',

@@ -1,0 +1,117 @@
+<!-- Storybook imports -->
+
+import { Meta, Canvas, Story } from '@storybook/addon-docs';
+
+<!-- Constants -->
+
+import { BUTTON_VARIANT, DEFAULT_SIZES } from 'types/enum';
+
+<!-- Components -->
+
+import Button from './Button.component';
+
+<Meta
+  title="Components/Button"
+  component={Button}
+  argTypes={{
+    onClick: { action: 'clicked' },
+    shellVariant: { control: { type: 'select', options: BUTTON_VARIANT } },
+    shellSize: { control: { type: 'select', options: DEFAULT_SIZES } },
+  }}
+/>
+
+export const StorybookButton = (args) => <Button {...args} />;
+
+# Button
+
+Button - is a basic element of every UI, which can be used as a basic way to interact with interface.
+
+## Usage
+
+```tsx
+//Types
+import { ReactElement } from 'react';
+
+// Components
+import { Button } from 'components/Defaults/Button/Button.component.tsx';
+
+export default function BasicComponent(): ReactElement {
+  function onButtonClickHandler() {
+    //...some actions
+  }
+  return (
+    <div>
+      {/*...some content*/}
+      <Button onClick={onButtonClickHandler}>Submit</Button>
+    </div>
+  );
+}
+```
+
+## Variants
+
+<Canvas>
+  <Story
+    name="Default Button"
+    args={{
+      children: 'Submit',
+    }}
+  >
+    {StorybookButton.bind({})}
+  </Story>
+</Canvas>
+
+### Contained Button
+
+<Canvas>
+  <Story
+    name="Contained Button"
+    args={{
+      children: 'Ok',
+      shellVariant: BUTTON_VARIANT.CONTAINED,
+    }}
+  >
+    {StorybookButton.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children*</td>
+      <td>
+        <em>string</em>
+      </td>
+      <td>-</td>
+      <td>Content of the button.</td>
+    </tr>
+    <tr>
+      <td>shellVariant</td>
+      <td>
+        <em>enum - BUTTON_VARIANT</em>
+      </td>
+      <td>BUTTON_VARIANT.OUTLINED</td>
+      <td>Variant of the button - contained or outlined.</td>
+    </tr>
+    <tr>
+      <td>shellSize</td>
+      <td>
+        <em>enum - DEFAULT_SIZES</em>
+      </td>
+      <td>DEFAULT_SIZES.MEDIUM</td>
+      <td>Size of the button.</td>
+    </tr>
+  </tbody>
+</table>
+
+Also standard props are available: `onClick`, `onMouseOver` and others.

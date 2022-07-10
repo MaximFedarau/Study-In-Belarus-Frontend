@@ -9,11 +9,10 @@ import { DEFAULT_SIZES, BUTTON_VARIANT } from 'types/enum';
 import { ButtonShell } from './Button.styles';
 
 //Interface for Props
-interface ButtonProps {
+interface ButtonProps extends MUIButtonProps {
   children: string;
   shellVariant?: BUTTON_VARIANT;
   shellSize?: DEFAULT_SIZES;
-  additionalProps?: MUIButtonProps;
 }
 
 export default function Button({
