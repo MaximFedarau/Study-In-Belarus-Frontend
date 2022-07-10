@@ -1,3 +1,39 @@
+import { addParameters } from "@storybook/react"
+import {INITIAL_VIEWPORT} from "@storybook/addon-viewport"
+
+const CUSTOM_VIEWPORTS = {
+  nestHubMax: {
+    name: 'Nest Hub Max',
+    style: {
+      width: '1280px',
+      height: '800px',
+    }
+  },
+  iphoneXR: {
+    name: 'iPhone XR',
+    styles: {
+      width: '414px',
+      height: '896px',
+    }
+  },
+  ...INITIAL_VIEWPORT,
+}
+
+addParameters({
+  viewport: {
+    viewports: CUSTOM_VIEWPORTS,
+    defaultViewport: 'nestHubMax',
+  },
+  previewTabs: {
+    'storybook/docs/panel': {
+      title: 'Docs',
+    },
+    canvas: {
+      title: 'Playground'
+    }
+  }
+})
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -5,5 +41,21 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/,
     },
+  },
+  darkMode: {
+    dark: 'Nest Hub Dark',
+  },
+  backgrounds: {
+    default: 'twiitter',
+    values: [
+      {
+        name: 'Light',
+        value: 'white',
+      },
+      {
+        name: 'Dark',
+        value: 'black',
+      },
+    ],
   },
 }
