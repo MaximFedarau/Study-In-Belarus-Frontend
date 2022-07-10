@@ -15,6 +15,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 beforeEach(() => {
   // * setup for each test
+  console.error = jest.fn();
   render(
     <BrowserRouter>
       <Advantages />

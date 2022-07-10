@@ -10,6 +10,10 @@ import App from './App';
 //React Navigation
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 
+beforeEach(() => {
+  console.error = jest.fn();
+});
+
 describe('Correct routing for pages with header and footer.', () => {
   afterEach(() => {
     // ! checking for at least one header and footer.
