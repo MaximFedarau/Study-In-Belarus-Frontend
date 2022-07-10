@@ -23,7 +23,7 @@ export default function Student({
 }: CarouselStudentInterface): ReactElement {
   return (
     <CarouselStudentInfo>
-      <StudentAvatar src={image} />
+      <StudentAvatar src={image} alt={name} />
       <section>
         <CarouselStudentHeader>{name}</CarouselStudentHeader>
         <CarouselStudentText>{speech}</CarouselStudentText>

@@ -45,7 +45,7 @@ describe('Advatanges page UI is correct.', () => {
   });
 });
 
-describe('Advatanges page UI is correct.', () => {
+describe('Advatanges page UX is correct.', () => {
   test('Advantages page has links.', () => {
     const links = screen.getAllByRole('link');
     expect(links.length).toBeGreaterThanOrEqual(2); // ! I want at least 2 links

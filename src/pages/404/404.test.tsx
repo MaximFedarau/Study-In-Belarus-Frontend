@@ -14,7 +14,7 @@ describe('404 page attributes working correcty.', () => {
 });
 
 // ! Warning. I added snapshot checking here, because I don't want the page to ever change much.
-describe('404 page UI is correct.', () => {
+describe('404 page UX is correct.', () => {
   const page = render(<Page404 />);
   expect(page).toMatchSnapshot();
 });
