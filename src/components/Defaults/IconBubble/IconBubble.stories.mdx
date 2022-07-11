@@ -1,0 +1,110 @@
+<!-- Storybook imports -->
+
+import { Meta, Canvas, Story } from '@storybook/addon-docs';
+
+<!-- Components -->
+
+import IconBubble from './IconBubble.component';
+
+<!-- Icons -->
+
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+
+<Meta
+  title="Components/IconBubble"
+  component={IconBubble}
+  argTypes={{
+    onClick: { action: 'clicked' },
+  }}
+/>
+
+export const StorybookBubble = (args) => <IconBubble {...args} />;
+
+# Icon Bubble
+
+Icon Bubble - a bubble with an icon. But unlike default bubble it is clickable.
+
+## Usage
+
+```tsx
+//Types
+import { ReactElement } from 'react';
+
+//Components
+import IconBubble from 'components/Defaults/IconBubble/IconBubble.component';
+
+//Icons
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+
+export default function PostContent(): ReactElement {
+  function handleBubbleClick(): void {
+    //...some actions
+  }
+
+  return (
+    <div>
+      {/*first part of the content */}
+      <IconBubble
+        size={{ width: '36px', height: '36px' }}
+        onClick={handleBubbleClick}
+      >
+        <ArrowUpwardIcon />
+      </IconBubble>
+      {/* final part of the content */}
+    </div>
+  );
+}
+```
+
+## Variants
+
+<Canvas>
+  <Story
+    name="Icon Bubble"
+    args={{
+      children: <ArrowUpwardIcon />,
+      size: { width: '36px', height: '36px' },
+    }}
+  >
+    {StorybookBubble.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children*</td>
+      <td>
+        <em>ReactElement</em>
+      </td>
+      <td>-</td>
+      <td>The icon to display in the bubble.</td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>
+        <em>object - {'{ width: string, height: string }'}</em>
+      </td>
+      <td>-</td>
+      <td>The size of the bubble.</td>
+    </tr>
+    <tr>
+      <td>onClick</td>
+      <td>
+        <em>function</em>
+      </td>
+      <td>-</td>
+      <td>The function to call when the bubble is clicked.</td>
+    </tr>
+  </tbody>
+</table>
