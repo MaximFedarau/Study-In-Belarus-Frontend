@@ -1,0 +1,144 @@
+<!-- Storybook imports -->
+
+import { Meta, Canvas, Story } from '@storybook/addon-docs';
+
+<!-- Components -->
+
+import IconButton from './IconButton.component';
+
+<!-- Icons -->
+
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import AddIcon from '@mui/icons-material/Add';
+
+<Meta
+  title="Components/IconButton"
+  component={IconButton}
+  argTypes={{
+    onClickHandler: { action: 'clicked' },
+    width: { control: 'number' },
+    height: { control: 'number' },
+  }}
+/>
+
+export const StorybookIconButton = (args) => <IconButton {...args} />;
+
+# Icon Button
+
+Icon Button is like regular button, but it's `children` prop is of type ReactNode.
+
+## Usage
+
+```tsx
+//Types
+import { ReactElement } from 'react';
+
+//Components
+import PostContent from 'components/Post/PostContent/PostContent.component';
+
+import { Reactions } from 'components/Defaults/Container/Container.component';
+import { IconButton } from 'components/Defaults/IconButton/IconButton.component';
+
+//Icons (using MUI icons)
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+
+export default function Post(): ReactElement {
+  function handleLike() {
+    //...some actions
+  }
+
+  function handleDislike() {
+    //...some actions
+  }
+
+  return (
+    <>
+      <PostContent />
+      <Reactions>
+        <IconButton onClickHandler={handleLike}>
+          <ThumbUpIcon />
+        </IconButton>
+        <IconButton onClickHandler={handleDislike}>
+          <ThumbDownIcon />
+        </IconButton>
+      </Reactions>
+    </>
+  );
+}
+```
+
+## Variants
+
+<Canvas>
+  <Story
+    name="Icon Button"
+    args={{
+      children: <ThumbUpIcon />,
+    }}
+  >
+    {StorybookIconButton.bind({})}
+  </Story>
+</Canvas>
+
+### With given sizes
+
+<Canvas>
+  <Story
+    name="Icon Button with sizes"
+    args={{
+      children: <AddIcon style={{ width: '100%', height: '100%' }} />,
+      width: 100,
+      height: 100,
+    }}
+  >
+    {StorybookIconButton.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children*</td>
+      <td>
+        <em>ReactNode</em>
+      </td>
+      <td>-</td>
+      <td>Content of the button.</td>
+    </tr>
+    <tr>
+      <td>width</td>
+      <td>
+        <em>number</em>
+      </td>
+      <td>-</td>
+      <td>Width of the button.</td>
+    </tr>
+    <tr>
+      <td>height</td>
+      <td>
+        <em>number</em>
+      </td>
+      <td>-</td>
+      <td>Height of the button.</td>
+    </tr>
+    <tr>
+      <td>onClickHandler</td>
+      <td>
+        <em>function</em>
+      </td>
+      <td>-</td>
+      <td>Function to be called when the button is clicked.</td>
+    </tr>
+  </tbody>
+</table>
