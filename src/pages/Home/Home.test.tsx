@@ -7,6 +7,7 @@ import {
   POINTS_OF_STUDYING,
   CAROUSEL_STUDENTS,
 } from 'constants/ui';
+import { LATEST_NEWS } from 'constants/data';
 
 //RTL
 import {
@@ -79,6 +80,16 @@ describe('Home page UI is correct.', () => {
     expect(latestNews).toBeInTheDocument();
     expect(allNews).toBeInTheDocument();
     // * Also, when all news have different content, I will check it here.
+  });
+
+  test('Home page has correct news.', () => {
+    for (let index = 0; index < LATEST_NEWS.length; index++) {
+      LATEST_NEWS[index].forEach((news) => {
+        const pattern = new RegExp(news.title, 'i');
+        const newsTitle = screen.getAllByText(pattern);
+        expect(newsTitle.length).toBeGreaterThanOrEqual(1); // ! I want at least ONE news - for desktop+mobile
+      });
+    }
   });
 });
 
