@@ -6,26 +6,30 @@ import { DEFAULT_SIZES } from 'types/enum';
 
 import { Meta, Canvas, Story } from '@storybook/addon-docs';
 
+<!-- Constants --->
+
+import { TRUE_BLUE } from 'constants/colors';
+
 <!-- Components -->
 
-import Bubble from './Bubble.component';
+import TextBubble from 'components/Defaults/TextBubble/TextBubble.component';
 
 <Meta
-  title="Components/Bubble"
-  component={Bubble}
+  title="Components/TextBubble"
+  component={TextBubble}
   argTypes={{
-    children: { control: { type: 'text' } },
-    isActive: { control: { type: 'boolean' } },
-    subtext: { control: { type: 'text' } },
+    reverse: {
+      control: { type: 'boolean' },
+    },
     type: { control: { type: 'select', options: DEFAULT_SIZES } },
   }}
 />
 
-export const StorybookBubble = (args) => <Bubble {...args} />;
+export const StorybookBubble = (args) => <TextBubble {...args} />;
 
-# Bubble
+# Text Bubble
 
-Bubble - is a component that displays a message inside a bubble. May be used to show steps of some action, for example.
+Text Bubble - is a bubble, which provides more options for working with text.
 
 ## Usage
 
@@ -34,13 +38,15 @@ Bubble - is a component that displays a message inside a bubble. May be used to 
 import { ReactElement } from 'react';
 
 //Components
-import Bubble from 'components/Defaults/Bubble/Bubble.component';
+import TextBubble from 'components/Defaults/TextBubble/TextBubble.component';
 
 export default function Example(): ReactElement {
   return (
     <>
       {/*...some content*/}
-      <Bubble size={{ width: '50px', height: '50px' }}>WOW</Bubble>
+      <TextBubble size={{ width: '100px', height: '100px' }} text="Super cool!">
+        WOW
+      </TextBubble>
     </>
   );
 }
@@ -50,40 +56,27 @@ export default function Example(): ReactElement {
 
 <Canvas>
   <Story
-    name="Bubble"
+    name="Text Bubble"
     args={{
       children: '1',
-      size: { width: '100px', height: '100px' },
+      text: 'First step',
+      size: { width: '72px', height: '72px' },
     }}
   >
     {StorybookBubble.bind({})}
   </Story>
 </Canvas>
 
-### Active Bubble
+### Reversed Bubble
 
 <Canvas>
   <Story
-    name="Active Bubble"
+    name="Reversed Bubble"
     args={{
-      children: 'Active',
-      size: { width: '100px', height: '100px' },
-      isActive: true,
-    }}
-  >
-    {StorybookBubble.bind({})}
-  </Story>
-</Canvas>
-
-### With subtext
-
-<Canvas>
-  <Story
-    name="Bubble with subtext"
-    args={{
-      children: '1',
-      size: { width: '180px', height: '180px' },
-      subtext: 'First step',
+      children: '2',
+      text: 'Second step',
+      reverse: true,
+      size: { width: '72px', height: '72px' },
     }}
   >
     {StorybookBubble.bind({})}
@@ -105,41 +98,43 @@ export default function Example(): ReactElement {
     <tr>
       <td>children*</td>
       <td>
-        <em>number | string</em>
+        <em>string</em>
       </td>
       <td>-</td>
       <td>Main content of the bubble.</td>
     </tr>
     <tr>
-      <td>isActive</td>
-      <td>
-        <em>boolean</em>
-      </td>
-      <td>-</td>
-      <td>State of the bubble.</td>
-    </tr>
-    <tr>
-      <td>size</td>
-      <td>
-        <em>object - {`{width: string, height: string}`}</em>
-      </td>
-      <td>-</td>
-      <td>Size of the bubble.</td>
-    </tr>
-    <tr>
-      <td>subtext</td>
+      <td>text*</td>
       <td>
         <em>string</em>
       </td>
       <td>-</td>
-      <td>Subtext (subcontent) of the bubble.</td>
+      <td>Subcontent of the bubble.</td>
+    </tr>
+    <tr>
+      <td>reverse</td>
+      <td>
+        <em>boolean</em>
+      </td>
+      <td>-</td>
+      <td>Swap text and the bubble.</td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>
+        <em>object - {'{ width: string, height: string }'}</em>
+      </td>
+      <td>-</td>
+      <td>Size of the bubble.</td>
     </tr>
     <tr>
       <td>type</td>
       <td>
         <em>enum - DEFAULT_SIZES</em>
       </td>
-      <td>DEFAULT_SIZES.MEDIUM</td>
+      <td>
+        DEFAULT_SIZES.MEDIUM (not for <em>fontSize</em>)
+      </td>
       <td>
         Type of the bubble, which will define such params as: <em>maxWidth</em>,{' '}
         <em>maxHeight</em>, <em>fontSize</em> and etc.

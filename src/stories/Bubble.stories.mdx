@@ -6,30 +6,26 @@ import { DEFAULT_SIZES } from 'types/enum';
 
 import { Meta, Canvas, Story } from '@storybook/addon-docs';
 
-<!-- Constants --->
-
-import { TRUE_BLUE } from 'constants/colors';
-
 <!-- Components -->
 
-import TextBubble from './TextBubble.component';
+import Bubble from 'components/Defaults/Bubble/Bubble.component';
 
 <Meta
-  title="Components/TextBubble"
-  component={TextBubble}
+  title="Components/Bubble"
+  component={Bubble}
   argTypes={{
-    reverse: {
-      control: { type: 'boolean' },
-    },
+    children: { control: { type: 'text' } },
+    isActive: { control: { type: 'boolean' } },
+    subtext: { control: { type: 'text' } },
     type: { control: { type: 'select', options: DEFAULT_SIZES } },
   }}
 />
 
-export const StorybookBubble = (args) => <TextBubble {...args} />;
+export const StorybookBubble = (args) => <Bubble {...args} />;
 
-# Text Bubble
+# Bubble
 
-Text Bubble - is a bubble, which provides more options for working with text.
+Bubble - is a component that displays a message inside a bubble. May be used to show steps of some action, for example.
 
 ## Usage
 
@@ -38,15 +34,13 @@ Text Bubble - is a bubble, which provides more options for working with text.
 import { ReactElement } from 'react';
 
 //Components
-import TextBubble from 'components/Defaults/TextBubble/TextBubble.component';
+import Bubble from 'components/Defaults/Bubble/Bubble.component';
 
 export default function Example(): ReactElement {
   return (
     <>
       {/*...some content*/}
-      <TextBubble size={{ width: '100px', height: '100px' }} text="Super cool!">
-        WOW
-      </TextBubble>
+      <Bubble size={{ width: '50px', height: '50px' }}>WOW</Bubble>
     </>
   );
 }
@@ -56,27 +50,40 @@ export default function Example(): ReactElement {
 
 <Canvas>
   <Story
-    name="Text Bubble"
+    name="Bubble"
     args={{
       children: '1',
-      text: 'First step',
-      size: { width: '72px', height: '72px' },
+      size: { width: '100px', height: '100px' },
     }}
   >
     {StorybookBubble.bind({})}
   </Story>
 </Canvas>
 
-### Reversed Bubble
+### Active Bubble
 
 <Canvas>
   <Story
-    name="Reversed Bubble"
+    name="Active Bubble"
     args={{
-      children: '2',
-      text: 'Second step',
-      reverse: true,
-      size: { width: '72px', height: '72px' },
+      children: 'Active',
+      size: { width: '100px', height: '100px' },
+      isActive: true,
+    }}
+  >
+    {StorybookBubble.bind({})}
+  </Story>
+</Canvas>
+
+### With subtext
+
+<Canvas>
+  <Story
+    name="Bubble with subtext"
+    args={{
+      children: '1',
+      size: { width: '180px', height: '180px' },
+      subtext: 'First step',
     }}
   >
     {StorybookBubble.bind({})}
@@ -98,43 +105,41 @@ export default function Example(): ReactElement {
     <tr>
       <td>children*</td>
       <td>
-        <em>string</em>
+        <em>number | string</em>
       </td>
       <td>-</td>
       <td>Main content of the bubble.</td>
     </tr>
     <tr>
-      <td>text*</td>
-      <td>
-        <em>string</em>
-      </td>
-      <td>-</td>
-      <td>Subcontent of the bubble.</td>
-    </tr>
-    <tr>
-      <td>reverse</td>
+      <td>isActive</td>
       <td>
         <em>boolean</em>
       </td>
       <td>-</td>
-      <td>Swap text and the bubble.</td>
+      <td>State of the bubble.</td>
     </tr>
     <tr>
       <td>size</td>
       <td>
-        <em>object - {'{ width: string, height: string }'}</em>
+        <em>object - {`{width: string, height: string}`}</em>
       </td>
       <td>-</td>
       <td>Size of the bubble.</td>
+    </tr>
+    <tr>
+      <td>subtext</td>
+      <td>
+        <em>string</em>
+      </td>
+      <td>-</td>
+      <td>Subtext (subcontent) of the bubble.</td>
     </tr>
     <tr>
       <td>type</td>
       <td>
         <em>enum - DEFAULT_SIZES</em>
       </td>
-      <td>
-        DEFAULT_SIZES.MEDIUM (not for <em>fontSize</em>)
-      </td>
+      <td>DEFAULT_SIZES.MEDIUM</td>
       <td>
         Type of the bubble, which will define such params as: <em>maxWidth</em>,{' '}
         <em>maxHeight</em>, <em>fontSize</em> and etc.
