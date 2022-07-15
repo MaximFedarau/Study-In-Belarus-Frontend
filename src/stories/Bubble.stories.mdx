@@ -1,0 +1,149 @@
+<!-- Types -->
+
+import { DEFAULT_SIZES } from 'types/enum';
+
+<!-- Storybook imports -->
+
+import { Meta, Canvas, Story } from '@storybook/addon-docs';
+
+<!-- Components -->
+
+import Bubble from 'components/Defaults/Bubble/Bubble.component';
+
+<Meta
+  title="Components/Bubble"
+  component={Bubble}
+  argTypes={{
+    children: { control: { type: 'text' } },
+    isActive: { control: { type: 'boolean' } },
+    subtext: { control: { type: 'text' } },
+    type: { control: { type: 'select', options: DEFAULT_SIZES } },
+  }}
+/>
+
+export const StorybookBubble = (args) => <Bubble {...args} />;
+
+# Bubble
+
+Bubble - is a component that displays a message inside a bubble. May be used to show steps of some action, for example.
+
+## Usage
+
+```tsx
+//Types
+import { ReactElement } from 'react';
+
+//Components
+import Bubble from 'components/Defaults/Bubble/Bubble.component';
+
+export default function Example(): ReactElement {
+  return (
+    <>
+      {/*...some content*/}
+      <Bubble size={{ width: '50px', height: '50px' }}>WOW</Bubble>
+    </>
+  );
+}
+```
+
+## Variants
+
+<Canvas>
+  <Story
+    name="Bubble"
+    args={{
+      children: '1',
+      size: { width: '100px', height: '100px' },
+    }}
+  >
+    {StorybookBubble.bind({})}
+  </Story>
+</Canvas>
+
+### Active Bubble
+
+<Canvas>
+  <Story
+    name="Active Bubble"
+    args={{
+      children: 'Active',
+      size: { width: '100px', height: '100px' },
+      isActive: true,
+    }}
+  >
+    {StorybookBubble.bind({})}
+  </Story>
+</Canvas>
+
+### With subtext
+
+<Canvas>
+  <Story
+    name="Bubble with subtext"
+    args={{
+      children: '1',
+      size: { width: '180px', height: '180px' },
+      subtext: 'First step',
+    }}
+  >
+    {StorybookBubble.bind({})}
+  </Story>
+</Canvas>
+
+## Props
+
+<table>
+  <thead>
+    <tr>
+      <th>Prop</th>
+      <th>Type</th>
+      <th>Default</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>children*</td>
+      <td>
+        <em>number | string</em>
+      </td>
+      <td>-</td>
+      <td>Main content of the bubble.</td>
+    </tr>
+    <tr>
+      <td>isActive</td>
+      <td>
+        <em>boolean</em>
+      </td>
+      <td>-</td>
+      <td>State of the bubble.</td>
+    </tr>
+    <tr>
+      <td>size</td>
+      <td>
+        <em>object - {`{width: string, height: string}`}</em>
+      </td>
+      <td>-</td>
+      <td>Size of the bubble.</td>
+    </tr>
+    <tr>
+      <td>subtext</td>
+      <td>
+        <em>string</em>
+      </td>
+      <td>-</td>
+      <td>Subtext (subcontent) of the bubble.</td>
+    </tr>
+    <tr>
+      <td>type</td>
+      <td>
+        <em>enum - DEFAULT_SIZES</em>
+      </td>
+      <td>DEFAULT_SIZES.MEDIUM</td>
+      <td>
+        Type of the bubble, which will define such params as: <em>maxWidth</em>,{' '}
+        <em>maxHeight</em>, <em>fontSize</em> and etc.
+      </td>
+    </tr>
+  </tbody>
+</table>
